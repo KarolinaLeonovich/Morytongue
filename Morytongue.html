@@ -104,7 +104,7 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="Morytongue" startnode="147" creator="Twine" creator-version="2.10.0" format="SugarCube" format-version="2.37.3" ifid="240C923B-65E8-49B9-8F3D-8047AECD50CB" options="" tags="" zoom="0.3" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* Контейнер для основного контента */
+	<tw-storydata name="Morytongue" startnode="147" creator="Twine" creator-version="2.10.0" format="SugarCube" format-version="2.37.3" ifid="240C923B-65E8-49B9-8F3D-8047AECD50CB" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* Контейнер для основного контента */
 #story {
     position: relative;
     min-height: 100vh;
@@ -239,6 +239,92 @@ $(document).on(':passagedisplay', function () {
         $('.footer-bar').addClass('visible'); // Показываем футер с анимацией
     }, 10); // Небольшая задержка для срабатывания transition
 });
+window.setBackground = function (url) {
+    $("#story").css("background-image", "url('" + url + "')");
+};
+// массив картинок для предзагрузки
+window.preloadImages = [
+    "media/characters/Kiros.webp",
+    "media/characters/Kiros_angry.webp",
+    "media/characters/Kiros_naked.webp",
+    "media/characters/Kiros_naked_2.webp",
+    "media/characters/Kiros_nude.webp",
+    "media/characters/Kiros_solid.webp",
+    "media/characters/Kiros_wet_smiled.webp",
+    "media/characters/Kiros_wet_solid.webp",
+    "media/characters/Laert_NN_unhappy.webp",
+    "media/characters/Laert_N_unhappy.webp",
+    "media/characters/Laert_angry.webp",
+    "media/characters/Laert_cruise_naked.webp",
+    "media/characters/Laert_nude.webp",
+    "media/characters/Laert_past.webp",
+    "media/characters/Laert_sad.webp",
+    "media/characters/Laert_smile.webp",
+    "media/characters/Laert_surprised.webp",
+    "media/characters/Teron.webp",
+    "media/characters/Teron_child.webp",
+    "media/characters/Teron_surprized.webp",
+    "media/characters/Teron_translucent.webp",
+    "media/characters/Teron_work.webp",
+    "media/characters/Unis_NN_closed_eyes.webp",
+    "media/characters/Unis_N_closed_eyes.webp",
+    "media/characters/Unis_despite.webp",
+    "media/characters/Unis_horny.webp",
+    "media/characters/Unis_look_right.webp",
+    "media/characters/Unis_military_light_smile.webp",
+    "media/characters/Unis_military_sad.webp",
+    "media/characters/Unis_military_sad_wet.webp",
+    "media/characters/Unis_military_scared.webp",
+    "media/characters/Unis_military_scared_wet.webp",
+    "media/characters/Unis_military_smile.webp",
+    "media/characters/Unis_military_smiled_wet.webp",
+    "media/characters/Unis_military_solid.webp",
+    "media/characters/Unis_nude.webp",
+    "media/characters/Unis_nude_light_smile.webp",
+    "media/characters/Unis_nude_smile.webp",
+    "media/characters/Unis_scared.webp",
+    "media/characters/Unis_surprised.webp",
+    "media/locations/Laert_Med_Lab.jpg",
+    "media/locations/Laert_Med_Lab_2.jpg",
+    "media/locations/Laert_Med_Lab_after_sex.jpg",
+    "media/locations/Laert_Med_Lab_ceil.jpg",
+    "media/locations/Laert_Med_Lab_cut.jpg",
+    "media/locations/Teron_childhood.jpg",
+    "media/locations/Teron_childhood_2.jpg",
+    "media/locations/VexorPrime_Cordius_sector.jpg",
+    "media/locations/VexorPrime_Cordius_sector_in_car.jpg",
+    "media/locations/VexorPrime_Ligrat_Tower.jpg",
+    "media/locations/VexorPrime_Palace_interior.jpg",
+    "media/locations/VexorPrime_Unis_apartment.jpg",
+    "media/locations/VexorPrime_Unis_bathroom.jpg",
+    "media/locations/VexorPrime_Unis_bedroom.jpg",
+    "media/locations/Vexor_Prime.jpg",
+    "media/locations/chapter_final_Teron.jpg",
+    "media/tablet/01ddd3.webp",
+    "media/tablet/Final_Compassion_2_1.webp",
+    "media/tablet/Final_HightEcho_3_1.webp",
+    "media/tablet/Final_LowEcho_3_2.webp",
+    "media/tablet/Final_Loyalty_2_2.webp",
+    "media/tablet/Final_counselor_1_2.webp",
+    "media/tablet/Final_shareholder_1_1.webp",
+    "media/tablet/Nonabene_love.webp",
+    "media/tablet/Notabene_1.webp",
+    "media/tablet/Notabene_2.webp",
+    "media/tablet/tablet_messages.webp",
+    "media/tablet/tablet_messages2.webp"
+];
+
+// функция предзагрузки
+window.preload = function (list) {
+    for (let i = 0; i < list.length; i++) {
+        const img = new Image();
+        img.src = list[i];
+    }
+};
+
+// вызвать предзагрузку
+preload(window.preloadImages);
+
 </script><tw-passagedata pid="1" name="1_0" tags="" position="425,175" size="100,100">&lt;&lt;script&gt;&gt;
 setBackground(&quot;media/locations/Laert_Med_Lab_ceil.jpg&quot;);
 $(&quot;#character-container-left&quot;).html(&#39;&lt;img src=&quot;media/characters/Unis_N_closed_eyes.webp&quot;&gt;&#39;);
@@ -549,7 +635,9 @@ $(document).one(&quot;:storyready&quot;, function() {
     // Вызываем обновление при загрузке
     updateStats();
 }); // Закрываем функцию :storyready
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="1_0_1" tags="" position="425,1725" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;На нее внимательно смотрел человек, чье лицо вызывало противоречивые чувства. Юнис смаковала неразделенную страсть к этому загадочному светловолосому мужчине, годы немого обожания, ревности и боли. На ресницах дрожал преломленный свет ламп, окутывая вполне заурядную внешность Лаэрта ореолом чувств Терона.
+&lt;&lt;/script&gt;&gt;
+
+</tw-passagedata><tw-passagedata pid="26" name="1_0_1" tags="" position="425,1725" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;На нее внимательно смотрел человек, чье лицо вызывало противоречивые чувства. Юнис смаковала неразделенную страсть к этому загадочному светловолосому мужчине, годы немого обожания, ревности и боли. На ресницах дрожал преломленный свет ламп, окутывая вполне заурядную внешность Лаэрта ореолом чувств Терона.
 [[Далее-&gt;1_1]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="27" name="1_3_2" tags="" position="900,1850" size="100,100">&lt;&lt;script&gt;&gt;
 $(&quot;#character-container-left img&quot;).fadeOut(300, function() {
     $(this).attr(&#39;src&#39;, &#39;media/characters/Unis_N_closed_eyes.webp&#39;);
@@ -789,7 +877,7 @@ $(&quot;#tablet-container&quot;).empty().hide();
 $(&quot;#story&quot;).removeClass(&quot;tablet-active&quot;);
 &lt;&lt;/script&gt;&gt;
 &lt;div class=&quot;footer-bar&quot;&gt;- Терон умер, - Юнис погасила фото одного из величайших людей в Империи с легкой улыбкой.
-- Да здраствует Юнис, - а улыбка Лаэрта была печальна.
+- Да здравствует Юнис, - улыбка Лаэрта же была печальна.
 [[Далее-&gt;1_4_7]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="59" name="1_2_2_2_2" tags="" position="225,2125" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;//Лаэрт принадлежал только Империи и собственной супруге. Ничего и не было, кроме редких разговоров, и только о деле. Стратегии развития колоний, нехватка ресурсов, слабая логистика... моральный дух переселенцев, в конце концов.//
 [[Далее-&gt;1_2_2_2]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="60" name="1_4_1_1_1" tags="" position="350,2500" size="100,100">&lt;&lt;script&gt;&gt;
 $(&quot;#character-container-left img&quot;).fadeOut(300, function() {
@@ -1111,7 +1199,7 @@ $(&quot;#character-container-right img&quot;).fadeOut(300, function() {
 &lt;&lt;/script&gt;&gt;
 &lt;div class=&quot;footer-bar&quot;&gt;Поэтому император не решился воссоздать память Терона в его же клонированном теле? Боялся заговора? Боялся, что его свергнут? Терон был популярен в народе, хотя его образ парня в замазаной рубашке и был далек от реальности.
 [[Далее-&gt;1_6_5]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="102" name="1_4_7_2_1_1" tags="" position="1650,3425" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;- Ты вольна делать, что захочешь. За твою безопасность будет отвечать офицер Кайрос. Я попрошу только не глупить и постараться быстрее вернуться к работе. Так или иначе, тебя создали с определенной целью - сохранить бесценные знания твоего великого предшественника. И лежать мертвым грузом они не могут, это преступление против империи. После отпуска примешь назначение на должность советницы.
-[[Далее-&gt;1_4_7_1_1]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="103" name="1_2_3_4_5" tags="" position="1650,3800" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;Лаэрт ничего не ответил, но по его расстроеному лицу Юнис поняла, что он почтит погребальную церемонию своим присутствием. Она открыла фото своего предшественника и провела пальцами по фото Терона, тщательно отобранному и одобреному имперской службой священной Пропаганды.
+[[Далее-&gt;1_4_7_1_1]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="103" name="1_2_3_4_5" tags="" position="1650,3800" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;Лаэрт ничего не ответил, но по его расстроеному лицу Юнис поняла, что император почтит погребальную церемонию своим присутствием. Она открыла фото своего предшественника и провела пальцами по фотографии Терона, тщательно отобранной и одобренной имперской службой священной Пропаганды.
 [[Взглянуть на фото Терона-&gt;tablet_2]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="104" name="1_7_1_2_3_4" tags="" position="1175,2525" size="100,100">&lt;&lt;script&gt;&gt;
 $(&quot;#character-container-left img&quot;).fadeOut(300, function() {
 $(this).attr(&#39;src&#39;, &#39;media/characters/Unis_nude_light_smile.webp&#39;); // Меняем src у изображения
