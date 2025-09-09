@@ -367,6 +367,10 @@ $(&quot;#character-container-right img&quot;).fadeOut(300, function() {
     $(this).attr(&#39;src&#39;, &#39;media/characters/Laert_N_unhappy.webp&#39;); // Меняем src у изображения
     $(this).fadeIn(600); // Показываем новый спрайт
 });
+$(&quot;#character-container-left img&quot;).fadeOut(300, function() {
+    $(this).attr(&#39;src&#39;, &#39;media/characters/Eunice_look_right.webp&#39;); // Меняем src у изображения
+    $(this).fadeIn(600); // Показываем новый спрайт
+});
 &lt;&lt;/script&gt;&gt;
 &lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
 &quot;Уголки рта Лаэрта нервно дернулись. Между ним и Юнис словно тень пролегла, и девушка отчетливо поняла: он прошлое. Теперь Лаэрт для нее прошлое.&quot;,
@@ -408,8 +412,8 @@ $(&quot;#character-container-right&quot;).fadeIn(900);
 &lt;&lt;/script&gt;&gt;
 
 &lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
-&quot;Лаэрт вздохнул и принялся искать ей одежду в шкафу, будто не хотел говорить на эту тему. Предприятия, которыми владел и управлял Терон, осиротели в один миг. Юнис, тихо простонав, приподнялась и села.&quot;,
-&quot;Laert sighed and began looking for clothes for her in the closet, as if he didn’t want to talk about it. The enterprises that Theron had owned and managed were left orphaned in an instant. Eunice, letting out a quiet moan, lifted herself and sat.&quot;
+&quot;Лаэрт вздохнул и принялся искать ей одежду в шкафу, избегая до последнего говорить на эту тему. Предприятия, которыми владел и управлял Терон, осиротели в один миг, и это было проблемой. Юнис, тихо простонав, приподнялась и села.&quot;,
+&quot;Laertes sighed and started searching the closet for her clothes, as though he were putting off the conversation for as long as possible. The enterprises Theron had owned and managed were orphaned in an instant, and that became a problem. Eunice, letting out a quiet moan, lifted herself and sat.&quot;
 )&gt;&gt;
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_6_1_1_1]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_6_1_1_1]]&lt;&lt;/if&gt;&gt;
 &lt;/div&gt;
@@ -497,8 +501,8 @@ $(&quot;#character-container-right img&quot;).fadeOut(300, function() {
 });
 &lt;&lt;/script&gt;&gt;
 &lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
-&quot;- Что ты, буду помалкивать и отдыхать. Давно хотела посмотреть хоть на что-то, помимо отчетов о прибылях и убытках. \nЮнис натянуто улыбнулась. За улыбкой прятался страх.&quot;,
-&quot;- Not at all, I’ll stay quiet and relax. I’ve long wanted to see something besides profit and loss reports.\nEunice forced a smile. Behind the smile hid fear.&quot;
+&quot;- Что ты, буду помалкивать и отдыхать. Давно хотела посмотреть хоть на что-то, помимо отчетов о прибылях и убытках. \nЮнис натянуто улыбнулась.&quot;,
+&quot;- Not at all, I’ll stay quiet and relax. I’ve long wanted to see something besides profit and loss reports.\nEunice forced a smile.&quot;
 )&gt;&gt;
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_4_7_2_1_1]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_4_7_2_1_1]]&lt;&lt;/if&gt;&gt;
 &lt;/div&gt;
@@ -564,8 +568,8 @@ $(&quot;#character-container-right img&quot;).fadeOut(300, function() {
 });
 &lt;&lt;/script&gt;&gt;
 &lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
-&quot;Юнис подошла и требовательно протянула руку за одеждой, глядя на сидевшего на корточках императора сверху вниз. В ее глазах читалось злое торжество. Она нужна Лаэрту хотя бы как память, во всех смыслах этого слова. Память ее гениального предшественника и память о нем же. \n- Почему женское тело? Не то, чтобы мне не нравилось.&quot;,
-&quot;Eunice stepped forward and demandingly reached for his clothing, looking down at the Emperor crouching before her. A wicked triumph shone in her eyes. Laertes needed her at least as a memory, in every sense of the word. The memory of her brilliant predecessor and the memory of him himself. \n- Female body, huh? Not that I mind.&quot;
+&quot;Юнис подошла и требовательно протянула руку за одеждой, глядя на сидевшего на корточках императора сверху вниз. В ее глазах читалось злое торжество. Она нужна Лаэрту хотя бы как память. Память ее гениального предшественника и память о нем же. \n- Почему женское тело? Не то, чтобы мне не нравилось.&quot;,
+&quot;Eunice stepped forward and firmly reached out for her clothes, looking down at the Emperor crouching before her. A wicked triumph gleamed in her eyes. Laertes needed her — as both the living legacy of her brilliant predecessor and the very memory of Theron himself.\n— A female body, huh? Not that I mind.&quot;
 )&gt;&gt;
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_6_3_1]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_6_3_1]]&lt;&lt;/if&gt;&gt;
 &lt;/div&gt;
@@ -886,10 +890,10 @@ $(this).fadeIn(300);
 &lt;&lt;/link&gt;&gt;
 &lt;&lt;else&gt;&gt;&lt;&lt;link [[- ⚜️ Your father must have told you how difficult some choices can be.-&gt;1_4_15]]&gt;&gt;
     &lt;&lt;set $loyalty to $loyalty + 1&gt;&gt;&lt;&lt;run updateStats()&gt;&gt;
-&lt;&lt;/link&gt;&gt;&lt;&lt;link [[- 🌱 But, of course, they later decided it’s easier to make a career in Security, right? Since no one dares to rebel anymore.-&gt;1_4_14]]&gt;&gt;
+&lt;&lt;/link&gt;&gt;
+&lt;&lt;link [[- 🌱 But, of course, they later decided it’s easier to make a career in Security, right? Since no one dares to rebel anymore.-&gt;1_4_14]]&gt;&gt;
     &lt;&lt;set $compassion to $compassion + 1&gt;&gt;&lt;&lt;run updateStats()&gt;&gt;
-&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
-&lt;/div&gt;
+&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="41" name="1_4_14" tags="" position="1025,5350" size="100,100">&lt;&lt;script&gt;&gt;
 $(&quot;#character-container-left img&quot;).fadeOut(300, function() {
 $(this).attr(&#39;src&#39;, &#39;media/characters/Eunice_military_sad.webp&#39;); 
@@ -897,15 +901,12 @@ $(this).fadeIn(300);
 });
 &lt;&lt;/script&gt;&gt;
 &lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
-&quot;Юнис очень осторожно подбирала слова, но нотки неприязни все равно прорвались наружу. Кажется, она могла угадать, кто из генералитета являлся отцом Кайроса, и имя этого мясника отдавало во рту металлом, кровью и горьким дымом.&quot;,
+&quot;Юнис очень осторожно подбирала слова, но нотки неприязни все равно прорвались наружу. Она догадалась, кто из генералитета являлся отцом Кайроса, и имя этого мясника отдавало во рту металлом, кровью и горьким дымом.&quot;,
 &quot;Eunice chose her words with great care, yet hints of disdain still slipped through. She seemed able to guess which member of the general staff was Kairos’ father, and the name of that butcher lingered on her tongue, tasting of metal, blood, and bitter smoke.&quot;
 )&gt;&gt;
-&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;
-[[Далее-&gt;1_4_14_1]]
-&lt;&lt;else&gt;&gt;
-[[Next-&gt;1_4_14_1]]
-&lt;&lt;/if&gt;&gt;
-&lt;/div&gt;
+&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_4_14_1]]
+&lt;&lt;else&gt;&gt;[[Next-&gt;1_4_14_1]]
+&lt;&lt;/if&gt;&gt;&lt;/div&gt;
 
 
 </tw-passagedata><tw-passagedata pid="42" name="1_4_15" tags="" position="1375,5350" size="100,100">&lt;&lt;script&gt;&gt;
@@ -918,12 +919,9 @@ $(this).fadeIn(300);
 &quot;Кайрос кивнул, теперь уже серьезно.\n- Отец сделал то, что было нужно. Он рассказывал, что в древности, когда медицина была в зачаточном состоянии, если рана начинала гноиться, то всю конечность отнимали, чтобы зараза не распространилась на здоровое тело. Это больно, в этом нет удовольствия, только необходимость.&quot;,
 &quot;Kairos nodded, now serious.\n- My father did what had to be done. He told me that in ancient times, when medicine was in its infancy, if a wound began to fester, they would amputate the entire limb to prevent the infection from spreading to the rest of the body. It is painful; there is no pleasure in it, only necessity.&quot;
 )&gt;&gt;
-&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;
-[[Далее-&gt;1_4_15_1]]
-&lt;&lt;else&gt;&gt;
-[[Next-&gt;1_4_15_1]]
-&lt;&lt;/if&gt;&gt;
-&lt;/div&gt;
+&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_4_15_1]]
+&lt;&lt;else&gt;&gt;[[Next-&gt;1_4_15_1]]
+&lt;&lt;/if&gt;&gt;&lt;/div&gt;
 
 </tw-passagedata><tw-passagedata pid="43" name="1_4_1_1" tags="" position="650,2500" size="100,100">&lt;&lt;script&gt;&gt;
 $(&quot;#character-container-right img&quot;).fadeOut(300, function() {
@@ -1062,7 +1060,7 @@ $(this).fadeIn(600); // Показываем новый спрайт
 });
 &lt;&lt;/script&gt;&gt;
 &lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t( 
-&quot;- Похороны состоятся завтра, - Лаэрт произнес вопросительно, и Юнис, уже предчувствуя его предложение, чуть ли не зашипела:\n- Я не пойду. Мне плевать, что потом скажут.\n- Я и не прошу. Не думаю, что сие хорошо для твоего ментального здоровья.\n- Сходи сам.&quot;, 
+&quot;- Похороны состоятся завтра, - Лаэрт произнес вопросительно, и Юнис, уже предчувствуя его предложение, чуть ли не зашипела:\n- Я не пойду. Мне плевать, что потом скажут.\n- Я и не прошу. Не думаю, что это полезно для твоего ментального здоровья.\n- Сходи сам.&quot;, 
 
 &quot;— The funeral is tomorrow, — Laertes said, his tone almost questioning. Eunice, already bracing for his suggestion, snapped back with a hiss:\n— I’m not going. I don’t give a damn what they say.\n— I’m not asking you to. I doubt it would do your state of mind any good.\n— Then go yourself.&quot; 
 )&gt;&gt; 
@@ -1189,8 +1187,8 @@ $(&quot;#character-container-right&quot;).html(&#39;&lt;img src=&quot;media/char
 $(&quot;#character-container-right&quot;).fadeIn(900);
 &lt;&lt;/script&gt;&gt;
 &lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
-&quot;Игра в гляделки с Лаэртом затянулась на долгие годы. Император беззастенчиво пользовался чувствами своего советника: преданность Терона империи была безгранична, он был весьма популярен в народе, а вот Лаэрт завоевывать сердца не стремился.&quot;,
-&quot;The staring game with Laertes dragged on for many years. The Emperor used his advisor’s feelings: Theron’s loyalty to the Empire was boundless, he was very popular among the people, while Laertes had no desire to win hearts.&quot;
+&quot;Игра в гляделки с Лаэртом затянулась на десятилетия. Император беззастенчиво пользовался чувствами своего советника: преданность Терона трону была безгранична, он был весьма популярен в народе, а Лаэрт завоевывать сердца не стремился.&quot;,
+&quot;The staring game with Laertes dragged on for decades. The Emperor shamelessly exploited his advisor’s feelings: Theron’s loyalty to the throne was boundless, and he was widely admired by the people, while Laertes had no wish to win hearts.&quot;
 )&gt;&gt;
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;after_tablet_1_2]]&lt;&lt;else&gt;&gt;[[Next-&gt;after_tablet_1_2]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="70" name="after_tablet_1_2" tags="" position="1750,1850" size="100,100">&lt;&lt;script&gt;&gt;
@@ -1214,7 +1212,7 @@ $(this).fadeIn(600); // Показываем новый спрайт
 });
 &lt;&lt;/script&gt;&gt;
 &lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
-&quot;- Самая ровная схема, - не моргнув и глазом ответила Юнис. - Представим это так, что молодая наследница не справляется, задержки зарплаты, пустые счета, банкротство. И тут ты берешь все предприятия под свое крылышко, принимаешь крутые меры, половину увольняешь, ставишь новое оборудование, бизнес резко идет в плюс, все славят Лаэрта Первого.&quot;,
+&quot;- Самая ровная схема, - не моргнув и глазом ответила Юнис. - Представим это так: молодая наследница не справляется, задержки зарплаты, пустые счета, банкротство. И тут ты берешь все предприятия под свое крылышко, принимаешь крутые меры, половину увольняешь, ставишь новое оборудование, бизнес резко идет в плюс, все славят Лаэрта Первого.&quot;,
 &quot;- The smoothest scheme, Eunice replied without batting an eye. - Let’s say the young heiress can’t manage, salaries delayed, empty accounts, bankruptcy. Then you take all the enterprises under your wing, implement bold measures, lay off half the staff, install new equipment, the business soars into profit, and everyone praises Laertes the First.&quot;
 )&gt;&gt;
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_8]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_8]]&lt;&lt;/if&gt;&gt;
@@ -1245,7 +1243,7 @@ $(&quot;#character-container-left&quot;).fadeIn(1000);
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;after_tablet_1_1]]&lt;&lt;else&gt;&gt;[[Next-&gt;after_tablet_1_1]]&lt;&lt;/if&gt;&gt;
 &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="74" name="1_10_1_2" tags="" position="1000,3300" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
-&quot;Проблемой было то, что позволить он себе мог, что угодно, а Юнис оставалось сделать лишь кислую мину: и то, это была привилегия человека, сделавшего для Империи немало. Другим и недовольство было недоступной роскошью.&quot;,
+&quot;Проблемой было то, что позволить он себе мог, что угодно, а Юнис оставалось сделать лишь кислую мину: и то, сие было привилегией человека, сделавшего для Империи немало. Другим и недовольство было недоступной роскошью.&quot;,
 &quot;The problem was that he could allow himself anything, while all Eunice could do was put on a sour face—and even that was a privilege reserved for someone who had done much for the Empire. For others, discontent was an unattainable luxury.&quot;
 )&gt;&gt;
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_10_1_1_1]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_10_1_1_1]]&lt;&lt;/if&gt;&gt;
@@ -1263,14 +1261,11 @@ $(this).fadeIn(300);
 &lt;&lt;/script&gt;&gt;
 &lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
 &quot;Юнис кивнула, но все равно спросила, скорее, чтобы поддержать разговор.\n- А если зараженная рана на голове? М?\nКайрос задумался.&quot;,
-&quot;YEunice nodded, but still asked, more to keep the conversation going.\n- And what if the infected wound is on the head? Hm?\nKairos fell into thought.&quot;
+&quot;Eunice nodded, but still asked, more to keep the conversation going.\n- And what if the infected wound is on the head? Huh?\nKairos fell into thought.&quot;
 )&gt;&gt;
-&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;
-[[Далее-&gt;1_4_15_2]]
-&lt;&lt;else&gt;&gt;
-[[Next-&gt;1_4_15_2]]
-&lt;&lt;/if&gt;&gt;
-&lt;/div&gt;
+&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_4_15_2]]
+&lt;&lt;else&gt;&gt;[[Next-&gt;1_4_15_2]]
+&lt;&lt;/if&gt;&gt;&lt;/div&gt;
 
 </tw-passagedata><tw-passagedata pid="78" name="1_4_15_2" tags="" position="1375,5600" size="100,100">&lt;&lt;script&gt;&gt;
 setBackground(&quot;media/locations/VexorPrime_Ligrat_Tower.jpg&quot;);
@@ -1287,12 +1282,9 @@ $(this).fadeIn(300);
 &quot;- Бросьте, Кайрос. Каждая аналогия имеет свои границы.\nОни подъехали к башне Лиграта, но радость от нового приобретения была смешана с сомнениями. Кайрос проверял непойми что в гостиной, а Юнис без сил рухнула на диван.&quot;,
 &quot;- Come on, Kairos. Every analogy has its limits.\nThey arrived at Ligrat Tower, yet the joy of their new acquisition was tinged with doubts. Kairos was inspecting who-knows-what in the living room, while YEunice collapsed onto the sofa, utterly exhausted.&quot;
 )&gt;&gt;
-&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;
-[[Далее-&gt;1_4_15_3]]
-&lt;&lt;else&gt;&gt;
-[[Next-&gt;1_4_15_3]]
-&lt;&lt;/if&gt;&gt;
-&lt;/div&gt;
+&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_4_15_3]]
+&lt;&lt;else&gt;&gt;[[Next-&gt;1_4_15_3]]
+&lt;&lt;/if&gt;&gt;&lt;/div&gt;
 
 </tw-passagedata><tw-passagedata pid="79" name="1_4_15_3" tags="" position="1200,5725" size="100,100">&lt;&lt;script&gt;&gt;
 setBackground(&quot;media/locations/VexorPrime_Eunice_apartment.jpg&quot;);
@@ -1305,12 +1297,9 @@ $(this).fadeIn(300);
 &quot;Кайрос напоминал ей кошку, что играя, показывала вполне себе рабочие навыки. Ясно было, что в Лиграта ей ничего не угрожает, что там нет жучков, взрывных устройств, отравляющих веществ, но доблестный телохранитель с суровым лицом под ее ироничную ухмылку обшаривал со сканером метр за метром.&quot;,
 &quot;Kairos reminded her of a cat that, while playing, displayed surprisingly effective skills. It was clear that nothing in Ligrat Tower posed a threat—no bugs, explosives, or poisons—but the valiant bodyguard, his face stern beneath her ironic smirk, scanned every meter with his device.&quot;
 )&gt;&gt;
-&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;
-[[Далее-&gt;1_4_15_4]]
-&lt;&lt;else&gt;&gt;
-[[Next-&gt;1_4_15_4]]
-&lt;&lt;/if&gt;&gt;
-&lt;/div&gt;
+&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_4_15_4]]
+&lt;&lt;else&gt;&gt;[[Next-&gt;1_4_15_4]]
+&lt;&lt;/if&gt;&gt;&lt;/div&gt;
 
 
 </tw-passagedata><tw-passagedata pid="80" name="1_4_14_2" tags="" position="1025,5600" size="100,100">&lt;&lt;script&gt;&gt;
@@ -1328,12 +1317,9 @@ $(this).fadeIn(300);
 &quot;Впрочем, ее мысли по поводу прошлого смешались при виде башни Лиграта. Они поднялись на восемнадцатый этаж, Кайрос повозился с кодом на замке, зашел первым и осмотрел квартиру. Пока ее телохранитель проверял не пойми что в гостиной, Юнис без сил рухнула на диван.&quot;,
 &quot;However, her thoughts of the past blurred at the sight of Ligrat Tower. They ascended to the eighteenth floor; Kairos fiddled with the lock code, went in first, and surveyed the apartment. While her bodyguard inspected who-knows-what in the living room, YEunice collapsed onto the sofa, utterly drained.&quot;
 )&gt;&gt;
-&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;
-[[Далее-&gt;1_4_15_3]]
-&lt;&lt;else&gt;&gt;
-[[Next-&gt;1_4_15_3]]
-&lt;&lt;/if&gt;&gt;
-&lt;/div&gt;
+&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_4_15_3]]
+&lt;&lt;else&gt;&gt;[[Next-&gt;1_4_15_3]]
+&lt;&lt;/if&gt;&gt;&lt;/div&gt;
 
 </tw-passagedata><tw-passagedata pid="81" name="1_4_14_1" tags="" position="1025,5475" size="100,100">&lt;&lt;script&gt;&gt;
 $(&quot;#character-container-right img&quot;).fadeOut(300, function() {
@@ -1345,31 +1331,22 @@ $(this).fadeIn(300);
 &quot;- Осуждаете? - порывисто вскинул подбородок Кайрос.\n- Нет, как я смею. - прозвучало сие безэмоционально, ибо настоящие свои чувства приходилось скрывать.&quot;,
 &quot;- Do you judge him? - Kairos snapped his chin up abruptly.\n- No, how could I. - The words sounded emotionless, for her true feelings had to be kept hidden.&quot;
 )&gt;&gt;
-&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;
-[[Далее-&gt;1_4_14_2]]
-&lt;&lt;else&gt;&gt;
-[[Next-&gt;1_4_14_2]]
-&lt;&lt;/if&gt;&gt;
-&lt;/div&gt;
+&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_4_14_2]]
+&lt;&lt;else&gt;&gt;[[Next-&gt;1_4_14_2]]
+&lt;&lt;/if&gt;&gt;&lt;/div&gt;
 
 </tw-passagedata><tw-passagedata pid="82" name="1_4_15_4" tags="" position="1200,5850" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
 &quot;Юнис сложила руки на животе, поставив ступни, еще не привыкшие к ходьбе, на журнальный столик.\n- Не думаю, что меня всерьез кто-то хотел бы уничтожить.&quot;,
-&quot;YEunice folded her hands over her stomach, placing her feet—still unsteady from walking—on the coffee table.\n- I don&#39;t think anyone would seriously want to get rid of me.&quot;
+&quot;Eunice folded her hands over her stomach, placing her feet—still unsteady from walking—on the coffee table.\n- I don&#39;t think anyone would seriously want to get rid of me.&quot;
 )&gt;&gt;
-
-&lt;&lt;if $romanceWithLaertes&gt;&gt;
-&lt;&lt;= setup.t(
+&lt;&lt;if $romanceWithLaertes&gt;&gt;&lt;&lt;= setup.t(
 &quot;Кроме Эли. - тут же подумалось ей. Мысль застряла как острый осколок в мозгу — с болью и страхом, с чувством беспомощности. А Лаэрт? Что он? Навряд ли он меня поддержит или защитит, если дойдет до открытого конфликта с Эли.&quot;,
 &quot;Except Eli, she thought immediately. The thought lodged in her mind like a sharp shard—painful, frightening, with a sense of helplessness. And Laertes? What about him? He would hardly support or protect her if it came to an open conflict with Eli.&quot;
 )&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-
-&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;
-[[Далее-&gt;1_4_15_5]]
-&lt;&lt;else&gt;&gt;
-[[Next-&gt;1_4_15_5]]
-&lt;&lt;/if&gt;&gt;
-&lt;/div&gt;
+&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_4_15_5]]
+&lt;&lt;else&gt;&gt;[[Next-&gt;1_4_15_5]]
+&lt;&lt;/if&gt;&gt;&lt;/div&gt;
 
 </tw-passagedata><tw-passagedata pid="83" name="1_4_15_5" tags="" position="1200,5975" size="100,100">&lt;&lt;script&gt;&gt;
 $(&quot;#character-container-left img&quot;).fadeOut(300, function() {
@@ -1381,20 +1358,15 @@ $(this).fadeIn(300);
 &quot;Кайрос, впрочем, ее реплику проигнорировал. Он действовал по инструкции. Юнис невольно любовалась его движениями, пластикой его тела и горящими глазами.&quot;,
 &quot;Kairos, however, ignored her remark. He followed his instructions. YEunice couldn&#39;t help but admire his movements, the fluidity of his body, and the fire in his eyes.&quot;
 )&gt;&gt;
-
 &lt;&lt;if $romanceWithLaertes&gt;&gt;
 &lt;&lt;= setup.t(
 &quot;Лаэрт не поддержит. А вот Кайрос — мог бы, - пришло внезапное осознание. - Возможно, именно поэтому император назначил телохранителем вполне определенного человека, чье имя знала.&quot;,
 &quot;Laertes wouldn&#39;t support me. But Kairos—he might, she realized suddenly. Perhaps that&#39;s exactly why the emperor appointed a very specific person as her bodyguard, someone whose name she knew.&quot;
 )&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-
-&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;
-[[Далее-&gt;1_4_15_6]]
-&lt;&lt;else&gt;&gt;
-[[Next-&gt;1_4_15_6]]
-&lt;&lt;/if&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="84" name="1_4_15_6" tags="" position="1200,6100" size="100,100">&lt;&lt;script&gt;&gt;
+&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_4_15_6]]
+&lt;&lt;else&gt;&gt;[[Next-&gt;1_4_15_6]]
+&lt;&lt;/if&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="84" name="1_4_15_6" tags="" position="1200,6100" size="100,100">&lt;&lt;script&gt;&gt;
 $(&quot;#character-container-left img&quot;).fadeOut(300, function() {
 $(this).attr(&#39;src&#39;, &#39;media/characters/Eunice_military_sad.webp&#39;); 
 $(this).fadeIn(300); 
@@ -1408,13 +1380,10 @@ $(this).fadeIn(300);
 &quot;Внезапно накатившая слабость оказалась не просто усталостью. Видимо, подходило к концу действие успокоительного, что удерживало якоря в голове, и та начала разрываться. Она не понимала, кем является — Юнис или Тероном? Состояние девушки резко ухудшилось: руки казались //не ее руками//, вес тела — слишком маленьким, ее шатало, и хорошо, что она сидела в этот момент.&quot;,
 &quot;The sudden wave of weakness was more than mere fatigue. Apparently, the sedative that had been holding her anchors in place was wearing off, and they began to unravel. She could not tell who she was — YEunice or Theron? Her condition deteriorated sharply: her hands felt //not her own//, her body too light, she swayed, and it was fortunate she was sitting at that moment.&quot;
 )&gt;&gt;
-&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;
-[[- Мне плохо.-&gt;1_4_15_9]]
-&lt;&lt;else&gt;&gt;
-[[- I feel unwell.-&gt;1_4_15_9]]
-&lt;&lt;/if&gt;&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[- Мне плохо.-&gt;1_4_15_9]]
+&lt;&lt;else&gt;&gt;[[- I feel unwell.-&gt;1_4_15_9]]
+&lt;&lt;/if&gt;&gt;&lt;/div&gt;
+
 
 
 </tw-passagedata><tw-passagedata pid="85" name="1_4_15_7" tags="" position="950,7575" size="100,100">&lt;!-- Тут она реагирует как Терон --&gt;
@@ -1428,12 +1397,9 @@ $(this).fadeIn(300);
 &quot;Искренняя улыбка Кайроса потухла, мгновенно сменившись на точно такую же, но казенную.\n- Я не успел тут все проверить.&quot;,
 &quot;Kairos’ genuine grin faded, instantly replaced by an identical but official one.\n- I haven’t had a chance to check everything here yet.&quot;
 )&gt;&gt;
-&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;
-[[Далее-&gt;1_4_138883_9_1]]
-&lt;&lt;else&gt;&gt;
-[[Next-&gt;1_4_138883_9_1]]
-&lt;&lt;/if&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="86" name="1_4_15_8" tags="" position="1450,7600" size="100,100">&lt;!-- Тут она реагирует как Юнис --&gt;
+&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_4_138883_9_1]]
+&lt;&lt;else&gt;&gt;[[Next-&gt;1_4_138883_9_1]]
+&lt;&lt;/if&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="86" name="1_4_15_8" tags="" position="1450,7600" size="100,100">&lt;!-- Тут она реагирует как Юнис --&gt;
 &lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
 &quot;- Если вы позволите. Это будет удобнее, чем дежурить в помещении для охраны. Вдруг опять нехорошо станет.\nЮнис постаралась не комментировать излишнее рвение Кайроса. Он ее забавлял, заставлял чувствовать себя живой: живее, чем когда бы то ни было.&quot;,
 &quot;- If you don’t mind. It will be more convenient than staying on duty in the security room. In case you feel unwell again.\nYEunice tried not to comment on Kairos’ overzealousness. He amused her, made her feel alive—more alive than ever before.&quot;
@@ -1452,15 +1418,12 @@ $(this).fadeIn(300);
 });
 &lt;&lt;/script&gt;&gt;
 &lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
-&quot;Ее ощутимо знобило, так, что не было возможности контролировать движения, а зубы лязгали до боли. \n- Держим строй, - коротко сказал Кайрос. Он подхватил ее под локоть и потащил к ванной, даже не спрашивая согласия.\n- Куда?.. - протарахтела она сквозь зубовную дробь, но ответа не последовало.&quot;,
+&quot;Ее ощутимо знобило, так, что не было возможности контролировать движения, а зубы лязгали до боли. \n- Держим строй, - коротко сказал Кайрос. Он подхватил ее под локоть и потащил к ванной, даже не спрашивая согласия.\n- Куда?.. - протарахтела она сквозь стук зубов, но ответа не последовало.&quot;,
 &quot;She shivered violently, unable to control her movements, her teeth chattering painfully.\n- Stay in formation, - Kairos said curtly. He grabbed her by the elbow and dragged her toward the bathroom without asking for consent.\n- Where to?.. - she rattled through her chattering teeth, but no answer came.&quot;
 )&gt;&gt;
-&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;
-[[Далее-&gt;1_4_1333_9_11]]
-&lt;&lt;else&gt;&gt;
-[[Next-&gt;1_4_1333_9_11]]
-&lt;&lt;/if&gt;&gt;
-&lt;/div&gt;
+&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_4_1333_9_11]]
+&lt;&lt;else&gt;&gt;[[Next-&gt;1_4_1333_9_11]]
+&lt;&lt;/if&gt;&gt;&lt;/div&gt;
 
 </tw-passagedata><tw-passagedata pid="88" name="1_4_15_7_1" tags="" position="925,7850" size="100,100">&lt;&lt;script&gt;&gt;
 setBackground(&quot;media/locations/VexorPrime_Eunice_bedroom.jpg&quot;);
@@ -1474,12 +1437,9 @@ $(&quot;#character-container-right img&quot;).fadeOut(300);
 &quot;В постели не стало легче ни на йоту. Все ей было не то и не так: кровать //другая// и давящая тишина в довесок. Терон жил в квартале попроще и повеселее. Ближе к барам и развлекательным центрам, специально, чтобы несмотря на шумопоглотители, уши, привычные к гулу инженерных систем, ощущали хоть что-то.&quot;,
 &quot;Being in bed didn’t make things any easier. Everything felt wrong: the bed //different//, and the oppressive silence on top of it. Theron had lived in a simpler, livelier district, closer to bars and entertainment centers, deliberately so that, despite the noise dampeners, ears accustomed to the hum of engineering systems could sense at least something.&quot;
 )&gt;&gt;
-&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;
-[[Далее-&gt;1_4_15_7_2]]
-&lt;&lt;else&gt;&gt;
-[[Next-&gt;1_4_15_7_2]]
-&lt;&lt;/if&gt;&gt;
-&lt;/div&gt;
+&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_4_15_7_2]]
+&lt;&lt;else&gt;&gt;[[Next-&gt;1_4_15_7_2]]
+&lt;&lt;/if&gt;&gt;&lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="89" name="1_4_15_8_1" tags="" position="1450,7850" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
 &quot;Юнис наблюдала за ними долго, сама не помнила, сколько именно. А потом, будто по команде, огни стали глуше, мягче: город готовился спать.\nСтарые воспоминания о Вексор Прайм были смазанными: то деловой обед в высотке, то вечная головная боль от недосыпа и раздражение от остановок на пропускных пунктах. Терон терпеть не мог столицу. А лично ей нравился Вексор Прайм. Начинал нравиться.&quot;,
 &quot;YEunice watched them for a long time, losing track of how long exactly. Then, as if on cue, the lights dimmed, softened: the city was preparing to sleep.\nHer old memories of Vexor Prime were blurred—sometimes a business lunch in a high-rise, sometimes the endless headache from lack of sleep and irritation at checkpoint stops. Theron could never tolerate the capital. But she personally liked Vexor Prime. She was beginning to like it.&quot;
@@ -1504,12 +1464,9 @@ $(this).fadeIn(300);
 &quot;Она ушла мыслями в чужое прошлое, такое далекое, что не сразу поняла, что ее окликнул Кайрос.\n- Спокойной ночи.\nЮнис промолчала. С трудом она подавляла раздраженное восклицание из разряда \&quot;Раньше обслуга умела себя вести!\&quot;, понимая, насколько это бы прозвучало неуместно. Кайрос, видимо, уловил ее настроение и ретировался.\nЗаснула она не скоро.&quot;,
 &quot;Her thoughts drifted into someone else&#39;s past, so distant that she didn’t immediately notice Kairos calling out to her.\n- Good night.\nYEunice remained silent. She struggled to suppress an irritated outburst along the lines of &#39;Servants used to know how to behave!&#39; realizing how inappropriate it would sound. Kairos, apparently sensing her mood, withdrew.\nShe didn’t fall asleep easily.&quot;
 )&gt;&gt;
-&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;
-[[Далее-&gt;final_1]]
-&lt;&lt;else&gt;&gt;
-[[Next-&gt;final_1]]
-&lt;&lt;/if&gt;&gt;
-&lt;/div&gt;
+&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;final_1]]
+&lt;&lt;else&gt;&gt;[[Next-&gt;final_1]]
+&lt;&lt;/if&gt;&gt;&lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="91" name="1_4_15_8_2" tags="" position="1450,7975" size="100,100">&lt;&lt;script&gt;&gt;
 $(&quot;#character-container-left img&quot;).fadeOut(300, function() {
 $(this).attr(&#39;src&#39;, &#39;media/characters/Eunice_nude_smile.webp&#39;); 
@@ -1551,25 +1508,19 @@ $(&quot;#character-container-right img&quot;).fadeOut(600);
 &quot;Вскоре она сама выключила воду и посмотрела на Кайроса. Мокрая одежда неприятно липла к коже. Возникла неловкая пауза, но телохранитель быстро нашелся, вышел, повозился немного и протянул ей полотенце, не делая уже ни шага внутрь душевой.\n- Держи. Только оно пахнет сильно, - сказал он, будто между делом. - Душистым чем-то.&quot;,
 &quot;Soon she turned off the water herself and looked at Kairos. Her wet clothes clung uncomfortably to her skin. An awkward pause arose, but the bodyguard quickly regained his composure, stepped out, fidgeted a bit, and handed her a towel, not stepping back into the shower.\n- Here. But it smells strong, - he said casually. - Of something fragrant.&quot;
 )&gt;&gt;
-&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;
-[[Далее-&gt;1_4_15_9_2]]
-&lt;&lt;else&gt;&gt;
-[[Next-&gt;1_4_15_9_2]]
-&lt;&lt;/if&gt;&gt;
-&lt;/div&gt;
+&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_4_15_9_2]]
+&lt;&lt;else&gt;&gt;[[Next-&gt;1_4_15_9_2]]
+&lt;&lt;/if&gt;&gt;&lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="94" name="1_4_15_9_2" tags="" position="1200,7225" size="100,100">&lt;&lt;script&gt;&gt;
 setBackground(&quot;media/locations/VexorPrime_Eunice_bedroom.jpg&quot;);
 &lt;&lt;/script&gt;&gt;
 &lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
-&quot;Вышла Юнис в одном полотенце. \n- Я не чувствую запахов, - призналась она. - Совсем.\nСкорее всего, это была \&quot;недоделка\&quot; ученых, побочный эффект биоревитализации, и возможно, стремящийся к совершенству во всем Лаэрт отправил бы ее на переделку, узнай он о недочете, но Юнис уже не боялась признаться Кайросу.&quot;,
-&quot;YEunice stepped out in just a towel.\n- I don&#39;t smell anything, - she admitted. - Not at all.\nMost likely, it was a &#39;flaw&#39; of the scientists, a side effect of the biorevitalization, and Laertes, striving for perfection in everything, would probably have sent it back for correction if he had noticed the defect—but YEunice was no longer afraid to admit it to Kairos.&quot;
+&quot;Вышла Юнис в одном полотенце. \n- Я не чувствую запахов, - призналась она. - Совсем.\nСкорее всего, это была недоделка ученых, побочный эффект биоревитализации. Стремящийся к совершенству во всем Лаэрт запросто отправил бы ее на переделку - то бишь, убил бы и заменил корректной копией. Тем не менее, Юнис уже не боялась признаться в таком Кайросу.&quot;,
+&quot;Eunice stepped out in nothing but a towel.\n- I can’t smell anything, - she admitted. - Not at all.\nIt was most likely a flaw of the scientists, a side effect of the biorevitalization. Laertes, ever striving for perfection, would have easily sent her back for &#39;correction&#39; — that is, killed her and replaced her with a proper copy. Yet Eunice was no longer afraid to confess this to Kairos.&quot;
 )&gt;&gt;
-&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;
-[[Далее-&gt;4545435]]
-&lt;&lt;else&gt;&gt;
-[[Next-&gt;4545435]]
-&lt;&lt;/if&gt;&gt;
-&lt;/div&gt;
+&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;4545435]]
+&lt;&lt;else&gt;&gt;[[Next-&gt;4545435]]
+&lt;&lt;/if&gt;&gt;&lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="95" name="1_3_1" tags="" position="750,1850" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
 &quot;Зато прежняя жизнь вспоминалась кристально ясно: вся она была положена на служение великому императору. Юнис с горечью вспоминала ожидание каждого его слова в тронном зале, взгляда, знака того, что ты - особенный...&quot;,
 &quot;Her past life, by contrast, came back with crystal clarity: it had been entirely devoted to serving the great Emperor. Eunice bitterly remembered waiting for each of his words in the throne room, each glance, each sign that you were special...&quot;
@@ -1600,8 +1551,8 @@ $(&quot;#character-container-right img&quot;).fadeOut(300, function() {
 });
 &lt;&lt;/script&gt;&gt;
 &lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
-&quot;Ей было сложно отделить искусственно созданное новое \&quot;Я\&quot; от груза старых воспоминаний, и говоря о \&quot;своем\&quot; наследстве, она метко обозначила и то, что оставил Терон, и то, что должна была принять на себя она. \nВпрочем, помогали предустановки, вшитые в подкорку её создателями — имя, самосознание, пол, возраст, амбиции.&quot;,
-&quot;It was difficult for her to separate the artificially created new &#39;self&#39; from the burden of old memories, and when speaking of her &#39;inheritance,&#39; she accurately encompassed both what Theron had left and what she herself was meant to take on.\nHowever, the presets embedded in her subconscious—name, self-awareness, biological sex, age, ambitions—helped greatly.&quot;
+&quot;Ей было сложно отделить искусственно созданное \&quot;Я\&quot; от старых воспоминаний, и говоря о \&quot;своем\&quot; наследстве, она метко обозначила и то, что оставил Терон, и то, что должна была принять на себя она. \nВпрочем, помогали предустановки, вшитые в подкорку ее создателями — имя, самосознание, пол, возраст, амбиции.&quot;,
+&quot;It was difficult for her to separate the artificially created &#39;self&#39; from the old memories, and when speaking of her &#39;inheritance,&#39; she accurately encompassed both what Theron had left and what she herself was meant to take on.\nHowever, the presets embedded in her subconscious—name, self-awareness, biological sex, age, ambitions—helped greatly.&quot;
 )&gt;&gt;
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_6_1_1_1_1]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_6_1_1_1_1]]&lt;&lt;/if&gt;&gt;
 &lt;/div&gt;
@@ -1698,7 +1649,7 @@ $(&quot;#character-container-right img&quot;).fadeOut(300, function() {
 });
 &lt;&lt;/script&gt;&gt;
 &lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
-&quot;- Жить будешь в башне Лиграта. - Лаэрт провел пальцем по линии обнаженного плеча Юнис, дизайн которого выбирал сам, и тут же заметил, как на ее коже появились мурашки., Ему бы хотелось списать это на чувственную реакцию...&quot;,
+&quot;- Жить будешь в башне Лиграта. - Лаэрт провел пальцем по линии обнаженного плеча Юнис, дизайн которого выбирал сам, и тут же заметил, как на ее коже появились мурашки. Ему бы хотелось списать это на чувственную реакцию...&quot;,
 &quot;- You’ll live in the Ligrat Tower. - Laertes traced a finger along the line of Eunice’s bare shoulder, the design of which he had chosen himself. He immediately noticed goosebumps forming on her skin, and he wanted so much to blame it on a sensual reaction...&quot;
 )&gt;&gt;
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;deserve_rest]]&lt;&lt;else&gt;&gt;[[Next-&gt;deserve_rest]]&lt;&lt;/if&gt;&gt;
@@ -1808,31 +1759,22 @@ $(this).fadeIn(300);
 )&gt;&gt; 
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[- Расскажите о себе, Кайрос.-&gt;1_4_13]]&lt;&lt;else&gt;&gt;[[- Tell me about yourself, Kairos.-&gt;1_4_13]]&lt;&lt;/if&gt;&gt; &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="118" name="1_4_1333_9_1" tags="" position="1200,6975" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
-&quot;- Знаю, - ответил он. - Но гад полезный. И симпатичный.\nОна откинулась затылком к стене, позволив горячей воде бить по плечам, и поняла, что напряжение спадает. Не из-за воды - из-за того, что он не строил из себя спасителя, не сюсюкал, не юлил, а прямо показал свои интересы.&quot;,
+&quot;- Знаю, - ответил он. - Но засранец полезный. И симпатичный.\nОна откинулась затылком к стене, позволив горячей воде бить по плечам, и поняла, что напряжение спадает. Не из-за воды - из-за того, что он не строил из себя спасителя, не сюсюкал, не юлил, а прямо обозначил свои интересы.&quot;,
 &quot;- I know, - he replied. - But a useful bastard. And handsome.\nShe leaned back against the wall, letting the hot water beat down on her shoulders, and realized the tension was easing. Not because of the water—but because he didn’t play the hero, didn’t coo, didn’t hedge—he just showed his intentions plainly.&quot;
 )&gt;&gt;
-&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;
-[[Далее-&gt;1_4_15_9_1]]
-&lt;&lt;else&gt;&gt;
-[[Next-&gt;1_4_15_9_1]]
-&lt;&lt;/if&gt;&gt;
-&lt;/div&gt;
+&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_4_15_9_1]]
+&lt;&lt;else&gt;&gt;[[Next-&gt;1_4_15_9_1]]
+&lt;&lt;/if&gt;&gt;&lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="119" name="1_4_138883_9_1" tags="" position="950,7725" size="100,100">&lt;&lt;script&gt;&gt;
-$(&quot;#character-container-right img&quot;).fadeOut(300, function() {
-$(this).attr(&#39;src&#39;, &#39;media/characters/Kiros_angry.webp&#39;); 
-$(this).fadeIn(300); 
-});
+$(&quot;#character-container-right img&quot;).fadeOut(300);
 &lt;&lt;/script&gt;&gt;
 &lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
-&quot;- Так заканчивай, у меня нет сил терпеть эту ерунду. - выплюнула она в раздражении. Ее будто тянуло назад в спасительную черноту: в сон... Будто снова хотелось хотя бы ненадолго окунуться в свою смерть..&quot;,
-&quot;- Just finish it, I can’t bear this nonsense anymore, - she spat irritably. It was as if she were being pulled back into the saving darkness: into sleep... As if she longed once again, even briefly, to sink into her own death.&quot;
+&quot;- Так заканчивай, у меня нет сил терпеть эту ерунду. - выплюнула она в раздражении. Ее тянуло назад, в спасительную черноту: в сон... Будто снова хотелось хотя бы ненадолго окунуться в свою смерть.&quot;,
+&quot;- Just finish it, I can’t bear this nonsense anymore, - she spat irritably. She were being pulled back into the saving darkness: into sleep... As if she longed once again, even briefly, to sink into her own death.&quot;
 )&gt;&gt;
-&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;
-[[Далее-&gt;1_4_15_7_1]]
-&lt;&lt;else&gt;&gt;
-[[Next-&gt;1_4_15_7_1]]
-&lt;&lt;/if&gt;&gt;
-&lt;/div&gt;
+&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_4_15_7_1]]
+&lt;&lt;else&gt;&gt;[[Next-&gt;1_4_15_7_1]]
+&lt;&lt;/if&gt;&gt;&lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="120" name="1_2_3_j" tags="" position="350,2225" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t( 
 &quot;//Тысячи драгоценных воспоминаний: как приподнимает бровь, как слегка склоняет голову, если что-то одобряет. Эти крохи распаляли воображение Терона, заставляли мечтать. Заставляли творить.\nНо мечта оставалась мечтой.//&quot;, 
 
@@ -1866,7 +1808,7 @@ $(&quot;#character-container-right img&quot;).fadeOut(300);
 &lt;&lt;/script&gt;&gt;
 &lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
 &quot;Он вышел, и наконец, Юнис осталась наедине с собой и с городом. Огни за окном завораживали. Массивные башни Вексор Прайм устремлялись вверх, стремились за безграничными амбициями своих создателей, и она собственным животом ощущала ту мощь, что стояла за ними.&quot;,
-&quot;He left, and at last YEunice was alone with herself and the city. The lights outside the window were mesmerizing. The massive towers of Vexor Prime soared upward, reaching for the boundless ambitions of their creators, and she felt the power behind them deep in her own gut.&quot;
+&quot;He left, and at last Eunice was alone with herself and the city. The lights outside the window were mesmerizing. The massive towers of Vexor Prime soared upward, reaching for the boundless ambitions of their creators, and she felt the power behind them deep in her own gut.&quot;
 )&gt;&gt;
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;
 [[Далее-&gt;1_4_15_8_1]]
@@ -1928,8 +1870,7 @@ setBackground(&quot;media/locations/chapter_final_Teron.webp&quot;);
 $(&quot;#tablet-container&quot;).empty().hide();
 $(&quot;#story&quot;).removeClass(&quot;tablet-active&quot;);
 &lt;&lt;/script&gt;&gt;
-&lt;div class=&quot;footer-bar&quot;&gt;
-Продолжение в разработке.
+&lt;div class=&quot;footer-bar&quot;&gt;Продолжение в разработке.
 Автор - Каролина Л.
 [[До скорых встреч!-&gt;null]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="129" name="null" tags="" position="1200,8625" size="100,100"></tw-passagedata><tw-passagedata pid="130" name="1_0_1_223445" tags="" position="425,300" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
 &quot;Свет был резким, немилосердным: лампы висели прямо над лицом. Она попыталась вдохнуть глубже и поняла, что грудная клетка едва слушается. В ушах звенело.&quot;,
@@ -1938,13 +1879,12 @@ $(&quot;#story&quot;).removeClass(&quot;tablet-active&quot;);
 &lt;&lt;if $lang is &quot;ru&quot;&gt;&gt;[[Далее-&gt;1_0_1_223446]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_0_1_223446]]&lt;&lt;/if&gt;&gt;
 &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="131" name="1_0_1_223446" tags="" position="425,425" size="100,100">&lt;&lt;script&gt;&gt;
-$(&quot;#character-container-right&quot;).fadeIn(900); 
 $(&quot;#character-container-left img&quot;).fadeOut(300, function() {
 $(this).attr(&#39;src&#39;, &#39;media/characters/Eunice_surprised.webp&#39;); // Меняем src у изображения
 $(this).fadeIn(600); // Показываем новый спрайт
 });
 $(&quot;#character-container-right img&quot;).fadeOut(300, function() {
-$(this).attr(&#39;src&#39;, &#39;media/characters/Teron.webp&#39;); // Меняем src у изображения
+$(this).attr(&#39;src&#39;, &#39;media/characters/Teron_surprized.webp&#39;); // Меняем src у изображения
 $(this).fadeIn(600); // Показываем новый спрайт
 });
 &lt;&lt;/script&gt;&gt;
@@ -1956,15 +1896,11 @@ $(this).fadeIn(600); // Показываем новый спрайт
 &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="132" name="1_0_1_223448" tags="" position="425,675" size="100,100">&lt;&lt;script&gt;&gt;
 setBackground(&quot;media/locations/Laert_Med_Lab.jpg&quot;);
-$(&quot;#character-container-left img&quot;).fadeOut(300, function() {
-$(this).attr(&#39;src&#39;, &#39;media/characters/Eunice_nude.webp&#39;); // Меняем src у изображения
-$(this).fadeIn(600); // Показываем новый спрайт
-});
 $(&quot;#character-container-right img&quot;).fadeOut(300);
 &lt;&lt;/script&gt;&gt;
 &lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
-&quot;Юнис попробовала поднять голову. Тело откликалось с задержкой, но все же подчинилось. Торопливый стук шагов и голос, теперь — знакомый. Твердый, уверенный. Властный.\n- Она стабильна? Оставьте нас.&quot;,
-&quot;Eunice tried to raise her head. Her body lagged, sluggish, but complied. The rapid tap of footsteps echoed, followed by a voice — now familiar. Steady, assured. Commanding.\n– Is she stable? Clear the room.&quot;
+&quot;Она попробовала поднять голову. Тело откликалось с задержкой, но все же подчинилось. Торопливый стук шагов и голос, теперь — знакомый. Твердый, уверенный. Властный.\n- Она стабильна? Оставьте нас.&quot;,
+&quot;She tried to raise her head. Her body lagged, sluggish, but complied. The rapid tap of footsteps echoed, followed by a voice — now familiar. Steady, assured. Commanding.\n– Is she stable? Clear the room.&quot;
 )&gt;&gt;
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_0_1_2234410]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_0_1_2234410]]&lt;&lt;/if&gt;&gt;
 &lt;/div&gt;
@@ -2030,6 +1966,10 @@ $(this).fadeIn(600);
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_0_1_2234416]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_0_1_2234416]]&lt;&lt;/if&gt;&gt;
 &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="139" name="1_0_1_2234477" tags="" position="425,550" size="100,100">&lt;&lt;script&gt;&gt;
+$(&quot;#character-container-left img&quot;).fadeOut(300, function() {
+$(this).attr(&#39;src&#39;, &#39;media/characters/Eunice_nude.webp&#39;); // Меняем src у изображения
+$(this).fadeIn(600); // Показываем новый спрайт
+});
 $(&quot;#character-container-right img&quot;).fadeOut(300, function() {
 $(this).attr(&#39;src&#39;, &#39;media/characters/Teron_translucent.webp&#39;); // Меняем src у изображения
 $(this).fadeIn(600); // Показываем новый спрайт
@@ -2072,12 +2012,9 @@ $(this).fadeIn(300);
 &quot;Через минуту он уже одной рукой вжимал ее в кафель в ванной, а второй - включал воду. Горячая струя ударила прямо в лицо, сшибая дыхание, потекла по одежде.\n- С ума сошел?! - выдохнула Юнис, но Кайрос твердо держал ее за плечо, пока оба они не промокли до нитки.&quot;,
 &quot;Within a minute, he was pressing her against the bathroom tiles with one hand while turning on the water with the other. The hot stream hit her face, knocking the breath out of her and soaking her clothes.\n- Are you crazy?! - YEunice gasped, but Kairos held her firmly by the shoulder as they both became drenched to the bone.&quot;
 )&gt;&gt;
-&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;
-[[Далее-&gt;1_4_1333_9_12]]
-&lt;&lt;else&gt;&gt;
-[[Next-&gt;1_4_1333_9_12]]
-&lt;&lt;/if&gt;&gt;
-&lt;/div&gt;
+&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_4_1333_9_12]]
+&lt;&lt;else&gt;&gt;[[Next-&gt;1_4_1333_9_12]]
+&lt;&lt;/if&gt;&gt;&lt;/div&gt;
 
 </tw-passagedata><tw-passagedata pid="142" name="1_4_1333_9_12" tags="" position="1200,6475" size="100,100">&lt;&lt;script&gt;&gt;
 $(&quot;#character-container-left img&quot;).fadeOut(300, function() {
@@ -2089,12 +2026,9 @@ $(this).fadeIn(300);
 &quot;- Можно без \&quot;спасибо\&quot;. Вдох, выдох... Сейчас полегчает, - спокойно ответил он.\nПар наполнил помещение, волосы прилипли к лицу, а мокрая одежда сковала тело. Юнис судорожно дышала, как приказал ее же телохранитель внезапно командным армейским тоном - но ей правда становилось легче.&quot;,
 &quot;- No need for \&quot;thank you.\&quot; Inhale, exhale... It will ease soon, - he replied calmly.\nSteam filled the room, her hair stuck to her face, and her wet clothes clung to her body. YEunice breathed convulsively, just as her bodyguard had suddenly commanded in a sharp military tone—but she really did start to feel better.&quot;
 )&gt;&gt;
-&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;
-[[Далее-&gt;1_4_1333_9_13]]
-&lt;&lt;else&gt;&gt;
-[[Next-&gt;1_4_1333_9_13]]
-&lt;&lt;/if&gt;&gt;
-&lt;/div&gt;
+&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_4_1333_9_13]]
+&lt;&lt;else&gt;&gt;[[Next-&gt;1_4_1333_9_13]]
+&lt;&lt;/if&gt;&gt;&lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="143" name="1_4_1333_9_13" tags="" position="1200,6600" size="100,100">&lt;&lt;script&gt;&gt;
 $(&quot;#character-container-left img&quot;).fadeOut(300, function() {
 $(this).attr(&#39;src&#39;, &#39;media/characters/Eunice_military_smiled_wet.webp&#39;); 
@@ -2109,22 +2043,16 @@ $(this).fadeIn(300);
 &quot;- Ну как? - спросил он. - Живая?\nЮнис ухмыльнулась сквозь тяжелое дыхание, а Кайрос почему-то отвел взгляд.\n- Если ты завтра доложишь императору, что его новая игрушка развалилась в первый же день, он меня прикончит.&quot;,
 &quot;- How are you? - he asked. - Alive?\nYEunice smirked through her heavy breathing, and for some reason, Kairos looked away.\n- If you report to the emperor tomorrow that his new toy fell apart on the very first day, he&#39;ll finish me off.&quot;
 )&gt;&gt;
-&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;
-[[Далее-&gt;1_4_1333_9_14]]
-&lt;&lt;else&gt;&gt;
-[[Next-&gt;1_4_1333_9_14]]
-&lt;&lt;/if&gt;&gt;
-&lt;/div&gt;
+&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_4_1333_9_14]]
+&lt;&lt;else&gt;&gt;[[Next-&gt;1_4_1333_9_14]]
+&lt;&lt;/if&gt;&gt;&lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="144" name="1_4_1333_9_14" tags="" position="1200,6725" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
-&quot;- Могу хоть сейчас доложить, - лениво ответил Кайрос, посмотрев на нее другими глазами, будто между ними уже не было субординации, а у него появились рычаги влияния на клиентку.\n- Отлично, - огрызнулась Юнис. - Напиши в отчет: «Не контролирующая себя истеричка, протекла по швам». И радуйся результату - сразу в утиль спишет.&quot;,
-&quot;- I could report it right now, - Kairos replied lazily, looking at her with different eyes, as if their hierarchy no longer existed and he now held leverage over his client.\n- Perfect, - YEunice snapped. - Put in the report: &#39;Uncontrollable hysteric, fell apart at the seams.&#39; And enjoy the outcome—she&#39;ll scrap it immediately.&quot;
+&quot;- Могу хоть сейчас доложить, - дразня, ответил Кайрос, глядя на нее другими глазами, будто между ними уже не было субординации.\n- Отлично, - огрызнулась Юнис. - Напиши в отчет: «Не контролирующая себя истеричка, протекла по швам». И радуйся результату - сразу в утиль спишет.&quot;,
+&quot;- I could report it right now, - Kairos replied teasingly, looking at her with different eyes, as if their hierarchy no longer existed.\n- Perfect, - YEunice snapped. - Put in the report: &#39;Uncontrollable hysteric, fell apart at the seams.&#39; And enjoy the outcome—she&#39;ll scrap it immediately.&quot;
 )&gt;&gt;
-&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;
-[[Далее-&gt;1_4_1333_9_15]]
-&lt;&lt;else&gt;&gt;
-[[Next-&gt;1_4_1333_9_15]]
-&lt;&lt;/if&gt;&gt;
-&lt;/div&gt;
+&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_4_1333_9_15]]
+&lt;&lt;else&gt;&gt;[[Next-&gt;1_4_1333_9_15]]
+&lt;&lt;/if&gt;&gt;&lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="145" name="1_4_1333_9_15" tags="" position="1200,6850" size="100,100">&lt;&lt;script&gt;&gt;
 $(&quot;#character-container-right img&quot;).fadeOut(300, function() {
 $(this).attr(&#39;src&#39;, &#39;media/characters/Kiros_wet_solid.webp&#39;); 
@@ -2132,15 +2060,12 @@ $(this).fadeIn(300);
 });
 &lt;&lt;/script&gt;&gt;
 &lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
-&quot;Он хмыкнул.\n- Ну уж нет. Я тоже хочу побывать на Этернис. Даже пиджак заказал. И нам выдали пропуски на все кварталы Вексор-Прайм, я надеялся посмотреть город. \nОна неожиданно рассмеялась. Смех сорвался грубо, сипло, но с облегчением.\n- Ты редкий гад, Кайрос.&quot;,
+&quot;Он хмыкнул.\n- Ну уж нет. Я тоже хочу побывать на Этернис. Даже пиджак заказал. И нам же выдали пропуски на все кварталы Вексор-Прайм, я надеялся посмотреть город. \nОна неожиданно рассмеялась. Смех сорвался грубо, сипло, но с облегчением.\n- Ты редкий засранец, Кайрос.&quot;,
 &quot;He snorted.\n- Not a chance. I want to visit Eternis too. I even ordered a jacket. And we were given passes to all districts of Vexor-Prime; I hoped to see the city.\nShe laughed unexpectedly. The laughter came out rough, hoarse, but with relief.\n- You&#39;re a rare bastard, Kairos.&quot;
 )&gt;&gt;
-&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;
-[[Далее-&gt;1_4_1333_9_1]]
-&lt;&lt;else&gt;&gt;
-[[Next-&gt;1_4_1333_9_1]]
-&lt;&lt;/if&gt;&gt;
-&lt;/div&gt;
+&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_4_1333_9_1]]
+&lt;&lt;else&gt;&gt;[[Next-&gt;1_4_1333_9_1]]
+&lt;&lt;/if&gt;&gt;&lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="146" name="4545435" tags="" position="1200,7350" size="100,100">&lt;&lt;script&gt;&gt;
 $(&quot;#character-container-right img&quot;).fadeOut(300, function() {
 $(this).attr(&#39;src&#39;, &#39;media/characters/Kiros_nude.webp&#39;); 
@@ -2151,12 +2076,9 @@ $(this).fadeIn(300);
 &quot;- Значит, парфюмерию буду выбирать тебе сам, - улыбнулся он.\nКайрос стоял посреди гостиной полуголый - запасной одежды у него не было, и раздеться было разумнее, чем заливать водой дорогой интерьер.&quot;,
 &quot;- So, I’ll choose your perfume for you myself, - he smiled.\nKairos stood half-naked in the middle of the living room—he had no spare clothes, and it made more sense to undress than to drench the expensive interior with water.&quot;
 )&gt;&gt;
-&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;
-[[Далее-&gt;1_4_15_8666666]]
-&lt;&lt;else&gt;&gt;
-[[Next-&gt;1_4_15_8666666]]
-&lt;&lt;/if&gt;&gt;
-&lt;/div&gt;
+&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_4_15_8666666]]
+&lt;&lt;else&gt;&gt;[[Next-&gt;1_4_15_8666666]]
+&lt;&lt;/if&gt;&gt;&lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="147" name="intro" tags="" position="425,50" size="100,100">&lt;&lt;if $lang is &quot;ru&quot;&gt;&gt;
   &lt;&lt;script&gt;&gt;setBackground(&quot;media/locations/title_ru.jpg&quot;);&lt;&lt;/script&gt;&gt;
 &lt;&lt;else&gt;&gt;
@@ -2169,18 +2091,16 @@ $(this).fadeIn(300);
     &quot;[[Start game-&gt;rich_granddaughter]]&quot;
   )&gt;&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="148" name="1_4_15_8666666" tags="" position="1200,7475" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;
-&lt;&lt;if $echo &gt;= 0&gt;&gt;
-&lt;&lt;= setup.t(
+&lt;&lt;if $echo &gt;= 0&gt;&gt;&lt;&lt;= setup.t(
 &quot;Ей захотелось остаться одной, и Юнис отослала телохранителя нетерпеливым жестом, каким Терон обычно прогонял надоедливых девушек на одну ночь из своей спальни.&quot;,
-&quot;She wanted to be alone, and YEunice waved the bodyguard away with the same impatient gesture Theron would use to shoo bothersome girls from his bedroom for a single night.&quot;
+&quot;She wanted to be alone, and Yunice waved the bodyguard away with the same impatient gesture Theron would use to shoo bothersome girls from his bedroom for a single night.&quot;
 )&gt;&gt;
-[[- I&#39;m tired... tired.-&gt;1_4_15_7]]
-&lt;&lt;else&gt;&gt;
-&lt;&lt;= setup.t(
+	&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[- Я устал. Устала...-&gt;1_4_15_7]]&lt;&lt;else&gt;&gt;[[I’m tired. I’m… he? She?-&gt;1_4_15_7]]&lt;&lt;/if&gt;&gt;
+&lt;&lt;else&gt;&gt;&lt;&lt;= setup.t(
 &quot;Она смело улыбнулась сама себе. Что бы там ни было с Лаэртом, с текущими его поручениями - она со всем справится. Она - не Терон. Она имеет все его преимущества и ни одного недостатка. Юнис снова заметила, что Кайрос на нее посматривает, и внимание это странным образом ей льстило.&quot;,
-&quot;She smiled boldly to herself. Whatever was going on with Laertes, she would manage all his current assignments. She was not Theron. She had all his strengths and none of his flaws. YEunice noticed once again that Kairos was glancing at her, and the attention oddly flattered her.&quot;
+&quot;She smiled boldly to herself. Whatever was going on with Laertes, she would manage all his current assignments. She was not Theron. She had all his strengths and none of his flaws. Eunice noticed once again that Kairos was glancing at her, and the attention oddly flattered her.&quot;
 )&gt;&gt;
-[[- Will you stay in the living room, Kairos?-&gt;1_4_15_8]]
+	&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[- Спокойной ночи, Кайрос.-&gt;1_4_15_8]]&lt;&lt;else&gt;&gt;[[Good night, Kairos-&gt;1_4_15_8]]&lt;&lt;/if&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="149" name="Love_notabene" tags="" position="475,2075" size="100,100">&lt;&lt;script&gt;&gt;
@@ -2271,7 +2191,7 @@ $(&quot;#tablet-container&quot;).html(&#39;&lt;img src=&quot;media/tablet/Notabe
 	box-shadow: 0 0 10px #00ffff;
 	transform: scale(1.05);
 }
-&lt;/style&gt;</tw-passagedata><tw-passagedata pid="152" name="intro_1" tags="" position="725,175" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(&quot;Далекое будущее, столица человеческой Империи, планета Вексор, главный кластер Вексор-прайм. Прыжковые якоря у черных дыр открывают путь к мгновенным межзвездным перелетам. Транспортную сеть полностью контролирует Империя.&quot;, &quot;In a far-flung future, the heart of the Human Empire beats on Vexor, the capital planet of the Vexor Prime cluster. Star-jump relays at black holes enable instantaneous interstellar travel. The transport network is held firmly in the Empire’s grasp.&quot;)&gt;&gt;
+&lt;/style&gt;</tw-passagedata><tw-passagedata pid="152" name="intro_1" tags="" position="725,175" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(&quot;Далекое будущее, столица человеческой Империи, планета Вексор, главный кластер Вексор-прайм. Прыжковые якоря у черных дыр открывают путь к мгновенным межзвездным перелетам. Империя полностью контролирует транспортную сеть.&quot;, &quot;In a far-flung future, the heart of the Human Empire beats on Vexor, the capital planet of the Vexor Prime cluster. Star-jump relays at black holes enable instantaneous interstellar travel. The transport network is held firmly in the Empire’s grasp.&quot;)&gt;&gt;
     &lt;&lt;if $lang is &quot;ru&quot;&gt;&gt;[[Далее|intro_2]]&lt;&lt;else&gt;&gt;[[Next|intro_2]]&lt;&lt;/if&gt;&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="153" name="intro_2" tags="" position="725,50" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(&quot;Связь без ограничений и контроль без слепых пятен. Искусство сведено к пропаганде: возвеличиванию абсолютной власти Императора. Но люди не ропщут — нет болезней, нет голода, а твое место в Империи зависит лишь от способностей и усердия.&quot;, &quot;The Empire holds an iron grip on the transport network. Communication is instant, surveillance absolute. Art has been debased into mere propaganda, exalting the Emperor’s unyielding rule. Yet, the people do not murmur—disease is eradicated, hunger unknown, and your rank in the Empire hinges solely on your skill and resolve.&quot;)&gt;&gt;
     &lt;&lt;if $lang is &quot;ru&quot;&gt;&gt;[[Далее|intro_3]]&lt;&lt;else&gt;&gt;[[Next|intro_3]]&lt;&lt;/if&gt;&gt;
@@ -2290,8 +2210,8 @@ $(&quot;#tablet-container&quot;).html(&#39;&lt;img src=&quot;media/tablet/Notabe
 &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="157" name="Fiercer_than_dead" tags="" position="600,1725" size="100,100">&lt;&lt;script&gt;&gt;$(&quot;#tablet-container&quot;).empty().hide(); $(&quot;#story&quot;).removeClass(&quot;tablet-active&quot;);&lt;&lt;/script&gt;&gt;
 &lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
-&#39;Чувства к нему казались сильнее смерти. Император был осью вращения всего мира. В голове всплыло зыбкое:\n&quot;Лаэрт. Как же он близко... И как участливо смотрит на меня. Никогда раньше так он не смотрел - всегда с насмешкой.&quot;&#39;,
-&#39;Her feelings for him burned fiercer than death itself. The Emperor was the axis around which her entire world spun. A fleeting thought flickered in her mind:\n&quot;Laertes. How close he is… And how tenderly he gazes at me. Never before like this—always with a mocking glint.&quot;&#39;
+&#39;Любовь к нему была сильнее смерти. Император был осью вращения всего мира. В голове всплыло зыбкое:\n&quot;Лаэрт. Как же он близко... И как участливо смотрит на меня. Никогда раньше так он не смотрел - всегда с насмешкой.&quot;&#39;,
+&#39;Love for him burned fiercer than death itself. The Emperor was the axis around which her entire world spun. A fleeting thought flickered in her mind:\n&quot;Laertes. How close he is… And how tenderly he gazes at me. Never before like this—always with a mocking glint.&quot;&#39;
 )&gt;&gt;
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;First_choice]]&lt;&lt;else&gt;&gt;[[Next-&gt;First_choice]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="158" name="gazed_tenderly" tags="" position="600,2075" size="100,100">&lt;&lt;script&gt;&gt;
 $(&quot;#tablet-container&quot;).empty().hide();
@@ -2332,7 +2252,7 @@ $(&quot;#story&quot;).removeClass(&quot;tablet-active&quot;);
 )&gt;&gt;
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_6_5_1_1]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_6_5_1_1]]&lt;&lt;/if&gt;&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="165" name="Kairos_talk" tags="" position="1325,4600" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
-&quot;Вскоре в ответ на приветливость Кайроса Юнис стала оживать и разговорилась. Он нарочно держал беседу легкой, уводил ее в сторону от мрачных мыслей по поводу императора. Кайрос непринужденно шутил, в его голосе не чувствовалось ни капли неискренности. Постепенно Юнис поддалась его обаянию — плечи чуть расслабились, и она поймала себя на том, что смотрит на телохранителя уже не с настороженностью, а с интересом.&quot;,
+&quot;Вскоре в ответ на приветливость Кайроса Юнис стала оживать и разговорилась. Он нарочно держал беседу легкой, уводил ее в сторону от мрачных мыслей. Кайрос непринужденно шутил, в его голосе не чувствовалось ни капли неискренности. Постепенно Юнис поддалась его обаянию и поймала себя на том, что смотрит на телохранителя уже не с настороженностью, а с интересом.&quot;,
 &quot;Soon, in response to Kairos’s warmth, Eunice began to brighten and open up. He deliberately kept the conversation light, steering her away from darker thoughts. Kairos joked with effortless ease, and not a trace of insincerity touched his voice. Gradually, Eunice yielded to his charm and found herself looking at the bodyguard no longer with wariness, but with growing interest.&quot;
 )&gt;&gt; 
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_4_7_8_9]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_4_7_8_9]]&lt;&lt;/if&gt;&gt; &lt;/div&gt;</tw-passagedata></tw-storydata>
