@@ -439,6 +439,25 @@ body {
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+#message-console {
+    position: fixed;
+    top: 10px; /* Прижимаем вверх, оставляем небольшой зазор от панели */
+    left: 60px; /* Уменьшаем отступ влево, но не до конца (было 200px) */
+    width: 20%;
+    height: 100px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px;
+    overflow-y: auto;
+    font-size: 12px;
+    z-index: 1; /* Оставляем, раз сработало */
+}
+
+#message-console p {
+    margin: 3px 0;
+    padding: 2px;
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript">$(document).ready(function() {
     if ($("#character-container").length === 0) {
         $("body").append('<div id="character-container"></div>');
@@ -785,7 +804,25 @@ setup.getSortedCodex = function() {
         .filter(key => setup.codexEntries[key].unlocked)
         .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()))
         .map(key => setup.codexEntries[key]);
+};
+// Инициализация консоли
+$(document).one(':passagestart', function () {
+    if (!$('#message-console').length) {
+        $('body').append('<div id="message-console"></div>');
+    }
+});
+
+// Функция для добавления сообщений с поддержкой языков
+window.addMessage = function(messageRu, messageEn) {
+    const consoleDiv = $('#message-console');
+    if (consoleDiv.length) {
+        const message = State.variables.lang === 'ru' ? messageRu : messageEn;
+        const p = $('<p>').text(message);
+        consoleDiv.append(p);
+        consoleDiv.scrollTop(consoleDiv[0].scrollHeight); // Скролл вниз
+    }
 };</script><tw-passagedata pid="1" name="1_0" tags="" position="425,350" size="100,100">&lt;&lt;script&gt;&gt;
+addMessage(&quot;Инициализация данных...&quot;, &quot;Initializing data...&quot;);
 setBackground(&quot;media/locations/Laert_Med_Lab_ceil.jpg&quot;);
 $(&quot;#character-container-left&quot;).html(&#39;&lt;img src=&quot;media/characters/Eunice_N_closed_eyes.webp&quot;&gt;&#39;);
 &lt;&lt;/script&gt;&gt;
@@ -850,7 +887,8 @@ $(&quot;#character-container-left img&quot;).fadeOut(300, function() {
 )&gt;&gt;
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_18_1]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_18_1]]&lt;&lt;/if&gt;&gt;
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="3" name="1_16" tags="" position="425,2375" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
+</tw-passagedata><tw-passagedata pid="3" name="1_16" tags="" position="425,2375" size="100,100">&lt;script&gt;addMessage(&quot;Активность вентромедиальной префронтальной коры: решение склоняется к эмоциональному выбору.&quot;, &quot;Ventromedial prefrontal cortex activity: the decision is biased towards emotional choice.&quot;);&lt;/script&gt;
+&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
 &#39;Ее желанием было:&#39;,
 &#39;Her first impulse was:&#39;
 )&gt;&gt;
@@ -979,6 +1017,7 @@ $(&quot;#character-container-right img&quot;).fadeOut(300, function() {
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_18_17]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_18_17]]&lt;&lt;/if&gt;&gt;
 &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="15" name="1_17" tags="" position="300,2375" size="100,100">&lt;&lt;script&gt;&gt;
+addMessage(&quot;Анализ прошлого опыта: схожие решения ранее приводили к негативным последствиям.&quot;, &quot;Analysis of past experience: similar decisions have previously led to negative consequences.&quot;);
 var currentVol = SimpleAudio.volume(); // Получаем текущую глобальную громкость (0.5 по дефолту)
 console.log(&quot;Current volume:&quot;, currentVol);
 // Затухание intro по шагам
@@ -1032,6 +1071,8 @@ $(&quot;#character-container-left img&quot;).fadeOut(300, function() {
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Вспомнить Лаэрта-&gt;1_17_1]]&lt;&lt;else&gt;&gt;[[Remember Laertes-&gt;1_17_1]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;
 
 &lt;!-- Плюс ЭХО --&gt;</tw-passagedata><tw-passagedata pid="16" name="1_17_1" tags="" position="175,2375" size="100,100">&lt;&lt;script&gt;&gt;
+addMessage(&quot;Внимание: высокая эмоциональная возбужденность. Неполная реконструкция.&quot;, &quot;Warning: High emotional arousal. Incomplete reconstruction.&quot;);
+addMessage(&quot;Инициализация архивных данных.&quot;, &quot;Initialization of archive data.&quot;);
 $(&quot;#character-container-left img&quot;).fadeOut(300);
 $(&quot;#character-container-right img&quot;).fadeOut(300, function() {
     $(this).attr(&#39;src&#39;, &#39;media/characters/Laert_past.webp&#39;); 
@@ -1167,7 +1208,8 @@ $(&quot;#character-container-right img&quot;).fadeOut(300, function() {
 )&gt;&gt;
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_18_16]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_18_16]]&lt;&lt;/if&gt;&gt;
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="25" name="1_14" tags="" position="425,2100" size="100,100">&lt;&lt;if $lang is &quot;ru&quot;&gt;&gt;
+</tw-passagedata><tw-passagedata pid="25" name="1_14" tags="" position="425,2100" size="100,100">&lt;script&gt;addMessage(&quot;Активация внешнего устройства вывода вирио: SynPad S-09 Nexus&quot;, &quot;Activating an external virio output device: SynPad S-09 Nexus&quot;);&lt;/script&gt;
+&lt;&lt;if $lang is &quot;ru&quot;&gt;&gt;
   &lt;&lt;script&gt;&gt;$(&quot;#tablet-container&quot;).html(&#39;&lt;img src=&quot;media/tablet/Notabene_1.webp&quot; alt=&quot;Tablet&quot;&gt;&#39;).show();&lt;&lt;/script&gt;&gt;
 &lt;&lt;else&gt;&gt;
   &lt;&lt;script&gt;&gt;$(&quot;#tablet-container&quot;).html(&#39;&lt;img src=&quot;media/tablet/Notabene_1_en.webp&quot; alt=&quot;Tablet&quot;&gt;&#39;).show();&lt;&lt;/script&gt;&gt;
@@ -1234,7 +1276,8 @@ $(&quot;#character-container-left img&quot;).fadeOut(300, function() {
 &lt;div class=&quot;footer-bar&quot; style=&quot;text-align: right; background-color: transparent; opacity: 1; font-size: 2rem; color: #ffffff; text-shadow: 0 0 5px #ffffff, 0 0 10px #00ff00, 0 0 15px #00ff00;&quot;&gt;&lt;&lt;= setup.t(
 &quot;[[✖-&gt;1_18_4]]&quot;,
 &quot;[[✖-&gt;1_18_4]]&quot;
-)&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="30" name="1_17_3" tags="" position="175,2625" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t( 
+)&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="30" name="1_17_3" tags="" position="175,2625" size="100,100">&lt;script&gt;addMessage(&quot;Рекомендовано прервать реконструкцию.&quot;, &quot;It is recommended to interrupt the reconstruction.&quot;);&lt;/script&gt;
+&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t( 
 &quot;//Слушал он внимательно. Иногда спрашивал мнение. Бывало, задерживал взгляд чуть дольше обычного, заставляя гадать, было ли это &lt;b&gt;что-то&lt;/b&gt;, или лишь тень усталости?//&quot;, 
 
 &quot;//He listened with rapt attention. At times, he sought his opinion. Sometimes his gaze lingered just a moment too long, leaving her to wonder--was it something more, or merely a flicker of exhaustion?//&quot; 
@@ -1576,7 +1619,8 @@ $(&quot;#story&quot;).removeClass(&quot;tablet-active&quot;);
 &quot;— Theron is dead, — Eunice extinguished the image of one of the Empire’s greatest men with a faint smile.\n— Long live Eunice, — Laertes’s smile, however, was tinged with sorrow.&quot; 
 )&gt;&gt; 
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_19]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_19]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="58" name="1_17_2" tags="" position="175,2500" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t( 
+</tw-passagedata><tw-passagedata pid="58" name="1_17_2" tags="" position="175,2500" size="100,100">&lt;script&gt;addMessage(&quot;Сенсорные данные восстановлены только на 72%.&quot;, &quot;Sensory data was only 72% restored.&quot;);&lt;/script&gt;
+&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t( 
 &quot;//Лаэрт принадлежал только Империи и собственной супруге. Ничего и не было, кроме редких разговоров, и только о деле. Стратегии развития колоний, нехватка ресурсов, слабая логистика... моральный дух переселенцев, в конце концов.//&quot;, 
 
 &quot;//Laertes belonged solely to the Empire and his wife. There had been nothing but rare conversations, and even those were only about business—strategies for colony expansion, resource shortages, faltering logistics… the morale of the settlers, in the end.//&quot; 
@@ -1651,6 +1695,7 @@ $(this).fadeIn(300);
 )&gt;&gt; 
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_17_39_4]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_17_39_4]]&lt;&lt;/if&gt;&gt; &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="67" name="1_17_5" tags="" position="300,2750" size="100,100">&lt;&lt;script&gt;&gt;
+addMessage(&quot;Ошибка реконструкции: входящее сообщение.&quot;, &quot;Reconstruction error: incoming message.&quot;);
 $(&quot;#character-container-left img&quot;).fadeOut(300, function() {
 $(this).attr(&#39;src&#39;, &#39;media/characters/Teron.webp&#39;); // Меняем src у изображения
 $(this).fadeIn(600); // Показываем новый спрайт
@@ -2322,7 +2367,8 @@ $(&quot;#character-container-right img&quot;).fadeOut(300);
 &quot;—Just finish it, I can’t bear this nonsense anymore, — she spat irritably. She were being pulled back into the saving darkness: into sleep... As if she longed once again, even briefly, to sink into her own death.&quot;
 )&gt;&gt;
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_45_2]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_45_2]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="119" name="1_17_4" tags="" position="175,2750" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t( 
+</tw-passagedata><tw-passagedata pid="119" name="1_17_4" tags="" position="175,2750" size="100,100">&lt;script&gt;addMessage(&quot;Синхронизация с остаточными следами эмоций.&quot;, &quot;Synchronization with residual traces of emotions.&quot;);&lt;/script&gt;
+&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t( 
 &quot;//Тысячи драгоценных воспоминаний: как приподнимает бровь, как слегка склоняет голову, если что-то одобряет. Эти крохи распаляли воображение Терона, заставляли мечтать. Заставляли творить.\nНо мечта оставалась мечтой.//&quot;, 
 
 &quot;//A thousand cherished fragments: the arch of his brow, the subtle tilt of his head when he approved of something. These fleeting glimpses set Theron’s imagination alight, fueling dreams, sparking creation.\nBut a dream it remained, nothing more.//&quot; 
@@ -2451,12 +2497,14 @@ if (State.variables.romanceWithLaertes === true) {
 &lt;div class=&quot;footer-bar&quot; style=&quot;text-align: center;&quot;&gt;&lt;&lt;= setup.t(
 &quot;[[Глава 2. Беспечная девица-&gt;2_0]]&quot;,
 &quot;[[Chapter 2. The Idle Girl-&gt;2_0]]&quot;
-)&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="128" name="1_1" tags="" position="425,475" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
+)&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="128" name="1_1" tags="" position="425,475" size="100,100">&lt;script&gt;addMessage(&quot;Имя: Юнис Либери.&quot;, &quot;Name: Eunice Liberi.&quot;);&lt;/script&gt;
+&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
 &quot;Свет был резким, немилосердным: лампы висели прямо над лицом. Она зажмурилась, попыталась вдохнуть глубже и поняла, что грудная клетка едва слушается. В ушах звенело.&quot;,
 &quot;The light was stark and unforgiving: lamps glared directly above her face. She squeezed her eyes shut and tried to draw a deeper breath, only to find her chest scarcely responded. A ringing echoed in her ears.&quot;
 )&gt;&gt; 
 &lt;&lt;if $lang is &quot;ru&quot;&gt;&gt;[[Далее-&gt;1_2]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_2]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="129" name="1_2" tags="" position="425,600" size="100,100">&lt;&lt;script&gt;&gt;
+addMessage(&quot;Возраст: 35 лет.&quot;, &quot;Age: 35 years.&quot;);
 $(&quot;#character-container-left img&quot;).fadeOut(300, function() {
 $(this).attr(&#39;src&#39;, &#39;media/characters/Eunice_scared.webp&#39;); // Меняем src у изображения
 $(this).fadeIn(600); // Показываем новый спрайт
@@ -2473,6 +2521,7 @@ $(this).fadeIn(600); // Показываем новый спрайт
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_3]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_3]]&lt;&lt;/if&gt;&gt;
 &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="130" name="1_4" tags="" position="425,850" size="100,100">&lt;&lt;script&gt;&gt;
+addMessage(&quot;Согласование основных параметров... В процессе... &quot;, &quot;Coordination of key parameters... In progress...&quot;);
 setBackground(&quot;media/locations/Laert_Med_Lab.jpg&quot;);
 $(&quot;#character-container-right img&quot;).fadeOut(300);
 $(&quot;#character-container-left img&quot;).fadeOut(300, function() {
@@ -2489,6 +2538,7 @@ $(this).fadeIn(600); // Показываем новый спрайт
 </tw-passagedata><tw-passagedata pid="131" name="1_5" tags="" position="425,975" size="100,100">&lt;&lt;set setup.codexEntries[&quot;Laertes&quot;].unlocked = true&gt;&gt;
 &lt;&lt;run updateCodexMenu()&gt;&gt;
 &lt;&lt;script&gt;&gt;
+addMessage(&quot;Формирование отчета для медицинского отдела: выполнено.&quot;, &quot;Generating a report for the medical department: completed.&quot;);
 $(&quot;#character-container-right img&quot;).fadeOut(300, function() {
 $(this).attr(&#39;src&#39;, &#39;media/characters/Laert_nude.webp&#39;); // Меняем src у изображения
 $(this).fadeIn(600); // Показываем новый спрайт
@@ -2500,12 +2550,14 @@ $(this).fadeIn(600); // Показываем новый спрайт
 )&gt;&gt;
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_6]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_6]]&lt;&lt;/if&gt;&gt;
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="132" name="1_6" tags="" position="425,1100" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
+</tw-passagedata><tw-passagedata pid="132" name="1_6" tags="" position="425,1100" size="100,100">&lt;script&gt;addMessage(&quot;Получение ID... Провал. Требуется личное присутствие в отделе регистрации физических лиц.&quot;, &quot;Obtaining an ID... Failed. Personal presence at the registration office is required.&quot;);&lt;/script&gt;
+&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
 &quot;У нее не было собственных воспоминаний. Все, что жило в голове, принадлежало другому. Терону. Его детство, его жизненный путь, его страхи и победы. Даже его любовь. Но самой себя у нее не было.&quot;,
 &quot;She had no memories of her own. Everything swirling in her mind belonged to another. Theron. His childhood, his journey, his fears, his victories. Even his love. But of herself—there was nothing.&quot;
 )&gt;&gt;
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_7]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_7]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="133" name="1_7" tags="" position="425,1225" size="100,100">&lt;&lt;script&gt;&gt;
+addMessage(&quot;Калибровка вирио... Ожидайте соединения.&quot;, &quot;Calibrating Virio... Waiting for connection.&quot;);
 $(&quot;#character-container-left img&quot;).fadeOut(300, function() {
 $(this).attr(&#39;src&#39;, &#39;media/characters/Eunice_look_right.webp&#39;); 
 $(this).fadeIn(600); 
@@ -2522,6 +2574,7 @@ $(this).fadeIn(600);
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_8]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_8]]&lt;&lt;/if&gt;&gt;
 &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="134" name="1_8" tags="" position="425,1350" size="100,100">&lt;&lt;script&gt;&gt;
+addMessage(&quot;Отсутсвие внешней связи. Активация протокола безопасности.&quot;, &quot;No external connection. Activating security protocol.&quot;);
 $(&quot;#character-container-left img&quot;).fadeOut(300, function() {
 $(this).attr(&#39;src&#39;, &#39;media/characters/Eunice_NN_closed_eyes.webp&#39;); 
 $(this).fadeIn(600); 
@@ -2537,19 +2590,22 @@ $(this).fadeIn(600);
 )&gt;&gt;
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_9]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_9]]&lt;&lt;/if&gt;&gt;
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="135" name="1_10" tags="" position="425,1600" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
+</tw-passagedata><tw-passagedata pid="135" name="1_10" tags="" position="425,1600" size="100,100">&lt;script&gt;addMessage(&quot;Отмечено применение ментальной модуляции.&quot;, &quot;The use of mental modulation is noted.&quot;);&lt;/script&gt;
+&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
 &quot;Император присел на край больничной койки и сжал кисть Юнис. Жест был слишком порывистым и личным для такого отстраненного человека, коим она помнила Лаэрта. Он наклонился еще ближе, понизив голос:\n— Слушай только меня. Остальное не имеет значения.&quot;,
 &quot;The Emperor settled on the edge of the hospital bed and gripped Eunice&#39;s wrist. The gesture was too sudden, too intimate for the cold man she recalled Laertes to be. He leaned closer, his voice dropping to a whisper:\n— Listen only to me. Nothing else matters.&quot;
 )&gt;&gt;
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_11]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_11]]&lt;&lt;/if&gt;&gt;
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="136" name="1_11" tags="" position="425,1725" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
+</tw-passagedata><tw-passagedata pid="136" name="1_11" tags="" position="425,1725" size="100,100">&lt;script&gt;addMessage(&quot;Учащение сердцебиения. Повышение давления. Ускорение дыхания. &quot;, &quot;Increased heart rate. Increased blood pressure. Increased breathing.&quot;);&lt;/script&gt;
+&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
 &quot;Юнис ощутила, что граница между ее телом и чужой памятью размывается. Слова Лаэрта отзывались в ней, как навязчивый мотив имперского марша — прекрасный, желанный и несмолкаемый. Она могла поддаться ему и позволить императору приблизиться еще ближе. Или сделать шаг назад, отделив чужую жизнь от своей.&quot;,
 &quot;Eunice felt the line between her body and the alien memories blurring. Laert’s words echoed within her like the haunting refrain of an imperial march—beautiful, irresistible and unceasing. She could yield to it and allow the Emperor to draw even closer. Or she could step back and keep another’s life apart from her own.&quot;
 )&gt;&gt;
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_12]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_12]]&lt;&lt;/if&gt;&gt;
 &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="137" name="1_3" tags="" position="425,725" size="100,100">&lt;&lt;script&gt;&gt;
+addMessage(&quot;Загрузка данных с основного биологического носителя: успешно.&quot;, &quot;Loading data from the primary biological carrier: successful.&quot;);
 $(&quot;#character-container-left img&quot;).fadeOut(300, function() {
 $(this).attr(&#39;src&#39;, &#39;media/characters/Eunice_surprised.webp&#39;); // Меняем src у изображения
 $(this).fadeIn(600); // Показываем новый спрайт
@@ -2566,6 +2622,7 @@ $(this).fadeIn(600); // Показываем новый спрайт
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_4]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_4]]&lt;&lt;/if&gt;&gt;
 &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="138" name="1_12" tags="" position="425,1850" size="100,100">&lt;&lt;script&gt;&gt;
+addMessage(&quot;Отмечено применение ментальной модуляции.&quot;, &quot;The use of mental modulation is noted.&quot;);
 $(&quot;#character-container-left img&quot;).fadeOut(300, function() {
 $(this).attr(&#39;src&#39;, &#39;media/characters/Eunice_nude.webp&#39;); 
 $(this).fadeIn(600); 
@@ -2697,6 +2754,7 @@ if (State.variables.echo &gt;= 0) {
 	&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[— Останетесь в гостиной?-&gt;1_44]]&lt;&lt;else&gt;&gt;[[—Gonna stay in the living room, Kairos?-&gt;1_44]]&lt;&lt;/if&gt;&gt;
 &lt;&lt;/if&gt;&gt;&lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="147" name="1_17_6" tags="" position="425,2750" size="100,100">&lt;&lt;script&gt;&gt;
+addMessage(&quot;Активация внешнего устройства вывода вирио: SynPad S-09 Nexus&quot;, &quot;Activating an external virio output device: SynPad S-09 Nexus&quot;);
 $(&quot;#tablet-container&quot;).html(
   `&lt;img src=&quot;${setup.t(
     &quot;media/tablet/Nonabene_love.webp&quot;,
@@ -2793,18 +2851,22 @@ $(&quot;#tablet-container&quot;).html(&#39;&lt;img src=&quot;media/tablet/Notabe
     &lt;&lt;if $lang is &quot;ru&quot;&gt;&gt;[[Далее-&gt;intro_3]]&lt;&lt;else&gt;&gt;[[Next-&gt;intro_3]]&lt;&lt;/if&gt;&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="152" name="intro_3" tags="" position="575,50" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(&quot;О самом Императоре ходят легенды: он может видеть будущее… и возвращать мертвых. Таков мир, в котором была сотворена женщина, в один день изменившая все.&quot;, &quot;Whispers of the Emperor\&#39;s power ripple through the masses: he foresees the future... and defies death itself. This is the world that forged a woman who, in a single day, reshaped it all.&quot;)&gt;&gt;
     &lt;&lt;if $lang is &quot;ru&quot;&gt;&gt;[[Далее-&gt;intro]]&lt;&lt;else&gt;&gt;[[Next-&gt;intro]]&lt;&lt;/if&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="153" name="1_9" tags="" position="425,1475" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="153" name="1_9" tags="" position="425,1475" size="100,100">&lt;script&gt;addMessage(&quot;Запрет на форсированную фиксацию внешних данных в присутствии лица уровня 1.&quot;, &quot;Prohibition of forced recording of external data in the presence of a Level 1 person.&quot;);&lt;/script&gt;
+&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
 &quot;Она была никем. Все, чем Юнис располагала — чужой памятью, чужой оборванной жизнью. От голоса Лаэрта внутри прокатывалась лавина воспоминаний и чувств, не ее собственных.&quot;,
 &quot;She was no one. All Eunice had was another&#39;s memory, another&#39;s life. Laertes&#39; voice unleashed an avalanche of memories and emotions inside her—none of them hers.&quot;
 )&gt;&gt;
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_10]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_10]]&lt;&lt;/if&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="154" name="1_13" tags="" position="425,1975" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="154" name="1_13" tags="" position="425,1975" size="100,100">&lt;script&gt;addMessage(&quot;Формирование запроса в медицинский отдел: запрещено. Отсутствие внешней связи.&quot;, &quot;Submitting a request to the medical department is prohibited. No external communication.&quot;);&lt;/script&gt;
+&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
 &quot;На ресницах дрожал преломленный свет ламп, окутывая вполне заурядную внешность Лаэрта ореолом чувств Терона.&quot;,
 &quot;The lamplight flickered on her lashes, weaving Theron’s emotions into an aura around Laertes’ otherwise unremarkable features.&quot;
 )&gt;&gt;
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_14]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_14]]&lt;&lt;/if&gt;&gt;
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="155" name="1_15" tags="" position="425,2225" size="100,100">&lt;&lt;script&gt;&gt;$(&quot;#tablet-container&quot;).empty().hide(); $(&quot;#story&quot;).removeClass(&quot;tablet-active&quot;);&lt;&lt;/script&gt;&gt;
+</tw-passagedata><tw-passagedata pid="155" name="1_15" tags="" position="425,2225" size="100,100">&lt;&lt;script&gt;&gt;
+addMessage(&quot;Рекомендовано снижение уровня стресса: высокий уровень сердцебиения.&quot;, &quot;Reducing stress levels is recommended: high heart rate.&quot;);
+$(&quot;#tablet-container&quot;).empty().hide(); $(&quot;#story&quot;).removeClass(&quot;tablet-active&quot;);&lt;&lt;/script&gt;&gt;
 &lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
 &#39;Любовь к нему была сильнее смерти. Император был осью вращения всего мира. В голове всплыло зыбкое:\n&quot;Лаэрт. Как же он близко... И как участливо смотрит на меня. Никогда раньше так он не смотрел — всегда с насмешкой.&quot;&#39;,
 &#39;Love for him burned fiercer than death itself. The Emperor was the axis around which her entire world spun. A fleeting thought flickered in her mind:\n&quot;Laertes. How close he is… And how tenderly he gazes at me. Never before like this—always with a mocking glint.&quot;&#39;
