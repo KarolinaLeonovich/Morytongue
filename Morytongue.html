@@ -1234,7 +1234,7 @@ $(this).fadeIn(600); // Показываем новый спрайт
 &lt;/div&gt;
 
 </tw-passagedata><tw-passagedata pid="10" name="1_17_12" tags="" position="425,3100" size="100,100">&lt;&lt;script&gt;&gt;
-addMessage(&quot;Запрос отменен вышестоящим лицом.&quot;, &quot;The request was cancelled by a superior.&quot;);
+addMessage(&quot;Запрос отменен вышестоящим лицом. Связь восстановлена.&quot;, &quot;The request was cancelled by a superior. Connection stable.&quot;);
 $(&quot;#character-container-left img&quot;).fadeOut(300, function() {
     $(this).attr(&#39;src&#39;, &#39;media/characters/Eunice_horny.webp&#39;); 
     $(this).fadeIn(900); 
@@ -1258,6 +1258,7 @@ $(&quot;#character-container-right img&quot;).fadeOut(300, function() {
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_17_20]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_17_20]]&lt;&lt;/if&gt;&gt;
 &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="13" name="1_17_23" tags="" position="600,3600" size="100,100">&lt;&lt;script&gt;&gt;
+addMessage(&quot;Приоритетые сообщения, ознакомьтесь немедленно: &quot;О вступлении в наследство&quot;, &quot;Об открытии наследственного дела&quot;, &quot;О посещении имперского нотариуса&quot; (всего 17 документов).&quot;, &quot;Priority messages, please read immediately: &quot;On entering into an inheritance&quot;, &quot;On opening an inheritance case&quot;, &quot;On visiting an imperial notary&quot; (17 documents in total).&quot;);
 $(&quot;#character-container-left&quot;).html(&#39;&lt;img src=&quot;media/characters/Eunice_nude_smile.webp&quot;&gt;&#39;);
 $(&quot;#character-container-right&quot;).html(&#39;&lt;img src=&quot;media/characters/Laert_naked_smile.webp&quot;&gt;&#39;);
 $(&quot;#character-container-left&quot;).fadeIn(900); 
@@ -1409,6 +1410,7 @@ $(&quot;#character-container-right img&quot;).fadeOut(300, function() {
 &lt;/div&gt;
 
 </tw-passagedata><tw-passagedata pid="21" name="1_17_28" tags="" position="175,3850" size="100,100">&lt;&lt;script&gt;&gt;
+addMessage(&quot;Уважаемая госпожа Юнис, сообщаем, что на ваше имя оформлено предварительное бронирование пассажирского модуля (каюта 42-S, палуба 11) на борту космического круизного лайнера «Этернис», маршрут: Туманность Эстер → Периметр Кобаяши Мару → Станция Соланар (круговой тур).&quot;, &quot;Dear Ms. Eunice, We would like to inform you that a preliminary reservation has been made in your name for a passenger module (cabin 42-S, deck 11) on board the space cruise liner Eternis, route: Ester Nebula → Kobayashi Maru Perimeter → Solanar Station (circular tour).&quot;);
 $(&quot;#tablet-container&quot;).empty().hide();
 $(&quot;#story&quot;).removeClass(&quot;tablet-active&quot;);
 $(&quot;#character-container-left img&quot;).fadeOut(300, function() {
@@ -1427,6 +1429,7 @@ $(this).fadeIn(300);
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_17_29]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_17_29]]&lt;&lt;/if&gt;&gt; &lt;/div&gt;
 
 </tw-passagedata><tw-passagedata pid="22" name="1_17_32" tags="" position="675,3850" size="100,100">&lt;&lt;script&gt;&gt;
+addMessage(&quot;Вы получили уведомление: «Проверка чистоты модуля». Инспекция может быть проведена в любое время.&quot;, &quot;You have received a notification: &quot;Module Cleanliness Check.&quot; The inspection can be performed at any time.&quot;);
 $(&quot;#character-container-left img&quot;).fadeOut(300, function() {
 $(this).attr(&#39;src&#39;, &#39;media/characters/Eunice_scared.webp&#39;); 
 $(this).fadeIn(300); 
@@ -1480,7 +1483,7 @@ addMessage(&quot;Активация внешнего устройства выв
 showTablet(
     null,  /* вместо пути к картинке — null */
     `&lt;p&gt;Юнис была создана с грузом прошлого — памятью другого человека, Терона.&lt;br&gt;
-     Вы можете отринуть это и постараться сформировать новую личность — ☽,&lt;br&gt;
+     Вы можете отринуть это и сформировать новую личность — ☽,&lt;br&gt;
      или же постараться сохранить прежнее Я, не позволив ему раствориться полностью — ⛓.&lt;br&gt;
      &lt;em&gt;Оба пути совершенно равноценны.&lt;/em&gt;&lt;/p&gt;`,
     `&lt;p&gt;Eunice was created carrying the weight of another\&#39;s past — the memories of Theron.&lt;br&gt;
@@ -1553,8 +1556,7 @@ showTablet(&quot;media/tablet/Eli.png&quot;, &quot;Элия Лорент, Пра
 )&gt;&gt; 
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_17_4]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_17_4]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="31" name="1_17_39" tags="" position="800,4475" size="100,100">&lt;&lt;script&gt;&gt;
-$(&quot;#tablet-container&quot;).empty().hide();
-$(&quot;#story&quot;).removeClass(&quot;tablet-active&quot;);
+addMessage(&quot;Уведомление: вы были упомянуты в отчете Квартального Комитета Наблюдения.&quot;, &quot;Notification: You have been mentioned in the Quarterly Monitoring Committee report.&quot;);
 $(&quot;#character-container-right img&quot;).fadeOut(300, function() {
 $(this).attr(&#39;src&#39;, &#39;media/characters/Laert_NN_unhappy.webp&#39;); 
 $(this).fadeIn(300); 
@@ -1566,8 +1568,7 @@ $(this).fadeIn(300);
 )&gt;&gt; 
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_17_39_1]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_17_39_1]]&lt;&lt;/if&gt;&gt; &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="32" name="1_17_38" tags="" position="925,4350" size="100,100">&lt;&lt;script&gt;&gt;
-$(&quot;#tablet-container&quot;).empty().hide();
-$(&quot;#story&quot;).removeClass(&quot;tablet-active&quot;);
+addMessage(&quot;Имперский департамент поведенческого прогнозирования благодарит вас за отсутствие зафиксированных нарушений в течение 24 часов.&quot;, &quot;The Imperial Department of Behavioral Forecasting thanks you for having no recorded violations for the past 24 hours.&quot;);
 &lt;&lt;/script&gt;&gt;
 &lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
 &quot;— Жизнь на благо Империи.\nЮнис поразилась, как жалко, испуганно дрожит голос. Но и правда было страшно — таким Лаэрта она не помнила. Она попыталась исправиться и сказала уже тверже, вымучив улыбку:\n— Я приступлю к своим обязанностям как можно скорее.&quot;,
@@ -1575,6 +1576,7 @@ $(&quot;#story&quot;).removeClass(&quot;tablet-active&quot;);
 )&gt;&gt; 
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_17_38_1]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_17_38_1]]&lt;&lt;/if&gt;&gt; &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="33" name="1_19" tags="" position="1200,4800" size="100,100">&lt;&lt;script&gt;&gt;
+addMessage(&quot;Обнаружено несоответствие данных временной регистрации. Немедленно явитесь в управление административного надзора и контроля.&quot;, &quot;A discrepancy in your temporary registration data has been detected. Report immediately to the Administrative Supervision and Control Department.&quot;);
 $(&quot;#character-container-left img&quot;).fadeOut(300, function() {
 $(this).attr(&#39;src&#39;, &#39;media/characters/Eunice_military_sad.webp&#39;); 
 $(this).fadeIn(300); 
@@ -1588,6 +1590,7 @@ setBackground(&quot;media/locations/VexorPrime_Cordius_sector.jpg&quot;);
 )&gt;&gt;
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_19_1]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_19_1]]&lt;&lt;/if&gt;&gt; &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="34" name="1_21" tags="" position="1200,5300" size="100,100">&lt;&lt;script&gt;&gt;
+addMessage(&quot;Запрос о предоставлении пропуска на территорию Башни Лиграта отклонен. Причина: отсутствие ордера с указанием права проживания.&quot;, &quot;A request for access to the Ligrat Tower grounds was denied. Reason: lack of a warrant indicating right of residence.&quot;);
 setBackground(&quot;media/locations/VexorPrime_Cordius_sector_in_car.jpg&quot;);
 &lt;&lt;/script&gt;&gt;
 &lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
@@ -1597,6 +1600,7 @@ setBackground(&quot;media/locations/VexorPrime_Cordius_sector_in_car.jpg&quot;);
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_22]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_22]]&lt;&lt;/if&gt;&gt; &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="35" name="1_23_2" tags="" position="1125,5725" size="100,100">&lt;!-- -ЭХО + ЛОЯЛЬНОСТЬ --&gt;
 &lt;&lt;script&gt;&gt;
+addMessage(&quot;Важное сообщение: все детали личного досье гражданки Юнис, Либери указом Императора классифицированы как совершенно секретные. Разглашение любым способом будет расценено как преступление высшего уровня с последующим устранением без проведения судебных процедур.  &quot;, &quot;Important notice: All details of Citizen Eunice Liberi&#39;s personal file have been classified as top secret by decree of the Emperor. Disclosure by any means will be considered a crime of the highest order and will be subject to immediate termination without judicial review.&quot;);
 $(&quot;#character-container-right img&quot;).fadeOut(300, function() {
 $(this).attr(&#39;src&#39;, &#39;media/characters/Kiros_solid.webp&#39;); 
 $(this).fadeIn(300); 
@@ -1609,6 +1613,7 @@ $(this).fadeIn(300);
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_23_2_1]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_23_2_1]]&lt;&lt;/if&gt;&gt; &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="36" name="1_23_3" tags="" position="1300,5725" size="100,100">&lt;!-- +ЭХО + СОЧУВСТВИЕ --&gt;
 &lt;&lt;script&gt;&gt;
+addMessage(&quot;Важное сообщение: все детали личного досье гражданки Юнис, Либери указом Императора классифицированы как совершенно секретные. Разглашение любым способом будет расценено как преступление высшего уровня с последующим устранением без проведения судебных процедур.  &quot;, &quot;Important notice: All details of Citizen Eunice Liberi&#39;s personal file have been classified as top secret by decree of the Emperor. Disclosure by any means will be considered a crime of the highest order and will be subject to immediate termination without judicial review.&quot;);
 $(&quot;#character-container-right img&quot;).fadeOut(300, function() {
 $(this).attr(&#39;src&#39;, &#39;media/characters/Kiros_solid.webp&#39;); 
 $(this).fadeIn(300); 
@@ -1620,6 +1625,7 @@ $(this).fadeIn(300);
 )&gt;&gt; 
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_23_3_1]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_23_3_1]]&lt;&lt;/if&gt;&gt; &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="37" name="1_23_1" tags="" position="925,5725" size="100,100">&lt;&lt;script&gt;&gt;
+addMessage(&quot;Важное сообщение: все детали личного досье гражданки Юнис, Либери указом Императора классифицированы как совершенно секретные. Разглашение любым способом будет расценено как преступление высшего уровня с последующим устранением без проведения судебных процедур.  &quot;, &quot;Important notice: All details of Citizen Eunice Liberi&#39;s personal file have been classified as top secret by decree of the Emperor. Disclosure by any means will be considered a crime of the highest order and will be subject to immediate termination without judicial review.&quot;);
 $(&quot;#character-container-right img&quot;).fadeOut(300, function() {
 $(this).attr(&#39;src&#39;, &#39;media/characters/Kiros_solid.webp&#39;); 
 $(this).fadeIn(300); 
@@ -1633,6 +1639,7 @@ $(this).fadeIn(300);
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_23_1_1]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_23_1_1]]&lt;&lt;/if&gt;&gt; &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="38" name="1_23_4" tags="" position="1475,5725" size="100,100">&lt;!-- + ЭХО + ЛОЯЛЬНОСТЬ --&gt;
 &lt;&lt;script&gt;&gt;
+addMessage(&quot;Важное сообщение: все детали личного досье гражданки Юнис, Либери указом Императора классифицированы как совершенно секретные. Разглашение любым способом будет расценено как преступление высшего уровня с последующим устранением без проведения судебных процедур.  &quot;, &quot;Important notice: All details of Citizen Eunice Liberi&#39;s personal file have been classified as top secret by decree of the Emperor. Disclosure by any means will be considered a crime of the highest order and will be subject to immediate termination without judicial review.&quot;);
 $(&quot;#character-container-right img&quot;).fadeOut(300, function() {
 $(this).attr(&#39;src&#39;, &#39;media/characters/Kiros_solid.webp&#39;); 
 $(this).fadeIn(300); 
@@ -1697,6 +1704,7 @@ $(&quot;#character-container-right img&quot;).fadeOut(300, function() {
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_17_21]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_17_21]]&lt;&lt;/if&gt;&gt;
 &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="45" name="1_17_24" tags="" position="475,3600" size="100,100">&lt;&lt;script&gt;&gt;
+addMessage(&quot;Налог на вступление в наследство — начислен. Предварительная сумма к оплате: 27 480 745 имперских кредитов.&quot;, &quot;Inheritance tax has been assessed. Estimated payment amount: 27,480,745 Imperial Credits.&quot;);
 $(&quot;#character-container-left img&quot;).fadeOut(300, function() {
 $(this).attr(&#39;src&#39;, &#39;media/characters/Eunice_surprised.webp&#39;); // Меняем src у изображения
 $(this).fadeIn(300); // Показываем новый спрайт
@@ -1708,12 +1716,14 @@ $(this).fadeIn(300); // Показываем новый спрайт
 )&gt;&gt; 
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_17_25]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_17_25]]&lt;&lt;/if&gt;&gt; &lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="46" name="1_17_30" tags="" position="425,3850" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
+</tw-passagedata><tw-passagedata pid="46" name="1_17_30" tags="" position="425,3850" size="100,100">&lt;script&gt;addMessage(&quot;Входящее сообщение от Управления Межличностной Этики: «Спасибо, что сохраняете тишину в ночные часы. Мы ценим вашу социальную адаптивность».&quot;, &quot;Incoming message from the Office of Interpersonal Ethics: &quot;Thank you for remaining quiet during the night hours. We appreciate your social adaptability.&quot;&quot;);&lt;/script&gt;
+&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
 &quot;Наконец, он нашел ее одежду. Юнис не покидало смятение: была ли их близость лишь случайной слабостью — или в Лаэрте зародилась хоть капля чувства? Они увидятся снова? Или она будет ждать императора, как прежде, словно преданная собака, без конца ждать?&quot;,
 &quot;At last, he found her clothes. Eunice remained unsettled: had their closeness been nothing more than a fleeting weakness, or had even a spark of feeling taken root in Laertes? Would they see each other again? Or will she wait for the emperor as before, like a devoted dog, waiting endlessly?&quot;
 )&gt;&gt; 
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_17_31]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_17_31]]&lt;&lt;/if&gt;&gt; &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="47" name="1_17_34" tags="" position="800,3975" size="100,100">&lt;&lt;script&gt;&gt;
+addMessage(&quot;Отмечена попытка взлома вирио, отчет направлен в отдел расследования киберпреступности по Вексор Прайм, номер дела - 364655/в.&quot;, &quot;An attempt to hack Virio has been detected, a report has been sent to the Vexor Prime Cybercrime Investigation Unit, case number 364655\b.&quot;);
 $(&quot;#character-container-left img&quot;).fadeOut(300, function() {
 $(this).attr(&#39;src&#39;, &#39;media/characters/Eunice_military_sad.webp&#39;); 
 $(this).fadeIn(300); 
@@ -1731,6 +1741,7 @@ $(&quot;#story&quot;).removeClass(&quot;tablet-active&quot;);
 )&gt;&gt; 
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_17_35]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_17_35]]&lt;&lt;/if&gt;&gt; &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="48" name="1_17_39_2" tags="" position="800,4800" size="100,100">&lt;&lt;script&gt;&gt;
+addMessage(&quot;Сообщение от Службы контроля социальных рисков: &quot;О временном поражении в правах.&quot;&quot;, &quot;Message from the Social Risk Control Service: &quot;On temporary deprivation of rights.&quot;&quot;);
 $(&quot;#character-container-right img&quot;).fadeOut(300, function() {
 $(this).attr(&#39;src&#39;, &#39;media/characters/Laert_surprised.webp&#39;); 
 $(this).fadeIn(300); 
@@ -1742,6 +1753,7 @@ $(this).fadeIn(300);
 )&gt;&gt; 
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_17_39_3]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_17_39_3]]&lt;&lt;/if&gt;&gt; &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="49" name="1_17_38_1" tags="" position="1050,4350" size="100,100">&lt;&lt;script&gt;&gt;
+addMessage(&quot;Система отмечает редкое достижение: &quot;Минимальный эмоциональный отклик при взаимодействии с объектом повышенной важности.&quot; Вам начислен поощрительный жетон хладнокровия. Пожалуйста, храните жетон в недоступном для детей месте.&quot;, &quot;The system has recognized a rare achievement: &quot;Minimal emotional response when interacting with an object of high importance.&quot; You have been awarded a Composure Token. Please keep the token out of the reach of children.&quot;);
 $(&quot;#character-container-left img&quot;).fadeOut(300, function() {
 $(this).attr(&#39;src&#39;, &#39;media/characters/Eunice_military_sad.webp&#39;); 
 $(this).fadeIn(300); 
@@ -1924,11 +1936,13 @@ setBackground(&quot;media/locations/Laert_Med_Lab_cut.jpg&quot;);
 &lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t( &quot;Элия была тихой и чувственной. Она никогда не позволила бы себе такого. Элия бы нежно провела пальчиками по его затылку, робко коснулась бы плеч. Юнис же сжала его ягодицы, прижимая к себе покрепче.&quot;, &quot;Eliya had always been quiet, tender, restrained. She would never have allowed herself anything like this. Eliya would have brushed her delicate fingers along the nape of his neck, touched his shoulders with timid reverence. Eunice, instead, gripped his hips hard, pulling him closer with raw urgency.&quot; )&gt;&gt;
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_17_18]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_17_18]]&lt;&lt;/if&gt;&gt;
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="62" name="1_17_22" tags="" position="750,3600" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t( &quot;Она скрестила ноги на его пояснице, обвила руками шею, не желая, чтобы их тела разъединялись. Ее слезы смешались с его потом, стекавшим по шее и груди, ныли губы, стертые от жестоких поцелуев. Саднило и там, где за минуту до этого было так сладко.&quot;, &quot;She locked her legs around his waist, arms wound tight around his neck, unwilling to let their bodies part. Her tears mingled with the sweat running down his neck and chest, while her lips ached, rubbed raw by merciless kisses. And there too, where moments before had been only sweetness, now burned with a stinging pain.&quot; )&gt;&gt;
+</tw-passagedata><tw-passagedata pid="62" name="1_17_22" tags="" position="750,3600" size="100,100">&lt;script&gt;addMessage(&quot;Сообщение отмечено как спам и удалено.&quot;, &quot;The message was marked as spam and deleted.&quot;);&lt;/script&gt;
+&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t( &quot;Она скрестила ноги на его пояснице, обвила руками шею, не желая, чтобы их тела разъединялись. Ее слезы смешались с его потом, стекавшим по шее и груди, ныли губы, стертые от жестоких поцелуев. Саднило и там, где за минуту до этого было так сладко.&quot;, &quot;She locked her legs around his waist, arms wound tight around his neck, unwilling to let their bodies part. Her tears mingled with the sweat running down his neck and chest, while her lips ached, rubbed raw by merciless kisses. And there too, where moments before had been only sweetness, now burned with a stinging pain.&quot; )&gt;&gt;
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_17_23]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_17_23]]&lt;&lt;/if&gt;&gt;
 &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="63" name="1_17_31" tags="" position="550,3850" size="100,100">&lt;&lt;set setup.codexEntries[&quot;Eliya&quot;].unlocked = true&gt;&gt;
 &lt;&lt;script&gt;&gt;
+addMessage(&quot;Сообщение от Сектора Социальной Гармонии: «Напоминаем, что отношения, не отражённые в официальной документации, не подлежат обсуждению с третьими лицами».&quot;, &quot;Message from the Social Harmony Sector: “We remind you that relationships not reflected in official documentation are not subject to discussion with third parties.”&quot;);
 $(&quot;#character-container-left img&quot;).fadeOut(300, function() {
 $(this).attr(&#39;src&#39;, &#39;media/characters/Eunice_NN_closed_eyes.webp&#39;); 
 $(this).fadeIn(300); 
@@ -1940,14 +1954,14 @@ $(this).fadeIn(300);
 )&gt;&gt; 
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_17_32]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_17_32]]&lt;&lt;/if&gt;&gt; &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="64" name="1_17_37" tags="" position="800,4350" size="100,100">&lt;&lt;script&gt;&gt;
-$(&quot;#tablet-container&quot;).empty().hide();
-$(&quot;#story&quot;).removeClass(&quot;tablet-active&quot;);
+addMessage(&quot;Уведомляем о необходимости проведения аудиторской проверки в связи с изменением состава совета директоров в соответствии с п. 758 Устава.&quot;, &quot;We inform you of the need to conduct an audit in connection with a change in the composition of the board of directors in accordance with paragraph 758 of the Charter.&quot;);
 &lt;&lt;/script&gt;&gt;
 &lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
 &quot;Эти два чувства были так переплетены, что даже имперские ученые не смогли их разделить.\n&lt;&lt;link [[⚜ Поблагодарить и послушаться-&gt;1_17_38]]&gt;&gt;\n    &lt;&lt;set $loyalty to $loyalty + 1&gt;&gt;&lt;&lt;run updateStats()&gt;&gt;&lt;&lt;/link&gt;&gt;\n&lt;&lt;link [[☘ Отказаться и взбрыкнуть-&gt;1_17_39]]&gt;&gt;\n    &lt;&lt;set $compassion to $compassion + 1&gt;&gt;&lt;&lt;run updateStats()&gt;&gt;&lt;&lt;/link&gt;&gt;&quot;,
 &quot;These two forces were so entwined that even the empire’s scholars could not separate them.\n&lt;&lt;link [[⚜ Thank and comply-&gt;1_17_38]]&gt;&gt;\n    &lt;&lt;set $loyalty to $loyalty + 1&gt;&gt;&lt;&lt;run updateStats()&gt;&gt;&lt;&lt;/link&gt;&gt;\n&lt;&lt;link [[☘ Refuse and rebel-&gt;1_17_39]]&gt;&gt;\n    &lt;&lt;set $compassion to $compassion + 1&gt;&gt;&lt;&lt;run updateStats()&gt;&gt;&lt;&lt;/link&gt;&gt;&quot;
 )&gt;&gt; &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="65" name="1_17_38_2" tags="" position="1200,4350" size="100,100">&lt;&lt;script&gt;&gt;
+addMessage(&quot;Ваше досье отмечено как &quot;перспективное&quot;. По итогам недельного анализа вы добавлены в список граждан, допущенных к участию в лотерее улучшенных бытовых условий. Вероятность выигрыша: ниже статистической погрешности. Тем не менее — поздравляем!&quot;, &quot;Your profile has been marked as &quot;promising.&quot; Following a week-long review, you have been added to the list of citizens eligible to participate in the improved living conditions lottery. Your winning odds are below the margin of error. Nevertheless, congratulations!&quot;);
 $(&quot;#character-container-left img&quot;).fadeOut(300, function() {
 $(this).attr(&#39;src&#39;, &#39;media/characters/Eunice_military_solid.webp&#39;); 
 $(this).fadeIn(300); 
@@ -1963,6 +1977,7 @@ $(this).fadeIn(300);
 )&gt;&gt; 
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_17_38_3]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_17_38_3]]&lt;&lt;/if&gt;&gt; &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="66" name="1_17_39_3" tags="" position="950,4800" size="100,100">&lt;&lt;script&gt;&gt;
+addMessage(&quot;Сообщение от Отдела превентивного правосудия: &quot;О проведении проверки в отношении гражданки Юнис Либери.&quot;&quot;, &quot;Message from the Preventive Justice Department: &quot;On the investigation of citizen Eunice Liberi.&quot;&quot;);
 $(&quot;#character-container-right img&quot;).fadeOut(300, function() {
 $(this).attr(&#39;src&#39;, &#39;media/characters/Laert_angry.webp&#39;); 
 $(this).fadeIn(300); 
@@ -2378,8 +2393,7 @@ $(&quot;#character-container-left img&quot;).fadeOut(300, function() {
 )&gt;&gt;
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_18_11_1]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_18_11_1]]&lt;&lt;/if&gt;&gt;
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="97" name="1_18_12" tags="" position="1400,2775" size="100,100">
-&lt;&lt;script&gt;&gt;
+</tw-passagedata><tw-passagedata pid="97" name="1_18_12" tags="" position="1400,2775" size="100,100">&lt;&lt;script&gt;&gt;
 addMessage(&quot;Активация внешнего устройства вывода вирио: SynPad S-09 Nexus.&quot;, &quot;Activating an external virio output device: SynPad S-09 Nexus.&quot;);
 $(&quot;#character-container-left img&quot;).fadeOut(300, function() {
 $(this).attr(&#39;src&#39;, &#39;media/characters/Eunice_nude.webp&#39;); // Меняем src у изображения
@@ -2486,6 +2500,7 @@ $(&quot;#character-container-right img&quot;).fadeOut(300, function() {
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_17_22]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_17_22]]&lt;&lt;/if&gt;&gt;
 &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="107" name="1_17_25" tags="" position="350,3600" size="100,100">&lt;&lt;script&gt;&gt;
+addMessage(&quot;Внимание! Дополнительно начислены: Сбор за оформление прав на неделимую собственность. Пошлина на подтверждение правопреемства. Тариф на интеграцию объектов в Реестр Имперского имущества. Комиссия за восстановление архивных данных (повреждение: умеренное).&quot;, &quot;Please note! Additionally charged: Fee for registration of rights to undivided property. Duty for confirmation of succession. Tariff for integrating objects into the Imperial Property Register. Commission for restoration of archival data (damage: moderate).&quot;);
 $(&quot;#character-container-right img&quot;).fadeOut(300, function() {
     $(this).attr(&#39;src&#39;, &#39;media/characters/Laert_naked.webp&#39;); 
     $(this).fadeIn(900); 
@@ -2497,6 +2512,7 @@ $(&quot;#character-container-right img&quot;).fadeOut(300, function() {
 )&gt;&gt; 
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_17_26]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_17_26]]&lt;&lt;/if&gt;&gt; &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="108" name="1_17_29" tags="" position="300,3850" size="100,100">&lt;&lt;script&gt;&gt;
+addMessage(&quot;Внимание: Пассажиру рекомендуется взять с собой минимальное количество личных вещей.&quot;, &quot;Please note: Passengers are advised to take a minimum amount of personal belongings with them.&quot;);
 $(&quot;#character-container-left img&quot;).fadeOut(300, function() {
 $(this).attr(&#39;src&#39;, &#39;media/characters/Eunice_nude_light_smile.webp&#39;); 
 $(this).fadeIn(300);
@@ -2513,6 +2529,7 @@ $(this).fadeIn(300);
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_17_30]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_17_30]]&lt;&lt;/if&gt;&gt; &lt;/div&gt;
 
 </tw-passagedata><tw-passagedata pid="109" name="1_17_39_1" tags="" position="800,4600" size="100,100">&lt;&lt;script&gt;&gt;
+addMessage(&quot;Уведомление об изменении перечня наследуемой недвижимости: подтверждение не требуется, утверждено Указом императора.&quot;, &quot;Notification of Change in the List of Inherited Real Estate: No confirmation required, approved by Imperial Decree.&quot;);
 $(&quot;#character-container-left img&quot;).fadeOut(300, function() {
 $(this).attr(&#39;src&#39;, &#39;media/characters/Eunice_military_scared.webp&#39;); 
 $(this).fadeIn(300); 
@@ -2524,6 +2541,7 @@ $(this).fadeIn(300);
 )&gt;&gt; 
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_17_39_2]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_17_39_2]]&lt;&lt;/if&gt;&gt; &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="110" name="1_17_39_4" tags="" position="1075,4800" size="100,100">&lt;&lt;script&gt;&gt;
+addMessage(&quot;Сообщение от Управления безопасности и защиты &quot;О назначении ответственного за безопасность.&quot;&quot;, &quot;Message from the Security and Protection Department &quot;On the appointment of a person responsible for security.&quot;&quot;);
 var currentVol = SimpleAudio.volume(); // Получаем текущую глобальную громкость (0.5 по дефолту)
 console.log(&quot;Current volume:&quot;, currentVol);
 // Затухание intro по шагам
@@ -2568,6 +2586,7 @@ setTimeout(function() {
 )&gt;&gt; 
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_19]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_19]]&lt;&lt;/if&gt;&gt; &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="111" name="1_20" tags="" position="1200,5175" size="100,100">&lt;&lt;script&gt;&gt;
+addMessage(&quot;Напоминаем о необходимости предоставления объяснений в письменном виде в связи с установлением правонарушений.&quot;, &quot;We remind you of the need to provide explanations in writing in connection with the establishment of violations.&quot;);
 $(&quot;#character-container-right img&quot;).fadeOut(300, function() {
 $(this).attr(&#39;src&#39;, &#39;media/characters/Kiros.webp&#39;); 
 $(this).fadeIn(300); 
@@ -2579,6 +2598,7 @@ $(this).fadeIn(300);
 )&gt;&gt; 
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_21]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_21]]&lt;&lt;/if&gt;&gt; &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="112" name="1_23" tags="" position="1200,5600" size="100,100">&lt;&lt;script&gt;&gt;
+addMessage(&quot;Пересечение границы квадрата 3-14 Кордийского сектора, поиск связи... Подключение восстановлено, получение IP устройства.&quot;, &quot;Crossing the border of square 3-14 of the Cordian sector, searching for communication... Connection restored, receiving device IP.&quot;);
 $(&quot;#character-container-left img&quot;).fadeOut(300, function() {
 $(this).attr(&#39;src&#39;, &#39;media/characters/Eunice_military_smile.webp&#39;); 
 $(this).fadeIn(300); 
@@ -2589,6 +2609,7 @@ $(this).fadeIn(300);
 &quot;&lt;&lt;link [[☽⚜(Coquettishly) Are you my overseer? We are both on the side of the Emperor. -&gt;1_23_2]]&gt;&gt;\n    &lt;&lt;set $echo to $echo - 1&gt;&gt;&lt;&lt;set $loyalty to $loyalty + 1&gt;&gt;&lt;&lt;run updateStats()&gt;&gt;&lt;&lt;/link&gt;&gt;\n&lt;&lt;link [[⛓☘I hope they’ll register the apartment in my name? As I know, the Emperor’s handouts tend to run out quickly. -&gt;1_23_3]]&gt;&gt;\n    &lt;&lt;set $echo to $echo + 1&gt;&gt;&lt;&lt;set $compassion to $compassion + 1&gt;&gt;&lt;&lt;run updateStats()&gt;&gt;&lt;&lt;/link&gt;&gt;\n&lt;&lt;link [[☽☘Gloomy place. It&#39;s here the officials live out their days? -&gt;1_23_1]]&gt;&gt;\n    &lt;&lt;set $echo to $echo - 1&gt;&gt;&lt;&lt;set $compassion to $compassion + 1&gt;&gt;&lt;&lt;run updateStats()&gt;&gt;&lt;&lt;/link&gt;&gt;\n&lt;&lt;link [[⛓⚜(Admiring and unladylike whistle) The Emperor knows how to reward, doesn’t he? -&gt;1_23_4]]&gt;&gt;\n    &lt;&lt;set $echo to $echo + 1&gt;&gt;&lt;&lt;set $loyalty to $loyalty + 1&gt;&gt;&lt;&lt;run updateStats()&gt;&gt;&lt;&lt;/link&gt;&gt;&quot;
 )&gt;&gt; &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="113" name="1_23_1_1" tags="" position="925,5875" size="100,100">&lt;&lt;script&gt;&gt;
+addMessage(&quot;Служба безопасности требует немедленной идентификации сопровождающего лица.&quot;, &quot;Security requires immediate identification of the accompanying person.&quot;);
 $(&quot;#character-container-left img&quot;).fadeOut(300, function() {
 $(this).attr(&#39;src&#39;, &#39;media/characters/Eunice_military_solid.webp&#39;); 
 $(this).fadeIn(300); 
@@ -2600,6 +2621,7 @@ $(this).fadeIn(300);
 )&gt;&gt; 
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[— Расскажите о себе, Кайрос.-&gt;1_24]]&lt;&lt;else&gt;&gt;[[—Tell me about yourself, Kairos.-&gt;1_24]]&lt;&lt;/if&gt;&gt; &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="114" name="1_23_2_1" tags="" position="1125,5875" size="100,100">&lt;&lt;script&gt;&gt;
+addMessage(&quot;Служба безопасности требует немедленной идентификации сопровождающего лица.&quot;, &quot;Security requires immediate identification of the accompanying person.&quot;);
 $(&quot;#character-container-left img&quot;).fadeOut(300, function() {
 $(this).attr(&#39;src&#39;, &#39;media/characters/Eunice_absent.webp&#39;); 
 $(this).fadeIn(300); 
@@ -2611,6 +2633,7 @@ $(this).fadeIn(300);
 )&gt;&gt; 
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[— Расскажите о себе, Кайрос.-&gt;1_24]]&lt;&lt;else&gt;&gt;[[—Tell me about yourself, Kairos.-&gt;1_24]]&lt;&lt;/if&gt;&gt; &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="115" name="1_23_3_1" tags="" position="1300,5875" size="100,100">&lt;&lt;script&gt;&gt;
+addMessage(&quot;Служба безопасности требует немедленной идентификации сопровождающего лица.&quot;, &quot;Security requires immediate identification of the accompanying person.&quot;);
 $(&quot;#character-container-left img&quot;).fadeOut(300, function() {
 $(this).attr(&#39;src&#39;, &#39;media/characters/Eunice_absent.webp&#39;); 
 $(this).fadeIn(300); 
@@ -2622,6 +2645,7 @@ $(this).fadeIn(300);
 )&gt;&gt; 
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[— Расскажите о себе, Кайрос.-&gt;1_24]]&lt;&lt;else&gt;&gt;[[— Tell me about yourself, Kairos.-&gt;1_24]]&lt;&lt;/if&gt;&gt; &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="116" name="1_23_4_1" tags="" position="1475,5875" size="100,100">&lt;&lt;script&gt;&gt;
+addMessage(&quot;Служба безопасности требует немедленной идентификации сопровождающего лица.&quot;, &quot;Security requires immediate identification of the accompanying person.&quot;);
 $(&quot;#character-container-left img&quot;).fadeOut(300, function() {
 $(this).attr(&#39;src&#39;, &#39;media/characters/Eunice_military_solid.webp&#39;); 
 $(this).fadeIn(300); 
@@ -2682,6 +2706,7 @@ $(&quot;#character-container-right img&quot;).fadeOut(300);
 )&gt;&gt;
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_44_2]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_44_2]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="122" name="1_17_27" tags="" position="175,3725" size="100,100">&lt;&lt;script&gt;&gt;
+addMessage(&quot;Курение строго запрещено. Запрещено содержать нелицензированных домашних существ. Открытие панорамных окон без разрешения службы безопасности запрещено. Шумовые ограничения: 22:00–06:00 — режим звуковой тишины.&quot;, &quot;Smoking is strictly prohibited. Keeping unlicensed pets is prohibited. Opening panoramic windows without security permission is prohibited. Noise restrictions: 10:00 PM–6:00 AM — no-sound policy.&quot;);
 $(&quot;#character-container-left img&quot;).fadeOut(300);
 $(&quot;#character-container-right img&quot;).fadeOut(300);
 $(&quot;#tablet-container&quot;).html(&#39;&lt;img src=&quot;media/tablet/01ddd3.webp&quot; alt=&quot;Tablet&quot;&gt;&#39;).show();
@@ -3139,15 +3164,13 @@ showTablet(
 &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="155" name="1_15" tags="" position="425,2225" size="100,100">&lt;&lt;script&gt;&gt;
 addMessage(&quot;п. 1 ч. 45 ст. 25(1) Конституции Объединенной Империи: \&quot;Каждый гражданин лично несет ответственность за свой выбор и его последствия.\&quot;&quot;, &quot;Sec. 1, Part 45, Art. 25(1) of the Constitution of the United Empire: \&quot;Every citizen bears personal responsibility for their choices and the consequences thereof.\&quot;&quot;);
-$(&quot;#tablet-container&quot;).empty().hide(); $(&quot;#story&quot;).removeClass(&quot;tablet-active&quot;);&lt;&lt;/script&gt;&gt;
+&lt;&lt;/script&gt;&gt;
 &lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
 &#39;Любовь к нему была сильнее смерти. Император был осью вращения всего мира. В голове всплыло зыбкое:\n&quot;Лаэрт. Как же он близко... И как участливо смотрит на меня. Никогда раньше так он не смотрел — всегда с насмешкой.&quot;&#39;,
 &#39;Love for him burned fiercer than death itself. The Emperor was the axis around which her entire world spun. A fleeting thought flickered in her mind:\n&quot;Laertes. How close he is… And how tenderly he gazes at me. Never before like this—always with a mocking glint.&quot;&#39;
 )&gt;&gt;
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_16]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_16]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="156" name="1_17_7" tags="" position="575,2750" size="100,100">&lt;&lt;script&gt;&gt;
 addMessage(&quot;\&quot;Иногда память — просто способ снова почувствовать хоть что-то. Да, моя маленькая? С днем рождения!\&quot;&quot;, &quot;\&quot;Sometimes memory is just a way to feel at least something again. Right, my baby girl? Happy birthday!\&quot;&quot;);
-$(&quot;#tablet-container&quot;).empty().hide();
-$(&quot;#story&quot;).removeClass(&quot;tablet-active&quot;);
 &lt;&lt;/script&gt;&gt;
 &lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t( &quot;Юнис ласкала его взглядом, как было между ними и раньше, по привычке не смея преступать невидимую черту. Лаэрт заметил это и отвернулся, а потом и вовсе отошел в сторону.&quot;, &quot;Eunice gazed at him tenderly, as she had always done before, never daring to cross the unseen barrier between them. Laertes caught her look, turned away, then stepped aside.&quot; )&gt;&gt;
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_17_8]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_17_8]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="157" name="1_17_10" tags="" position="700,3100" size="100,100">&lt;script&gt;addMessage(&quot;Повторный запрос в ИСБ... Отказано.&quot;, &quot;Repeated request to the ISB... Denied.&quot;);&lt;/script&gt;
@@ -3157,8 +3180,7 @@ $(&quot;#story&quot;).removeClass(&quot;tablet-active&quot;);
 &lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t( &quot;Элия тихо ахала бы ему на ухо, а Юнис рвано и хрипло стонала, перемежая это нечленораздельными вскриками и крепкими словечками. Элия позволяла себя любить, а Юнис любила сама.&quot;, &quot;Eliya would have sighed softly into his ear, while Eunice moaned in ragged, husky gasps, breaking them with incoherent cries and sharp, unbridled words. Eliya allowed herself to be loved—Eunice loved with all her fire.&quot; )&gt;&gt;
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_17_19]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_17_19]]&lt;&lt;/if&gt;&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="159" name="1_17_36" tags="" position="800,4225" size="100,100">&lt;&lt;script&gt;&gt;
-$(&quot;#tablet-container&quot;).empty().hide();
-$(&quot;#story&quot;).removeClass(&quot;tablet-active&quot;);
+addMessage(&quot;Поздравляем с назначением в совет директоров концерна Фиделис Экстракшн! Просьба явиться для ознакомления с протоколами заседаний за 28 сентября 2217 года.&quot;, &quot;Congratulations on your appointment to the Fidelis Extraction Board of Directors! Please attend to review the minutes of the meeting for September 28, 2017.&quot;);
 &lt;&lt;/script&gt;&gt;
 &lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
 &quot;К тому же Юнис снова должна была вернуться к руководству предприятиями, чего ей очень не хотелось. Причина ее нежелания крылась в прошлом Терона — в его бесконечной усталости, которая сочеталась с бесценным опытом. &quot;,
@@ -3185,12 +3207,14 @@ $(&quot;#story&quot;).removeClass(&quot;tablet-active&quot;);
 &quot;— Don’t start. You sound like him.\n— I’m not him. You said so yourself.\nA storm raged in her soul. There was so much she wanted to say to him, to spit in his face. &quot;
 )&gt;&gt;
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_18_14_10]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_18_14_10]]&lt;&lt;/if&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="163" name="1_22" tags="" position="1200,5450" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="163" name="1_22" tags="" position="1200,5450" size="100,100">&lt;script&gt;addMessage(&quot;Сообщение от Сектора Социальной Гармонии: «Для улучшения социального взаимодействия рекомендуем к распространению только одобренный юмористический контент.»&quot;, &quot;A message from the Social Harmony Sector: &quot;To improve social interaction, we recommend distributing only approved humorous content.&quot;&quot;);&lt;/script&gt;
+&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
 &quot;Вскоре в ответ на приветливость Кайроса Юнис стала оживать. Он нарочно уводил ее в сторону от мрачных мыслей, непринужденно шутил, притом в голосе его не чувствовалось ни капли неискренности. Юнис невольно поддалась его обаянию и поймала себя на том, что смотрит на телохранителя с интересом.&quot;,
 &quot;Soon, in response to Kairos’s warmth, Eunice began to brighten and open up. He deliberately kept the conversation light, joked with effortless ease, and not a trace of insincerity touched his voice. Gradually, Eunice yielded to his charm and found herself looking at the bodyguard with growing interest.&quot;
 )&gt;&gt; 
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_23]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_23]]&lt;&lt;/if&gt;&gt; &lt;/div&gt;</tw-passagedata><tw-passagedata pid="164" name="1_24" tags="" position="1200,6050" size="100,100">&lt;&lt;set setup.codexEntries[&quot;Petros&quot;].unlocked = true&gt;&gt;
 &lt;&lt;script&gt;&gt;
+addMessage(&quot;Зафиксирована попытка доступа к запрещенным источникам в экстранете. Переадресация на соответствующую статью Имперской энциклопедии: \&quot;О наведении порядка на дальних рубежах.\&quot;&quot;, &quot;An attempt to access restricted extranet sources has been detected. Redirected to the relevant Imperial Encyclopedia article: \&quot;On Restoring Order on the Far Frontiers.\&quot;&quot;);
 $(&quot;#character-container-left img&quot;).fadeOut(300, function() {
 $(this).attr(&#39;src&#39;, &#39;media/characters/Eunice_military_sad.webp&#39;); 
 $(this).fadeIn(300); 
@@ -3216,6 +3240,7 @@ $(this).fadeIn(300);
 &quot;She opened the image of her predecessor and let her fingers drift across the photograph of Theron—meticulously chosen and sanctified by the Empire’s Holy Ministry of Sacred Propaganda.&quot; 
 )&gt;&gt; 
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Взглянуть на фото Терона-&gt;1_18_25]]&lt;&lt;else&gt;&gt;[[Look at Theron’s photo-&gt;1_18_25]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="168" name="1_17_38_3" tags="" position="1200,4650" size="100,100">&lt;&lt;script&gt;&gt;
+addMessage(&quot;Сообщение от Управления безопасности и защиты &quot;О назначении ответственного за безопасность.&quot;&quot;, &quot;Message from the Security and Protection Department &quot;On the appointment of a person responsible for security.&quot;&quot;);
 var currentVol = SimpleAudio.volume(); // Получаем текущую глобальную громкость (0.5 по дефолту)
 console.log(&quot;Current volume:&quot;, currentVol);
 // Затухание intro по шагам
@@ -3259,7 +3284,8 @@ setTimeout(function() {
 &quot;—Officer Kairos will be responsible for your safety. You are free to go.\nHis words sounded like mockery.&quot;
 )&gt;&gt; 
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_19]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_19]]&lt;&lt;/if&gt;&gt; &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="169" name="1_17_33" tags="" position="800,3850" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
+</tw-passagedata><tw-passagedata pid="169" name="1_17_33" tags="" position="800,3850" size="100,100">&lt;script&gt;addMessage(&quot;Уведомление: в 18:00 состоится обязательное общее собрание Башни Лиграта. Тема: «Недопустимость скрытых социальных связей».&quot;, &quot;Notice: The mandatory general meeting of the Ligrat Tower will take place at 6:00 PM. Topic: &quot;Inadmissibility of hidden social connections.&quot;&quot;);&lt;/script&gt;
+&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
 &quot;— Ты не смеешь разглашать обстоятельства нашей связи. Ты продолжишь управлять стратегически важными предприятиями, как это делал Терон. И оденься, в конце концов.&quot;,
 &quot;—You must not reveal the circumstances of our relationship. You will continue to manage strategically important enterprises, just as Theron did. And put on some clothes, for heaven’s sake.&quot;
 )&gt;&gt; 
@@ -3290,7 +3316,8 @@ setTimeout(function() {
 )&gt;&gt;
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_18_14_2]]
 &lt;&lt;else&gt;&gt;[[Next-&gt;1_18_14_2]]
-&lt;&lt;/if&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="175" name="1_17_26" tags="" position="175,3600" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
+&lt;&lt;/if&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="175" name="1_17_26" tags="" position="175,3600" size="100,100">&lt;script&gt;addMessage(&quot;Статус вашей учетной записи обновлен. Место временной регистрации: Башня Лиграта, сектор B, 18-й этаж, жилой модуль 1804.&quot;, &quot;Your account status has been updated. Your temporary registration location is Ligrat Tower, Sector B, Floor 18, Residential Unit 1804.&quot;);&lt;/script&gt;
+&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
 &quot;Слова будто не сама Юнис произнесла, а кто-то со стороны:\n— Как будет угодно императору.\n— Представим тебя обществу на Этернис. Покрутишься там с неделю, чтобы тебя запомнили.&quot;,
 &quot;The words seemed to come not from Eunice herself, but from someone speaking through her:\n— As the emperor wishes.\n—Let&#39;s present you to Eternis&#39; high society. Work your charm there for a week so everyone remembers you.&quot;
 )&gt;&gt; 
@@ -3394,7 +3421,8 @@ $(this).fadeIn(600); // Показываем новый спрайт
 )&gt;&gt;
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;1_18_12]]&lt;&lt;else&gt;&gt;[[Next-&gt;1_18_12]]&lt;&lt;/if&gt;&gt;
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="181" name="1_19_1" tags="" position="1200,5000" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
+</tw-passagedata><tw-passagedata pid="181" name="1_19_1" tags="" position="1200,5000" size="100,100">&lt;script&gt;addMessage(&quot;На ваше имя выписан штраф на сумму 2450 имперских кредитов. Сумма будет принудительно взыскана с вашего счета.&quot;, &quot;A fine of 2,450 imperial credits has been issued in your name. The amount will be forcibly collected from your account.&quot;);&lt;/script&gt;
+&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
 &quot;На душе было неуютно, и это чувство усиливалось от необходимости пройти все формальности, объяснить, кто, куда, зачем, почему нет айди, почему нет доверенности на авто, почему, почему...&quot;,
 &quot;She felt uneasy, and the sensation grew stronger as she had to endure all the formalities, explain who, where, why, why no ID, why no car authorization, why, why...&quot;
 )&gt;&gt;
@@ -4704,20 +4732,19 @@ $(this).fadeIn(600); // Показываем новый спрайт
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;2_22_13]]&lt;&lt;else&gt;&gt;[[Next-&gt;2_22_13]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="325" name="2_22_11_1_1" tags="" position="1750,19750" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(&quot;\&quot;И кто же тебя так назвал-то, мама-вердантийка на счастье или Петрос, на которого вдруг накатил приступ суеверности?\&quot;&quot;, &quot;//And who called you that, the Verdantian mother for luck or Petros, who was suddenly overcome by an attack of superstition?//&quot;)&gt;&gt;
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;2_22_12]]&lt;&lt;else&gt;&gt;[[Next-&gt;2_22_12]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="326" name="2_22_13" tags="" position="1600,20000" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(&quot;— Балет начинается через пятнадцать минут. Вы ведь хотели увидеть, как это выглядит?&quot;, &quot;\&quot;The ballet starts in fifteen minutes. You wanted to see what it looks like, right?\&quot;&quot;)&gt;&gt;
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;2_22_14]]&lt;&lt;else&gt;&gt;[[Next-&gt;2_22_14]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="327" name="2_22_14" tags="" position="1600,20125" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(&quot;Они вышли из бара в коридор, где было темнее и интимней. Музыка все еще продолжала фантомом звучать у Юнис в голове.&quot;, &quot;They walked out of the bar into the hallway, where it was darker and more intimate. The music still continued to sound like a phantom in Eunice\&#39;s head.&quot;)&gt;&gt;
-&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;0_sax3k]]&lt;&lt;else&gt;&gt;[[Next-&gt;0_sax3k]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="328" name="2_22_15" tags="" position="1600,20250" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(&quot;Кайрос резко выдохнул, когда оказался прижатым к стенке. Похоже, он такого от Юнис не ожидал.&quot;, &quot;Kairos exhaled sharply when he found himself pressed against the wall. The bodyguard didn’t seem to expect this from Eunice.&quot;)&gt;&gt;
+&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;0_sax3k]]&lt;&lt;else&gt;&gt;[[Next-&gt;0_sax3k]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="328" name="2_22_15" tags="" position="1600,20250" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(&quot;Кайрос резко выдохнул, когда оказался прижатым к стенке. Похоже, такого от Юнис он не ожидал.&quot;, &quot;Kairos exhaled sharply when he found himself pressed against the wall. The bodyguard didn’t seem to expect this from Eunice.&quot;)&gt;&gt;
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;2_22_16]]&lt;&lt;else&gt;&gt;[[Next-&gt;2_22_16]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="329" name="2_22_16" tags="" position="1600,20375" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(&quot;С ее стороны прозвучал смешок - чуть нервный. Она попыталась объяснить хотя бы себе, почему стала хихикать, как школьница.&quot;, &quot;There was a laugh on her part, a little nervous. She tried to explain, at least to herself, why she started giggling like a schoolgirl.&quot;)&gt;&gt;
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[У него тело каменное. Вообще //все// как камень.-&gt;2_22_17]]\n[[Я много выпила. А он только чуть пригубил вина. И сейчас смотрит, как зверь. Так пугает… и так нравится.-&gt;2_22_17]]\n[[Между ног тепло стало. И внутри все дрожит. Я хочу его и не только. Не только хочу.-&gt;2_22_17]]&lt;&lt;else&gt;&gt;[[His body is like stone. //Every// part of him-&gt;2_22_17]]\n[[I’ve had too much to drink. And he only barely tasted the wine. And now he\’s looking at me like a predator. It scares me… and I like it.-&gt;2_22_17]]\n[[There\’s heat between my legs. And everything inside is trembling. I want him — and not just //want//.-&gt;2_22_17]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="330" name="2_22_17" tags="" position="1600,20500" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(&quot;Кайрос обхватил ее за талию, помедлил - и Юнис провалилась в его темные внезапно серьезные глаза.&quot;, &quot;Kairos slipped an arm around her waist and hesitated — and Eunice fell into his dark, suddenly serious eyes.&quot;)&gt;&gt;
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;2_22_18]]&lt;&lt;else&gt;&gt;[[Next-&gt;2_22_18]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="331" name="2_22_18" tags="" position="1600,20625" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(&quot;Сейчас его было легко представить себе в лесах Верданты, целящегося в прицел устаревшей обшарпанной винтовки, охотящегося на неведомых чудищ или просчитывающего план марш-броска.&quot;, &quot;Now it was easy to imagine him  in the forests of Verdanta, aiming at the scope of an outdated, shabby rifle, hunting unknown monsters or calculating a forced march plan.&quot;)&gt;&gt;
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;2_22_19]]&lt;&lt;else&gt;&gt;[[Next-&gt;2_22_19]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="332" name="2_22_19" tags="" position="1600,20750" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(&quot;Ей чертовски хотелось докопаться до него настоящего, и сейчас он был именно таким.\n- Я хочу тебя, Кайрос.&quot;, &quot;She damn sure wanted to get to the bottom of the real him, and now he was just like that.\n\&quot;I want you, Kairos.\&quot;&quot;)&gt;&gt;
-&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;2_22_20]]&lt;&lt;else&gt;&gt;[[Next-&gt;2_22_20]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="333" name="2_22_20" tags="" position="1600,20875" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(&quot;Снова резкий выдох от него и победная ухмылка у нее.&quot;, &quot;Another sharp exhale from him and a victorious grin from her.&quot;)&gt;&gt;
+&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;2_22_20]]&lt;&lt;else&gt;&gt;[[Next-&gt;2_22_20]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="333" name="2_22_20" tags="" position="1600,20875" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(&quot;Снова резкий выдох от него и победная ухмылка у нее. Взгляд его стал тяжелым, а тело предательски напряглось. Юнис решила его добить и провела пальцами там, где Кайрос выдавал себя.&quot;, &quot;Another sharp exhale from him, and a victorious smirk from her. His gaze grew heavy, and his body betrayed him with a tense shiver. Eunice decided to finish him off and traced her fingers where Kairos was giving himself away.&quot;)&gt;&gt;
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;2_22_21]]&lt;&lt;else&gt;&gt;[[Next-&gt;2_22_21]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="334" name="2_22_21" tags="" position="1600,21000" size="100,100">
-&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(&quot;- Здесь могут отдыхающие ходить, госпожа, - через силу выдавил из себя он.&quot;, &quot;\&quot;Vacators can walk here, madam,\&quot; it seemed that he was telling a lie, his voice sounded unnatural.&quot;)&gt;&gt;
-&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;2_22_22]]&lt;&lt;else&gt;&gt;[[Next-&gt;2_22_22]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="335" name="2_22_22" tags="" position="1600,21125" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(&quot;\&quot;Просто говоришь не то, что хочешь, Кайрос. А хочешь ты меня.\&quot; - пока Юнис было достаточно этой небольшой победы. Пока.&quot;, &quot;//You’re just not saying what you want, Kairos. But what you want is me.// - for now, this small victory was enough for Eunice. For now.&quot;)&gt;&gt;
-&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;2_22_23]]&lt;&lt;else&gt;&gt;[[Next-&gt;2_22_23]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="336" name="2_22_23" tags="" position="1600,21250" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(&quot;- Действительно. И на балет можем опоздать, - мстительно поддакнула она.&quot;, &quot;\&quot;Really. And we might be late for the ballet,\&quot; she assented vindictively.&quot;)&gt;&gt;
+</tw-passagedata><tw-passagedata pid="334" name="2_22_21" tags="" position="1600,21000" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(&quot;- Здесь могут отдыхающие ходить, госпожа, - через силу выдавил из себя он.\n Юнис нехотя убрала пальцы от его ремня, а губы - от шеи.&quot;, &quot;\&quot;Vacators can walk here, Domina,\&quot; it seemed that he was telling a lie, his voice sounded unnatural. Eunice reluctantly withdrew her fingers from his belt, and her lips from his neck.&quot;)&gt;&gt;
+&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;2_22_22]]&lt;&lt;else&gt;&gt;[[Next-&gt;2_22_22]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="335" name="2_22_22" tags="" position="1600,21125" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(&quot;\&quot;Просто говоришь не то, что хочешь, Кайрос. А хочешь ты меня.\&quot; - подумала она. Пока Юнис было достаточно этой небольшой победы. Пока.&quot;, &quot;//You’re just not saying what you want, Kairos. But what you want is me.// - for now, this small victory was enough for Eunice. For now.&quot;)&gt;&gt;
+&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;2_22_23]]&lt;&lt;else&gt;&gt;[[Next-&gt;2_22_23]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="336" name="2_22_23" tags="" position="1600,21250" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(&quot;- Действительно. И на балет можем опоздать, - мстительно поддакнула она.\n Кайрос тяжело дышал, всем видом показывая, чего в действительности он хотел сейчас.&quot;, &quot;\&quot;Really. And we might be late for the ballet,\&quot; she assented vindictively. Kairos was breathing heavily, his whole demeanor revealing what he truly wanted right now.&quot;)&gt;&gt;
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;2_22_24]]&lt;&lt;else&gt;&gt;[[Next-&gt;2_22_24]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="337" name="2_22_24" tags="" position="1600,21375" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(&quot;И разумеется, они опоздали - оторваться друг от друга было задачей с пятью звездочками. Юнис казалось, что все смотрят на них и видят отпечатки его рук на ней… и ее на нем. Под ладонями будто все еще горело тело Кайроса, горячее и жесткое.&quot;, &quot;And of course, they were late - getting away from each other was a five-star task. Eunice felt like everyone was looking at them and seeing his handprints on her... and hers on him. Under the palms, it was as if Kairos’s body was still burning, hot and hard.&quot;)&gt;&gt;
-&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;2_22_25]]&lt;&lt;else&gt;&gt;[[Next-&gt;2_22_25]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="338" name="2_22_25" tags="" position="1600,21500" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(&quot;На самом деле всем было плевать: смотрели шоу. Совершенные тела танцовщиц плавно, томно вращались в невесомости, освещение драматично выставляло их то нежными ангелами, то, в момент прыжков, пикирующими охотницами.&quot;, &quot;In fact, no one cared: they watched the show. The perfect bodies of the dancers rotated smoothly, languidly in weightlessness, the lighting dramatically exposed them either as gentle angels or, at the moment of jumping, as diving huntresses.&quot;)&gt;&gt;
+&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;2_22_25]]&lt;&lt;else&gt;&gt;[[Next-&gt;2_22_25]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="338" name="2_22_25" tags="" position="1600,21500" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(&quot;На самом деле всем было плевать: смотрели шоу. Совершенно сложенные танцовщицы плавно, томно вращались в невесомости, освещение драматично выставляло их то нежными ангелами, то, в момент прыжков, пикирующими охотницами.&quot;, &quot;In fact, no one cared: they watched the show. The perfect bodies of the dancers rotated smoothly, languidly in weightlessness, the lighting dramatically exposed them either as gentle angels or, at the moment of jumping, as diving huntresses.&quot;)&gt;&gt;
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;2_22_26]]&lt;&lt;else&gt;&gt;[[Next-&gt;2_22_26]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="339" name="2_22_26" tags="" position="1600,21625" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(&quot;Юнис взяла программу спектакля - роскошную, напечатанную на настоящей бумаге, и попыталась вникнуть в сюжет.&quot;, &quot;Eunice took the performance program - luxurious, printed on real paper - and tried to understand the plot.&quot;)&gt;&gt;&lt;&lt;if $echo &gt;= 0&gt;&gt;
     &lt;&lt;= setup.t(&quot;[[Далее-&gt;2_22_27]]&quot;, &quot;[[Next-&gt;2_22_27]]&quot;)&gt;&gt;
 &lt;&lt;elseif $echo &lt; 0 and State.variables.loyalty &gt;= State.variables.compassion&gt;&gt;
@@ -4793,17 +4820,17 @@ $(this).fadeIn(600); // Показываем новый спрайт
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;2_22_27_53]]&lt;&lt;else&gt;&gt;[[Next-&gt;2_22_27_53]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="395" name="2_22_27_53" tags="" position="750,28325" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(&quot;- Снова мокрая. Или все еще? - он вздохнул и убрал свою руку от ее груди для того, чтобы расстегнуть свою ширинку. - Твоя очередь, племяшка Юни.&quot;, &quot;\&quot;Wet again. Or still? - He sighed and removed his hand from her chest in order to unzip his fly. - Your turn, Eunie... Niece...\&quot;&quot;)&gt;&gt;
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;2_22_27_54]]&lt;&lt;else&gt;&gt;[[Next-&gt;2_22_27_54]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="396" name="2_22_27_54" tags="" position="750,28450" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(&quot;Он откинулся на спинку дивана и смотрел, смотрел не мигая, не отрываясь. В этот раз Юнис не хотела и не могла сдерживать стоны, а потом и крики.&quot;, &quot;He leaned back on the sofa and watched, watched without blinking, without looking away. This time Eunice was unwilling and unable to hold back her moans and then her screams.&quot;)&gt;&gt;
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;2_22_27_55]]&lt;&lt;else&gt;&gt;[[Next-&gt;2_22_27_55]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="397" name="2_22_28_1" tags="" position="1600,21875" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(&quot;- Так что сильно не облизывайтесь, Кайрос. Сейчас на сцену выпустят объединенные военно-воздушные силы во главе с вашим отцом, и они этих дам… затанцуют.&quot;, &quot;\&quot;So don’t lick yourself too much, Kairos. Now the united air force, led by your father, will be released on stage, and they will... dance these ladies.\&quot;&quot;)&gt;&gt;
+</tw-passagedata><tw-passagedata pid="397" name="2_22_28_1" tags="" position="1600,21875" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(&quot;- Так что сильно не облизывайтесь, Кайрос. Сейчас на сцену выпустят объединенные военно-воздушные силы во главе с вашим отцом, и они этих дам… затанцуют.\n Юнис эта мысль приносила мрачное удовлетворение.&quot;, &quot;\&quot;So don’t lick yourself too much, Kairos. Now the united air force, led by your father, will be released on stage, and they will... dance these ladies.\&quot;&quot;)&gt;&gt;
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;2_22_28_2]]&lt;&lt;else&gt;&gt;[[Next-&gt;2_22_28_2]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="398" name="2_22_28_2" tags="" position="1600,22000" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(&quot;Кайрос шутку поддержал:\n- Хвала Пресвятым Речеводам, пусть Слово их будет крепко. Значит, не придется вмешиваться и можно сконцентрироваться на своих обязанностях.&quot;, &quot;Kairos supported the joke:\n\&quot;Praise to the Most Holy Speechmakers, may their Word be strong. This means you don’t have to interfere and you can concentrate on your responsibilities.\&quot;&quot;)&gt;&gt;
-&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;2_22_28_3]]&lt;&lt;else&gt;&gt;[[Next-&gt;2_22_28_3]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="399" name="2_22_28_3" tags="" position="1600,22125" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(&quot;Он наклонился к Юнис:\n- На вас, моя госпожа.&quot;, &quot;He leaned towards Eunice:\n\&quot;At you, domina.&quot;)&gt;&gt;
-&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;2_22_28_4]]&lt;&lt;else&gt;&gt;[[Next-&gt;2_22_28_4]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="400" name="2_22_28_4" tags="" position="1600,22250" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(&quot;Смотреть представление стало попросту невозможно. Смысл представления от нее ускользал, оставались лишь внешние раздражители:...&quot;, &quot;It became simply impossible to watch the show. The meaning of the performance eluded her, only external stimuli remained:...&quot;)&gt;&gt;
+&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;2_22_28_3]]&lt;&lt;else&gt;&gt;[[Next-&gt;2_22_28_3]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="399" name="2_22_28_3" tags="" position="1600,22125" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(&quot;Он наклонился к Юнис:\n- На вас, моя госпожа.\nОт вкрадчиво-низкого голоса между ног снова стало жарко, и уважаемая домина стала елозить по бархатной обивке стула с золочеными ножками.&quot;, &quot;He leaned towards Eunice:\n\&quot;At you, domina.&quot;)&gt;&gt;
+&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;2_22_28_4]]&lt;&lt;else&gt;&gt;[[Next-&gt;2_22_28_4]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="400" name="2_22_28_4" tags="" position="1600,22250" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(&quot;Смотреть представление стало попросту невозможно. Смысл происходящего от нее ускользал, оставались лишь внешние раздражители:...&quot;, &quot;It became simply impossible to watch the show. The meaning of the performance eluded her, only external stimuli remained:...&quot;)&gt;&gt;
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;2_22_28_5]]&lt;&lt;else&gt;&gt;[[Next-&gt;2_22_28_5]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="401" name="2_22_28_5" tags="" position="1600,22375" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(&quot;…эротично выгибающиеся танцоры обоих полов, Кайрос рядом, ненароком (или нарочно) задевающий ее то локтем, то коленом, и собственная кипящая страсть внутри.&quot;, &quot;...erotically arching dancers of both sexes, Kairos nearby, inadvertently (or deliberately) touching her with his elbow or knee, and his own boiling passion inside.&quot;)&gt;&gt;
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;2_22_28_6]]&lt;&lt;else&gt;&gt;[[Next-&gt;2_22_28_6]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="402" name="2_22_28_6" tags="" position="1600,22500" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(&quot;- Кого бы вы поддержали?\nТихий голос телохранителя вытащил Юнис из оцепенения. Кайрос увел ее с представления чуть пораньше, якобы, чтобы избежать толпы, и Юнис не особо этому противилась.&quot;, &quot;\&quot;Who would you support?\&quot;\nThe quiet voice of the bodyguard pulled Eunice out of her stupor. Kairos took her out of the show a little early, and Eunice didn\&#39;t mind too much.&quot;)&gt;&gt;
-&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;2_22_28_7]]&lt;&lt;else&gt;&gt;[[Next-&gt;2_22_28_7]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="403" name="2_22_28_7" tags="" position="1600,22625" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(&quot;- М? Простите, о чем вы? Я не сильно вникала, больше наслаждалась эстетикой раннего тоталитаризма.&quot;, &quot;\&quot;M-m? Sorry, what are you talking about? I didn’t delve into it much, I rather enjoyed the aesthetics of early totalitarianism.\&quot;&quot;)&gt;&gt;
+&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;2_22_28_7]]&lt;&lt;else&gt;&gt;[[Next-&gt;2_22_28_7]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="403" name="2_22_28_7" tags="" position="1600,22625" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(&quot;- М? Простите, о чем вы? Я не сильно вникала, больше наслаждалась эстетикой раннего тоталитаризма.\nКайрос вдруг снова схватил ее за руку - резко, даже, пожалуй, грубовато, выдавая, насколько важным на самом деле был заданный Юнис вопрос.&quot;, &quot;\&quot;M-m? Sorry, what are you talking about? I didn’t delve into it much, I rather enjoyed the aesthetics of early totalitarianism.\&quot;&quot;)&gt;&gt;
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;2_22_28_8]]&lt;&lt;else&gt;&gt;[[Next-&gt;2_22_28_8]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="404" name="2_22_28_8" tags="" position="1600,22750" size="100,100">
-&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(&quot;- Шутите, да? \n- Кайрос, я поддерживаю политику нашей Империи. Император - ее лицо и ведущая воля. Речеводы - ее голос. Мы - …&quot;, &quot;\&quot;You\&#39;re kidding, right?\&quot; \n\&quot;Kairos, I support the policy of our Empire. The Emperor is her face and guiding will. Speechmakers are her voice. We - …\&quot;&quot;)&gt;&gt;
-&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;2_22_28_9]]&lt;&lt;else&gt;&gt;[[Next-&gt;2_22_28_9]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="405" name="2_22_28_9" tags="" position="1600,22875" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(&quot;Была очередь Кайроса взять ее врасплох, вжать в стену и поцеловать - так страстно, что по затылку у Юнис мурашки пробежались.&quot;, &quot;It was Kairos\&#39;s turn to take her by surprise, push her into the wall and kiss her so passionately that it sent shivers down the back of Eunice\&#39;s head.&quot;)&gt;&gt;
+&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(&quot;- Шутите, да? \n- Кайрос, я поддерживаю политику нашей Империи, - Юнис закатила глаза, сообщая очевидные истины, - Император - ее лицо и ведущая воля. Речеводы - ее голос. Мы - …&quot;, &quot;\&quot;You\&#39;re kidding, right?\&quot; \n\&quot;Kairos, I support the policy of our Empire. The Emperor is her face and guiding will. Speechmakers are her voice. We - …\&quot;&quot;)&gt;&gt;
+&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;2_22_28_9]]&lt;&lt;else&gt;&gt;[[Next-&gt;2_22_28_9]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="405" name="2_22_28_9" tags="" position="1600,22875" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(&quot;Была очередь Кайроса взять ее врасплох, вжать в стену и поцеловать - страстно, грубовато, напористо... Именно так, как ей и хотелось. Юнис улыбнулась, зная, что он почувствует ее улыбку своими губами и поцелует еще, мягче.&quot;, &quot;It was Kairos\&#39;s turn to take her by surprise, push her into the wall and kiss her so passionately that it sent shivers down the back of Eunice\&#39;s head.&quot;)&gt;&gt;
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;2_22_28_10]]&lt;&lt;else&gt;&gt;[[Next-&gt;2_22_28_10]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="406" name="2_22_28_10" tags="" position="1600,23000" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(&quot;Она расслабилась от сладкой ласки, а он раздвинул ей ноги коленом, задавая этим максимально грубо не самый приличный вопрос, тот, озвучить который вслух было бы непристойно.&quot;, &quot;She relaxed from the sweet caress, and he spread her legs with his knee, asking the most rudely, not the most decent question, one that would be obscene to voice out loud.&quot;)&gt;&gt;
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;2_22_28_11]]&lt;&lt;else&gt;&gt;[[Next-&gt;2_22_28_11]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="407" name="2_22_28_11" tags="" position="1600,23125" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(&quot;Она ответила \&quot;да\&quot; тем, что забросила на него ногу и прогнулась в пояснице.\n- Пойдем лучше ко мне, - прошептал он ей на ухо.&quot;, &quot;She answered \&quot;yes\&quot; by throwing her leg over him and bending at the waist.\n &quot;Come to me,&quot; he whispered in her ear.&quot;)&gt;&gt;
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;2_22_28_12a]]&lt;&lt;else&gt;&gt;[[Next-&gt;2_22_28_12a]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="408" name="2_22_28_12a" tags="" position="1600,23250" size="100,100">&lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(&quot;Почему, она не стала спрашивать. Шли они, держась за руки; Юнис внутренне трепетала от предвкушения и азарта, и ни капля сомнения не омрачала этот выбор.&quot;, &quot;Why, she didn\&#39;t ask. They walked holding hands; Eunice was internally trembling with anticipation and excitement, and not a drop of doubt clouded this choice.&quot;)&gt;&gt;
