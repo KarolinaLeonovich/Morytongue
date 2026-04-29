@@ -107,7 +107,6 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 	<tw-storydata name="Morytongue" startnode="149" creator="Twine" creator-version="2.10.0" format="SugarCube" format-version="2.37.3" ifid="240C923B-65E8-49B9-8F3D-8047AECD50CB" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* ============================= */
 /* БАЗА */
 /* ============================= */
-
 #story {
     position: relative;
     min-height: 100vh;
@@ -136,37 +135,42 @@ body {
 /* ============================= */
 /* СПРАЙТЫ */
 /* ============================= */
-
 #character-container-left {
     position: absolute;
     bottom: 0;
     left: 0;
-    max-height: calc(100% - 120px);
-    max-width: 25%;
+    max-height: calc(100vh - 160px);
+    max-width: 28%;
     z-index: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
 }
 
 #character-container-right {
     position: absolute;
     bottom: 0;
     right: 0;
-    max-width: 25%;
+    max-height: calc(100vh - 160px);
+    max-width: 28%;
     z-index: 1;
-    transform: scale(1.05);
-    transform-origin: bottom right;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
 }
 
 #character-container-left img,
 #character-container-right img {
     width: 100%;
     height: auto;
+    max-height: 82vh;
+    object-fit: contain;
     display: block;
 }
 
 /* ============================= */
-/* ПЛАНШЕТ (ТОЛЬКО ДЛЯ HOLO) */
+/* ПЛАНШЕТ (HOLO) */
 /* ============================= */
-
 #tablet-container {
     position: fixed;
     top: 50%;
@@ -174,273 +178,6 @@ body {
     transform: translate(-50%, -50%);
     z-index: 9000;
     display: none;
-}
-
-
-/* ============================= */
-/* КОДЕКС — ОТДЕЛЬНЫЙ СЛОЙ */
-/* ============================= */
-
-#codex-container {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80vw;
-    max-width: 1100px;
-    height: 85vh;
-    padding: 40px;
-
-    background: linear-gradient(
-        145deg,
-        rgba(15,15,15,0.98),
-        rgba(5,5,5,0.98)
-    );
-
-    border: 2px solid #c9a84a;
-    border-radius: 18px;
-
-    color: #e8d7a5;
-    line-height: 1.7;
-
-    overflow-y: auto;
-    overflow-x: hidden;
-
-    box-shadow:
-        0 0 80px rgba(0,0,0,0.95),
-        0 0 25px rgba(201,168,74,0.6);
-
-    z-index: 20000;
-    display: none;
-}
-
-/* Скролл кодекса */
-
-#codex-container::-webkit-scrollbar {
-    width: 10px;
-}
-
-#codex-container::-webkit-scrollbar-track {
-    background: rgba(15,15,15,0.6);
-    border-radius: 10px;
-}
-
-#codex-container::-webkit-scrollbar-thumb {
-    background: #c9a84a;
-    border-radius: 10px;
-}
-
-#codex-container::-webkit-scrollbar-thumb:hover {
-    background: #e8d7a5;
-}
-
-#codex-container {
-    scrollbar-width: thin;
-    scrollbar-color: #c9a84a rgba(15,15,15,0.6);
-}
-
-/* ============================= */
-/* ФУТЕР */
-/* ============================= */
-
-.footer-bar {
-    background-color: rgba(0,0,0,0.75);
-    color: white;
-    width: 60%;
-    max-width: 900px;
-    padding: 18px 26px;
-    font-size: 1.05rem;
-    z-index: 50;
-    position: fixed;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 14px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.8);
-}
-
-/* ============================= */
-/* КОНСОЛЬ ВИРИО */
-/* ============================= */
-
-#message-console {
-    position: fixed;
-    top: 10px;
-    left: 60px;
-    width: 20%;
-    max-height: 22vh;
-
-    background: rgba(0, 0, 0, 0.85);
-    color: #ffd700;
-
-    padding: 8px;
-    border-radius: 10px;
-    font-size: 12px;
-    line-height: 1.3;
-
-    overflow-y: auto;
-    overflow-x: hidden;
-
-    border: 1px solid rgba(255, 215, 0, 0.4);
-    box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
-
-    z-index: 30;   /* Ниже кодекса */
-}
-
-/* ============================= */
-/* СТАТЫ + КНОПКИ */
-/* ============================= */
-
-#stats-container {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 10px;
-    border-radius: 8px;
-    z-index: 100;
-    font-size: 0.9rem;
-    min-width: 170px;
-}
-
-#audio-controls,
-#codex-controls {
-    margin-top: 10px;
-    display: flex;
-    gap: 6px;
-    justify-content: center;
-}
-
-#audio-controls button,
-#codex-controls button {
-    appearance: none;
-    background: rgba(255, 255, 255, 0.2);
-    border: 1px solid rgba(255, 215, 0, 0.5);
-    color: #ffd700;
-    font-size: 0.95rem;
-    padding: 6px 8px;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-#audio-controls button:hover,
-#codex-controls button:hover {
-    background: rgba(255, 215, 0, 0.4);
-    color: #000;
-}
-
-/* ============================= */
-/* УВЕДОМЛЕНИЕ КОДЕКСА */
-/* ============================= */
-
-#codex-notification {
-    position: fixed;
-    top: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 5000;
-    pointer-events: none;
-}
-
-#codex-update-msg {
-    background: rgba(255, 215, 0, 0.9);
-    padding: 14px 28px;
-    border: 2px solid #ffd700;
-    border-radius: 10px;
-    color: #000;
-    font-weight: bold;
-    font-size: 1rem;
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
-}
-
-/* Убираем синие фокусы */
-a:focus,
-button:focus {
-    outline: none;
-}
-.codex-content {
-    position: relative;
-}
-
-.codex-close {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    cursor: pointer;
-    font-size: 24px;
-    color: #c9a84a;
-}
-
-.codex-close:hover {
-    color: white;
-}
-
-.codex-list {
-    list-style: none;
-    padding: 0;
-    margin-top: 40px;
-}
-
-.codex-list li {
-    padding: 10px 0;
-    cursor: pointer;
-    border-bottom: 1px solid rgba(201,168,74,0.3);
-}
-
-.codex-list li:hover {
-    color: white;
-}
-/* Красивый скроллбар для планшета/кодекса */
-#tablet-container::-webkit-scrollbar {
-    width: 10px;                /* тонкий, не мешает */
-}
-
-#tablet-container::-webkit-scrollbar-track {
-    background: rgba(15,15,15,0.6);   /* тёмный фон */
-    border-radius: 10px;
-    margin: 4px;
-}
-
-#tablet-container::-webkit-scrollbar-thumb {
-    background: #c9a84a;              /* золотой ползунок */
-    border-radius: 10px;
-    border: 2px solid rgba(15,15,15,0.8); /* обводка для объёма */
-}
-
-#tablet-container::-webkit-scrollbar-thumb:hover {
-    background: #e8d7a5;              /* светлее при наведении */
-}
-
-/* Для Firefox (если кто-то на нём играет) */
-#tablet-container {
-    scrollbar-width: thin;
-    scrollbar-color: #c9a84a rgba(15,15,15,0.6);
-}
-@media (max-width: 900px) {
-    #character-container-left,
-    #character-container-right {
-        max-width: 40%;
-    }
-    .footer-bar {
-        width: 94%;
-        bottom: 20px;
-        padding: 14px 18px;
-    }
-    #message-console {
-        width: 80%;
-        left: 10%;
-        top: 70px;
-        max-height: 18vh;
-    }
-    #stats-container {
-        right: 8px;
-        top: 8px;
-        font-size: 0.85rem;
-    }
-}
-#tablet-container {
     overflow: auto;
     max-height: 90vh;
 }
@@ -449,14 +186,6 @@ button:focus {
     max-width: 90vw;
     height: auto;
     display: block;
-}
-#tablet-container {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2000;
-    display: none;
 }
 
 .holo-tablet {
@@ -468,10 +197,9 @@ button:focus {
     max-width: 90vw;
     max-height: 85vh;
     overflow-y: auto;
-
     display: flex;
     flex-direction: column;
-    align-items: center;   /* ← центрируем всё */
+    align-items: center;
 }
 
 .holo-image {
@@ -497,15 +225,233 @@ button:focus {
     font-size: 22px;
     cursor: pointer;
 }
-.console-alert {
-    color: #00FFEF;
-    font-weight: bold;
+
+/* ============================= */
+/* КОДЕКС */
+/* ============================= */
+#codex-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    max-width: 1100px;
+    height: 85vh;
+    padding: 40px;
+    background: linear-gradient(145deg, rgba(15,15,15,0.98), rgba(5,5,5,0.98));
+    border: 2px solid #c9a84a;
+    border-radius: 18px;
+    color: #e8d7a5;
+    line-height: 1.7;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-shadow: 0 0 80px rgba(0,0,0,0.95), 0 0 25px rgba(201,168,74,0.6);
+    z-index: 20000;
+    display: none;
 }
-.console-alert-red {
-    color: #FF3B3B;
-    font-weight: bold;
+
+#codex-container::-webkit-scrollbar { width: 10px; }
+#codex-container::-webkit-scrollbar-track { background: rgba(15,15,15,0.6); border-radius: 10px; }
+#codex-container::-webkit-scrollbar-thumb { background: #c9a84a; border-radius: 10px; }
+#codex-container::-webkit-scrollbar-thumb:hover { background: #e8d7a5; }
+
+.codex-content { position: relative; }
+.codex-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #c9a84a;
 }
-</style><script role="script" id="twine-user-script" type="text/twine-javascript">$(document).ready(function() {
+.codex-close:hover { color: white; }
+
+.codex-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 40px;
+}
+.codex-list li {
+    padding: 10px 0;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(201,168,74,0.3);
+}
+.codex-list li:hover { color: white; }
+
+/* ============================= */
+/* КОНСОЛЬ ВИРИО */
+/* ============================= */
+#message-console {
+    position: fixed;
+    top: 12px;
+    left: 50px; /* ← Увеличили отступ, чтобы уйти из-под бокового меню */
+    width: 23%; /* Слегка расширили для компенсации сдвига */
+    max-height: 18vh;
+    background: rgba(0, 0, 0, 0.88);
+    color: #ffd700;
+    padding: 10px 12px;
+    border-radius: 12px;
+    font-size: 13px;
+    line-height: 1.35;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: 1px solid rgba(255, 215, 0, 0.45);
+    box-shadow: 0 0 12px rgba(255, 215, 0, 0.35);
+    z-index: 100; /* Подняли слой повыше */
+}
+
+/* ============================= */
+/* ФУТЕР (основной текст) */
+/* ============================= */
+.footer-bar {
+    background-color: rgba(0,0,0,0.75);
+    color: white;
+    width: 42%; /* Идеально помещается между двумя спрайтами по 28% (28+28+42=98%) */
+    max-width: 800px;
+    padding: 18px 26px;
+    font-size: 1.05rem;
+    z-index: 50;
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 14px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.8);
+}
+
+/* ============================= */
+/* СТАТЫ + КНОПКИ */
+/* ============================= */
+#stats-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    z-index: 100;
+    font-size: 0.9rem;
+    min-width: 170px;
+}
+
+#audio-controls, #codex-controls {
+    margin-top: 10px;
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+}
+
+#audio-controls button, #codex-controls button {
+    appearance: none;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 215, 0, 0.5);
+    color: #ffd700;
+    font-size: 0.95rem;
+    padding: 6px 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#audio-controls button:hover, #codex-controls button:hover {
+    background: rgba(255, 215, 0, 0.4);
+    color: #000;
+}
+
+/* ============================= */
+/* УВЕДОМЛЕНИЕ КОДЕКСА */
+/* ============================= */
+#codex-notification {
+    position: fixed;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5000;
+    pointer-events: none;
+}
+
+#codex-update-msg {
+    background: rgba(255, 215, 0, 0.9);
+    padding: 14px 28px;
+    border: 2px solid #ffd700;
+    border-radius: 10px;
+    color: #000;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+}
+
+/* ============================= */
+/* МОБИЛЬНАЯ ОПТИМИЗАЦИЯ */
+/* ============================= */
+@media screen and (max-width: 950px) and (orientation: landscape),
+       screen and (max-height: 550px) {
+    
+    /* Спрайты - делаем их чуть уже, чтобы дать место тексту */
+    #character-container-left,
+    #character-container-right {
+        max-width: 33%;
+        max-height: calc(100vh - 80px);
+    }
+
+    #character-container-left img,
+    #character-container-right img {
+        max-height: 85vh; /* Спрайты остаются высокими */
+    }
+
+/* Консоль Вирио — компактная и не перекрывает лицо */
+    #message-console {
+        left: 45px; /* ← Сдвигаем вправо от кнопки меню ">" */
+        width: 25%; /* Делаем чуть шире, чтобы текст хорошо влезал */
+        top: 10px;
+        max-height: 16vh;
+        font-size: 10px;
+        line-height: 1.15;
+        padding: 6px 8px;
+    }
+
+    /* Футер — строго по центру, не касается боковых спрайтов (33 + 33 + 30 = 96%) */
+    .footer-bar {
+        width: 30%; 
+        max-width: none;
+        bottom: 12px;
+        padding: 12px 16px; /* Уменьшены отступы, чтобы блок не рос в высоту */
+        font-size: 0.85rem;
+        line-height: 1.4;
+        border-radius: 10px;
+    }
+
+    /* Статы */
+    #stats-container {
+        top: 8px;
+        right: 8px;
+        padding: 6px;
+        font-size: 0.75rem;
+        min-width: 125px;
+    }
+
+    #audio-controls button, 
+    #codex-controls button {
+        padding: 4px 6px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Общие правки */
+a:focus, button:focus { 
+    outline: none; 
+}
+
+.console-alert { 
+    color: #00FFEF; 
+    font-weight: bold; 
+}
+
+.console-alert-red { 
+    color: #FF3B3B; 
+    font-weight: bold; 
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript">$(document).ready(function() {
     if ($("#character-container").length === 0) {
         $("body").append('<div id="character-container"></div>');
     }
@@ -543,7 +489,6 @@ window.preloadImages = [
     "media/characters/Eunice_armor_smile.webp",
     "media/characters/Eunice_armor_unhappy.webp",
     "media/characters/Eunice_cut.webp",
-    "media/characters/Eunice_despite.webp",
     "media/characters/Eunice_dress_distracted.webp",
     "media/characters/Eunice_dress_scared.webp",
     "media/characters/Eunice_dress_smiling.webp",
@@ -780,16 +725,16 @@ setup.codexEntries = {
 <p>«Народ не нуждается в правде. Ему достаточно ощущения порядка.»</p>
 <p>«Люди любят богов, пока те молчат. Стоит заговорить — и тебя распнут.»</p>
 <p>«Я не верю в любовь, но уважаю постоянство.»</p>`,
-            en: `<p>Laertes I Aporios ascended to the throne in 2167, following the chaotic period known as the Month of Strife. His father, Emperor Beauregard, even on his deathbed, refused to name an heir, and his will, prepared years earlier, bore no names. The crown was left adrift, and Laertes, one of Beauregard\'s many children from different mothers, was far from the front of the line.</p>
-<p>From a young age, Laertes shone with remarkable intellect, carving out a distinguished career as a scholar. Power was never his ambition. Yet whispers suggest it was his closest ally, Theron, who urged him to seize the throne—and played a pivotal role in securing his victory.</p>
-<p>Laert\'s reign began under the shadow of the Great Recession, an economic downturn he didn’t cause. The prosperity of Beauregard\'s era stemmed from a stroke of fortune: the near-simultaneous discovery of colonizable, resource-rich planets. Laertes, however, worked tirelessly to shield ordinary citizens from the fallout of these natural economic shifts.</p>
-<p>Still, many in the colonies view his rule as a tyranny, breeding stifling bureaucracy and stagnation. What began as genuine care for his people has, over time, become a heavy burden on the Empire.</p>
-<p>A tall, lean man with fair skin, piercing green eyes, and light hair, Laertes cuts a striking figure. His wife, Empress Eliya—affectionately called \"Eli\" by the people—stands by his side. They married late, and their two legitimate children, son Beauertes and daughter Lieselle, are still young.</p>
-<p>Engraved in the black basalt of Vexor\'s buildings are Laertes\'s sayings, words that echo his philosophy:</p>
-<p>\"Timely information is the only currency that never loses value.\"</p>
-<p>\"The people don\'t need truth. The illusion of order suffices.\"</p>
-<p>\"People love their gods until they speak. Then they crucify them.\"</p>
-<p>\"I don\'t believe in love, but I respect constancy.\"</p>`
+            en: `<p>Laertes I Aporios is the ruler of the United Human Empire. He ascended the throne in 2167, after the so-called Month of Turmoil – a period during which his father, Emperor Beauregard, refused to name an heir even as he lay dying. A will prepared in advance likewise contained not a single name.</p>
+<p>From a young age, Laertes displayed remarkable intellect and built a successful career as a scientist. He had never sought power: merely one of Beauregard’s many children by different mothers, he stood far from first in the line of succession. It is said that his closest ally, Theron, was the one who persuaded Laertes to enter the struggle for the throne – and played the decisive role in securing it.</p>
+<p>Laertes\'s accession marked the beginning of the Great Recession – a period of economic decline for which the young emperor was, in truth, hardly to blame. The previous era of explosive growth under Beauregard had been the result of fortunate chance: several planets suitable for colonization and mineral extraction were discovered almost simultaneously. Prosperity was followed by decay, and Laertes did everything in his power to soften the effects of these natural processes for ordinary citizens.</p>
+<p>Nevertheless, many colonists regard his rule as a tyranny that bred monstrous bureaucracy and stagnation. What began as sincere concern for his subjects gradually became a crushing burden upon the entire Empire.</p>
+<p>A fair-skinned, tall, slender man with piercing green eyes and wheat-blond hair. His consort is Empress Eliya, known among the people simply as \"Eli.\" They have two legitimate children: a son, Boert, and a daughter, Lizel. The emperor married late in life, and his heirs are still children.</p>
+<p>Sayings of Emperor Laertes, carved into the black basalt of Vexor’s buildings:</p>
+<p>\"Current information is the only currency that never loses its value.\"</p>
+<p>\"The people do not need truth. The feeling of order is enough.\"</p>
+<p>\"People love gods while they remain silent. The moment you speak, they crucify you.\"</p>
+<p>\"I do not believe in love, but I respect constancy.\"</p>`
         },
         unlocked: false
     },
@@ -804,103 +749,78 @@ setup.codexEntries = {
 — гражданам I класса<br>
 — имперским служащим V уровня и выше<br>
 — офицерскому составу Вооруженных сил в звании не ниже коммандера</p>
-
 <p><strong>Общие сведения</strong><br>
 Этернис — космический круизный лайнер длительного пребывания, функционирующий на замкнутом маршруте:<br>
 Туманность Эстер → Предел Кобаяши Мару → Станция Соланар</p>
-
 <p>Маршрут является фиксированным и не подлежит изменению во избежание любых непредвиденных ситуаций и во обеспечения высочайшего уровня безопасности.</p>
-
 <p><strong>Владелец:</strong> Фиделис Логистикс<br>
 <strong>Юридический статус:</strong> частный объект с расширенным имперским мандатом</p>
-
 <p><strong>Назначение</strong><br>
 Этернис предназначен для краткосрочного и среднесрочного пребывания лиц, находящихся под повышенной социальной и профессиональной нагрузкой.</p>
-
 <p><strong>Основные категории пользователей:</strong><br>
 — представители высшей административной вертикали<br>
 — офицерский состав<br>
 — лица, выполняющие функции публичного представительства Империи</p>
-
 <p>Объект выполняет функции регулируемой психологической разгрузки.</p>
-
 <p><strong>Развлекательная инфраструктура</strong><br>
 Базовый перечень доступных активностей включает:<br>
 — реконструированный балет древности (единственный сертифицированный комплекс в галактике)<br>
 — водные зоны с переменной гравитацией<br>
 — рестораны, бары и различные игровые комплексы<br>
 — тематические частные клубы</p>
-
 <p>Дополнительные форматы взаимодействия не подлежат публичному описанию и предоставляются в индивидуальном порядке.</p>
-
 <p><strong>Регуляторный режим</strong><br>
 В период пребывания на борту Этерниса:<br>
 — поведенческие протоколы Империи ослабляются<br>
 — действия пассажиров не вносятся в стандартные досье<br>
 — наблюдение осуществляется в пассивном режиме</p>
-
 <p>Исключение составляют случаи прямой угрозы инфраструктуре объекта или иным пассажирам. Поведение, допустимое на Этернисе, не рассматривается как релевантное за пределами объекта.</p>
-
 <p><strong>Ограничения</strong><br>
 Доступ к Этернису является привилегией и может быть отозван:<br>
 — при снижении уровня допуска<br>
 — при нарушении имперской лояльности<br>
 — по решению куратора соответствующего сектора</p>
-
 <p>Повторный допуск не гарантируется.</p>
 
 <p><strong>Этернис:</strong> вам позволено несовершенство. Нам — нет.</p>`,
 
-        en: `<p><strong>Classification:</strong> Restricted Access Facility<br>
-<strong>Document Status:</strong> For Official Use Only</p>
-
-<p><strong>Clearance Granted To:</strong><br>
+        en: `<p><strong>Classification:</strong> restricted-access asset<br>
+<strong>Document Status:</strong> for official use only</p>
+<p><strong>Access Authorized For:</strong><br>
 — Class I citizens<br>
-— Imperial officials of Level V and above<br>
-— Armed Forces officers holding the rank of Commander or higher</p>
-
+— Imperial personnel of Level V and above<br>
+— commissioned officers of the Armed Forces holding the rank of Commander or higher</p>
 <p><strong>General Information</strong><br>
-Eternis is a long-duration space cruise liner operating on a closed-loop route:<br>
-Esther Nebula → Kobayashi Maru Perimeter → Solanar Station</p>
-
-<p>The route is fixed and not subject to alteration in order to prevent unforeseen contingencies and to ensure the highest level of security.</p>
-
+Eternis is a long-stay interstellar cruise liner operating on a closed route:<br>
+Ester Nebula → Kobayashi Maru Frontier → Solanar Station</p>
+<p>The route is fixed and may not be altered, in order to prevent any unforeseen incidents and to ensure the highest possible level of security.</p>
 <p><strong>Owner:</strong> Fidelis Logistics<br>
-<strong>Legal Status:</strong> Private entity with extended Imperial mandate</p>
-
+<strong>Legal Status:</strong> private asset with expanded Imperial mandate</p>
 <p><strong>Purpose</strong><br>
-Eternis is designated for short- and mid-term stays for individuals subjected to elevated social and professional pressure.</p>
-
-<p><strong>Primary user categories include:</strong><br>
-— representatives of the administrative hierarchy<br>
-— commissioned officers<br>
-— individuals performing public representation functions for the Empire</p>
-
-<p>The facility provides regulated psychological decompression.</p>
-
-<p><strong>Recreational Infrastructure</strong><br>
-The baseline range of available activities includes:<br>
-— reconstructed ancient ballet (the only certified complex of its kind in the galaxy)<br>
-— variable-gravity aquatic environments<br>
-— restaurants, bars, and gaming complexes<br>
+Eternis is intended for short-term and mid-term stays by individuals subject to elevated social and professional strain.</p>
+<p><strong>Primary User Categories:</strong><br>
+— members of the highest administrative hierarchy<br>
+— officer corps personnel<br>
+— individuals performing public representative functions for the Empire</p>
+<p>The facility serves as a center for regulated psychological decompression.</p>
+<p><strong>Entertainment Infrastructure</strong><br>
+The standard range of available activities includes:<br>
+— reconstructed ballet of antiquity (the only certified complex in the galaxy)<br>
+— aquatic zones with variable gravity<br>
+— restaurants, bars, and various gaming complexes<br>
 — themed private clubs</p>
-
-<p>Additional formats of engagement are not subject to public disclosure and are provided on an individual basis.</p>
-
+<p>Additional interaction formats are not subject to public disclosure and are provided on an individual basis.</p>
 <p><strong>Regulatory Framework</strong><br>
-During stays aboard Eternis:<br>
+During a guest’s stay aboard Eternis:<br>
 — Imperial behavioral protocols are relaxed<br>
-— passenger actions are not entered into standard records<br>
-— monitoring is conducted in a passive mode</p>
-
-<p>Exceptions apply in cases of direct threat to facility infrastructure or other passengers. Behavior permitted aboard Eternis is not considered relevant outside the facility.</p>
-
+— passenger actions are not entered into standard dossiers<br>
+— surveillance is conducted in passive mode</p>
+<p>Exceptions apply only in cases of direct threat to the vessel’s infrastructure or to other passengers. Conduct permissible aboard Eternis shall not be considered relevant beyond the boundaries of the facility.</p>
 <p><strong>Restrictions</strong><br>
 Access to Eternis is a privilege and may be revoked:<br>
 — upon reduction of clearance level<br>
-— in case of breach of Imperial loyalty<br>
-— by decision of the relevant sector curator</p>
-
+— upon breach of Imperial loyalty<br>
+— by decision of the supervising curator of the relevant sector</p>
 <p>Reinstatement of access is not guaranteed.</p>
 
 <p><strong>Eternis:</strong> you are permitted imperfection. We are not.</p>`
@@ -917,30 +837,30 @@ Access to Eternis is a privilege and may be revoked:<br>
 Император ошибается — и Пропагандисты возвещают, что именно так и было задумано.</p>
 <p>Ошибок не бывает там, где есть Воля.</p>
 <p>На коже святых речеводов — оранжевые знаки, чернила откровения. Никто не знает, как именно и почему они появляются, но означают они разное, к примеру:</p>
-<p>- Узор на подбородке — право говорить о снах, видениях и женских судьбах. Редкий знак, проявляется только у речеводов женского пола.</p>
-<p>- Знаки на лбу и щеках — власть толковать войны, смерть и жертву. Они есть почти у всех. Как правило, чем ярче, четче и симметричнее знаки, тем более дисциплинирован разум у пропагандиста, тем он старше и опытнее. </p>
-<p>- Отметины вдоль позвоночника — разрешение изменять закон, если момент того требует.</p>
+<p>— Узор на подбородке — право говорить о снах, видениях и женских судьбах. Редкий знак, проявляется только у речеводов женского пола.</p>
+<p>— Знаки на лбу и щеках — власть толковать войны, смерть и жертву. Они есть почти у всех. Как правило, чем ярче, четче и симметричнее знаки, тем более дисциплинирован разум у пропагандиста, тем он старше и опытнее. </p>
+<p>— Отметины вдоль позвоночника — разрешение изменять закон, если момент того требует.</p>
 <p>Когда Пропагандист облачен в черное, священные линии на теле повторяются золотыми швами и вышивкой на его одежде — чтобы даже сквозь ткань всем были видны границы дозволенного, ибо только голос Пропагандиста признается законным каналом между троном и народом.</p>
 <p>Они появляются там, где нужно переплавить гнев в покорность, страх — в благодарность, поражение — в новую надежду.</p>
 <p>Они могут возвести крест на площади — и через час толпа будет петь гимны благодарности за милость быть распятым во славу трона.</p>
 <p>Их боятся больше, чем имперских гвардейцев. Те могут уничтожить только тело.
 Пропагандисты переписывают душу.</p>
 <p>Немало святых блаженных воинов слова пало во времена смут и волнений. Талант речевода редок и далеко не всегда передается по наследству.</p>`,
-            en: `<p>To uphold the Imperial Throne, the Order of True Voices was established—the only ones entitled to interpret the Emperor’s will.</p>
-<p>They don’t sit on councils, lead armies, or demand lands and loans. They preach among the people and give meaning to their flock’s lives. Their duty is to proclaim truth and expose heresy.</p>
-<p>The Emperor speaks—and the Propagandists turn his words into eternal revelation, delivering his speeches to the crowd in a way that makes them divine epiphany for his subjects.</p>
-<p>The Emperor errs—and the Propagandists declare that this was exactly as intended.</p>
-<p>There are no mistakes where there is Will.</p>
-<p>On the skin of the holy orators are orange marks, the ink of revelation. No one knows exactly how or why they appear, but they mean different things, for example:</p>
-<p>- A pattern on the chin grants the right to speak of dreams, visions, and women’s fates. A rare mark, found only on female orators.</p>
-<p>- Marks on the forehead and cheeks confer authority to interpret war, death, and sacrifice. Nearly everyone has them. Generally, the brighter, sharper, and more symmetrical the marks, the more disciplined the propagandist’s mind, the older and more experienced they are.</p>
-<p>- Notches along the spine permit altering the law if the moment demands it.</p>
-<p>When a Propagandist dons black, the sacred lines on their body are echoed in golden seams and embroidery on their robes—so that even through the fabric, the boundaries of the permitted are visible to all, for only the Propagandist’s voice is recognized as the lawful channel between throne and people.</p>
-<p>They appear where anger must be forged into obedience, fear into gratitude, defeat into fresh hope.</p>
-<p>They can raise a cross in the square—and within an hour the crowd will sing hymns of thanks for the grace of being crucified in the throne’s glory.</p>
-<p>They are feared more than imperial guardsmen. Those can destroy only the body.</p>
-<p>Propagandists rewrite the soul.</p>
-<p>Many saintly, blessed warriors of the word have fallen in times of unrest and upheaval. The gift of oratory is rare and far from always passed down through blood.</p>`
+            en: `<p>In support of the Imperial Throne, the Order of True Voices was established in ages long forgotten – the only ones granted the right to interpret the Emperor’s will.</p>
+<p>They hold no seats on councils, command no armies, and demand neither lands nor credits. They preach among the people and give meaning to the lives of their flock. Their duty is to proclaim truth and expose heresy.</p>
+<p>The Emperor speaks – and the Propagandists turn his words into eternal revelation, delivering his speeches to the masses until they are received as divine truth.<br>
+The Emperor errs – and the Propagandists declare that it was intended so from the very beginning.</p>
+<p>Mistakes do not exist where there is Will.</p>
+<p>Upon the skin of the holy Wordweavers appear orange markings – the ink of revelation. No one knows how or why they manifest, yet each bears its own meaning, for example:</p>
+<p>— A pattern upon the chin – the right to speak of dreams, visions, and the fates of women. A rare sign, appearing only among female Wordweavers.</p>
+<p>— Marks upon the brow and cheeks – authority to interpret war, death, and sacrifice. Nearly all possess them. As a rule, the brighter, sharper, and more symmetrical the markings, the more disciplined the Propagandist’s mind, and the older and more experienced they are.</p>
+<p>— Traces running along the spine – permission to alter the law, should the moment demand it.</p>
+<p>When a Propagandist is robed in black, the sacred lines upon the body are echoed in golden seams and embroidery upon their garments – so that even through cloth, all may see the boundaries of what is permitted, for only the Propagandist’s voice is recognized as the lawful channel between throne and people.</p>
+<p>They appear wherever rage must be reforged into obedience, fear into gratitude, defeat into renewed hope.</p>
+<p>They may raise a cross in the square – and within the hour the crowd will be singing hymns of thanks for the mercy of being crucified in glory of the throne.</p>
+<p>They are feared more than the Imperial Guards. Those can destroy only the body.<br>
+Propagandists rewrite the soul.</p>
+<p>Many holy and blessed warriors of the word fell in times of unrest and upheaval. The gift of a Wordweaver is rare, and does not always pass through bloodlines.</p>`
         },
         unlocked: false
     },
@@ -970,11 +890,11 @@ Access to Eternis is a privilege and may be revoked:<br>
 <p>Император Борегар I, ознакомившись с трудами Лаэрта, распорядился внедрить их принципы в политику управления отдаленными системами. Однако реализация оказалась далека от замысла автора. Ставка на «экономическую эффективность» колоний привела к множеству бунтов и, как следствие, карательных операций, направленных против так называемых «нерациональных» поселений.</p> 
 <p>Сам Апориос в публичных записях не отрицал своей интеллектуальной ответственности, но считал произошедшее искажением первоначальных принципов. В поздних заметках он писал: «Я хотел превратить хаос в форму. Они решили уничтожить саму материю.»</p> 
 <p>Несмотря на неоднозначную историю применения, «Серафим» легла в основу политической философии Объединённой Империи. Современные исследователи рассматривают её не только как инструмент централизации, но и как начало новой веры — веры в то, что люди пока еще не готовы к самостоятельному выбору.</p>`,
-            en: `<p>\"Seraphim\" — an analytical framework for humanity\’s systemic unity, crafted by the young scholar Laert Aporios in 2147, two decades before his coronation. Initially an academic study, it explored the patterns of collapse in large political entities and the evolution of colonial cultures.</p>
-<p>At its core lay a hypothesis: humanity\’s expansion across the universe would inevitably lead to cultural divergence and wars over identity. Aporios argued that only absolute centralization of power and control over resource distribution could prevent this. His idea crystallized in a maxim that would become the future emperor\’s motto: \"Order is not the result of strength. Order is its source.\"</p>
-<p>Emperor Beauregard I, upon reviewing Laert\’s work, ordered its principles integrated into the governance of distant systems. Yet the implementation strayed far from the author\’s intent. A focus on the \”economic efficiency\” of colonies spurred numerous punitive operations against so-called \”irrational\” settlements. One such operation—the purge of the K-9 asteroid sector—later became known as the greatest tragedy of Beauregard\’s era.</p>
-<p>Aporios himself never denied his intellectual responsibility in public records but viewed the outcomes as a distortion of his original principles. In his later writings, he noted: \"I asked them to shape chaos into form. They chose to melt the very matter.\"</p>
-<p>Despite its controversial application, \"Seraphim\" became the cornerstone of the United Empire\’s political philosophy. Modern scholars see it not only as a tool for centralization but also as the genesis of a new belief—a faith that humanity could be saved by stripping it of choice.</p>`
+            en: `<p>\"Seraphim\" was an analytical concept of humanity’s systemic unity, developed by the young scholar Laertes Aporios twenty years before his coronation. It originally took the form of an academic study on the recurring patterns behind the collapse of large political entities and the evolution of colonial cultures.</p>
+<p>At the core of the doctrine lay the hypothesis that humanity’s expansion across the universe would inevitably lead to cultural divergence and, in time, wars of identity. Aporios argued that only absolute centralization of power and strict control over the distribution of resources could prevent such an outcome. The idea was distilled into the formula that would later become the future emperor’s motto: \"Order is not the consequence of strength. Order is its source.\"</p>
+<p>After reviewing Laertes’s work, Emperor Beauregard I ordered its principles to be implemented in the governance of distant systems. Yet the execution proved far removed from the author’s intent. The emphasis on colonial \"economic efficiency\" led to numerous uprisings and, in turn, punitive campaigns directed against so-called \"irrational\" settlements.</p>
+<p>Aporios himself did not deny his intellectual responsibility in public records, but regarded what followed as a corruption of the original principles. In later notes, he wrote: \"I wished to give chaos a shape. They chose to destroy matter itself.\"</p>
+<p>Despite the controversial history of its application, \"Seraphim\" became one of the foundations of the political philosophy of the United Empire. Modern scholars view it not merely as an instrument of centralization, but as the birth of a new faith – the belief that humanity is not yet ready for the burden of free choice.</p>`
         },
         unlocked: false
     },
@@ -1040,13 +960,13 @@ Access to Eternis is a privilege and may be revoked:<br>
 <p>Историки упоминают, что именно Реон после введения доктрины «Серафим» возглавил серию карательных экспедиций, ставших символом «необходимой жестокости» Империи. Позже он редко говорил о тех событиях, а в официальных хрониках они упомянуты лишь как</p>
 <p>«Операция по восстановлению порядка».</p>
 <p>Суровый, прямолинейный и неподкупный, генерал Реон стал воплощением того поколения военных, для которых долг всегда стоял выше сострадания.</p>`,
-            en: `<p>One of the most controversial military figures of the era of Beauregard VI and Laertes I, General Petros Rheon earned fame as a man who could "pacify" the Empire’s frontier colonies in the blink of an eye. His methods sparked endless debate: where some saw him as a guardian of order, others branded him a merciless enforcer.</p>
-<p>Reon acted with unrelenting resolve. When negotiations and promises failed, the Emperor’s command was brief:</p>
-<p>"Send Reon."</p>
-<p>After his arrival, rebellions vanished for good—along with those who sparked them.</p>
-<p>Historians note that it was Rheon who, following the introduction of the \"Seraphim\" doctrine, led a series of punitive expeditions that became a symbol of the Empire’s necessary cruelty. Later, he rarely spoke of those days, and official chronicles mention them only as:</p>
-<p>\"The Operation to Restore Order.\"</p>
-<p>Stern, straightforward, and incorruptible, General Rheon embodied a generation of soldiers for whom duty always trumped compassion.</p>`
+            en: `<p>One of the most controversial military figures of the age of Beauregard VI and Laertes I. He became renowned as a man capable of \"pacifying\" the colonies at the Empire’s fringes in the shortest possible time. General Rheon’s methods were always a matter of dispute: where some saw a guardian of order, others saw a merciless enforcer.</p>
+<p>Petros Rheon acted decisively and without hesitation. When negotiations and promises failed, the Emperor would give a single curt command:</p>
+<p>\"Send Rheon.\"</p>
+<p>After his arrival, rebellions ended forever – together with those who had begun them.</p>
+<p>Historians note that it was Rheon who, following the adoption of the \"Seraphim\" doctrine, led a series of punitive expeditions that became the symbol of the Empire’s \"necessary cruelty.\" Later in life, he spoke of those events only rarely, and in official chronicles they were mentioned merely as</p>
+<p>\"An Operation to Restore Order.\"</p>
+<p>Harsh, direct, and incorruptible, General Rheon became the embodiment of that generation of military men for whom duty always stood above compassion.</p>`
         },
         unlocked: false
     },
@@ -1079,9 +999,9 @@ Access to Eternis is a privilege and may be revoked:<br>
         title: { ru: "Юнис", en: "Eunice" },
         content: {
             ru: `<p>Юнис Либери - женщина, искусственно созданная  на основе генетического материала почившего Советника Терона и его воспоминаний. На момент своего создания (2217 год) Юнис около 35 лет на вид. Юнис смешанного происхождения, у нее темные волосы и карие глаза, оливковая кожа. При создании девушки ученые допустили несколько ошибок, которые вылились в полное отсутствие у нее обаняния.</p>
-<p>Воспоминания Терона становятся для Юнис “секретным оружием”, как и ее харизма с привлекательностью… они же могут якорем тянуть на дно, сжирая ее личность. В случае, если Юнис концентрируется на прошлой жизни, дух Терона становится сильнее, а от нее самой ничего не остается.</p>`,
-            en: `<p>Eunice Liberi is a woman crafted from the genetic legacy of the late Counselor Theron, her existence shaped by his DNA and memories. Born in 2217, she looks about 35, with a blend of heritage reflected in her dark hair, warm brown eyes, and olive skin. Her creators, though, made mistakes, leaving her without the ability to smell.</p>
-<p>Theron’s memories are her secret weapon, paired with her natural charm and allure. But they’re a double-edged sword—if she dwells too much on his past, they weigh her down, threatening to erode her own identity. The more she focuses on Theron’s life, the stronger his presence becomes, until there’s little left of Eunice herself.</p>`
+<p>Воспоминания Терона становятся для Юнис \"секретным оружием\", как и ее харизма с привлекательностью… они же могут якорем тянуть на дно, сжирая ее личность. В случае, если Юнис концентрируется на прошлой жизни, дух Терона становится сильнее, а от нее самой ничего не остается.</p>`,
+            en: `<p>Eunice Liberi is a woman artificially created using the genetic material of the late Advisor Theron and the remnants of his memories. At the time of her creation (2217), Eunice appears to be around thirty-five years old. Of mixed heritage, she has dark hair, brown eyes, and olive-toned skin. During her creation, the scientists made several mistakes, the most notable of which resulted in her complete lack of smell.</p>
+<p>Theron’s memories become Eunice’s \"secret weapon,\" as do her charisma and beauty… yet those same gifts can drag her downward like an anchor, consuming her own identity. If Eunice fixates too deeply on the life that came before, Theron’s spirit grows stronger, until nothing of her remains.</p>`
         },
         unlocked: false
     },
@@ -1252,19 +1172,19 @@ Quasi-state financial superstructure; formally independent of any single authori
 <p>• insight into the internal logic or algorithms of decision-making;</p>
 <p>• ability to attribute authorship or initiation to any specific decision.</p>
 
-<p><strong>Fidelis Foreign Trade (Vneshtorg Division)</strong><br>
+<p><strong>Fidelis Foreign Trade</strong><br>
 Specialized arm of Fidelis Imperi Bank tasked with regulation and facilitation of all extra-metropolitan economic activity.</p>
 
 <p>Within Imperial jurisprudence, a foreign-trade operation is statutorily defined as any economic transaction or activity occurring outside the capital star system (encompassing Vexor and Marisol), irrespective of sectoral jurisdiction or colonial legal status.</p>
 
-<p>The Vneshtorg Division was instituted to:</p>
+<p>The Foreign Trade Division was instituted to:</p>
 <p>• stimulate sustained economic activity in frontier and outer sectors;</p>
 <p>• alleviate fiscal pressure on peripheral territories;</p>
 <p>• effect deliberate capital redistribution away from the metropolitan core.</p>
 
 <p>Imperial strategic doctrine posits that economic revitalization of frontier regions reduces systemic instability more effectively and sustainably than coercive military measures.</p>
 
-<p>Transactions processed through Fidelis Vneshtorg receive:</p>
+<p>Transactions processed through Fidelis Foreign Trade receive:</p>
 <p>• preferential (reduced) tax treatment;</p>
 <p>• streamlined contractual and compliance procedures;</p>
 <p>• priority queuing and execution within all Fidelis-integrated systems.</p>`
@@ -2005,7 +1925,7 @@ addMessage(&quot;[Σ/09] Замедление пульса, стабилизац
 </tw-passagedata><tw-passagedata pid="6" name="Laertes_lab_prof_scene_11" tags="" position="1925,2550" size="100,100">&lt;&lt;script&gt;&gt;
 addMessage(&quot;[Σ/09] Зафиксирована спам-атака: удалено 478 входящих на имя Терона Фиделиса.&quot;, &quot;[Σ/09] Spam attack detected: 478 incoming messages addressed to Theron Fidelis have been deleted.&quot;);
 $(&quot;#character-container-right img&quot;).fadeOut(300, function() {
-$(this).attr(&#39;src&#39;, &#39;media/characters/Laert_N_unhappy.png&#39;);
+$(this).attr(&#39;src&#39;, &#39;media/characters/Laert_N_unhappy.webp&#39;);
 $(this).fadeIn(600);
 });
 $(&quot;#character-container-left img&quot;).fadeOut(300, function() {
@@ -5235,16 +5155,13 @@ $(document).one(&quot;:storyready&quot;, function() {
     console.log(&quot;StoryInit: Initializing...&quot;);
 
     // Контейнеры для персонажей и фона
-    $(&quot;#story&quot;).append(`&lt;div id=&quot;character-container-left&quot;&gt;&lt;img id=&quot;mainCharImg&quot; src=&quot;&quot; alt=&quot;Main Character&quot;&gt;&lt;/div&gt;`);
-    $(&quot;#story&quot;).append(`&lt;div id=&quot;character-container-right&quot;&gt;&lt;img id=&quot;npcCharImg&quot; src=&quot;&quot; alt=&quot;NPC Character&quot;&gt;&lt;/div&gt;`);
-    // Планшет (для holo-сцен)
-    $(&quot;#story&quot;).append(`
-    &lt;div id=&quot;tablet-container&quot;&gt;
-        &lt;img id=&quot;tabletImg&quot; src=&quot;&quot; alt=&quot;Tablet&quot;&gt;
-    &lt;/div&gt;
-`);
+    $(&quot;#story&quot;).append(`&lt;div id=&quot;character-container-left&quot;&gt;&lt;img id=&quot;mainCharImg&quot; src=&quot;&quot; alt=&quot;Main Character&quot; style=&quot;display:none;&quot;&gt;&lt;/div&gt;`);
+    $(&quot;#story&quot;).append(`&lt;div id=&quot;character-container-right&quot;&gt;&lt;img id=&quot;npcCharImg&quot; src=&quot;&quot; alt=&quot;NPC Character&quot; style=&quot;display:none;&quot;&gt;&lt;/div&gt;`);
+    
+    // Планшет (очищен от неиспользуемого img, так как JS функция showTablet переписывает HTML)
+    $(&quot;#story&quot;).append(`&lt;div id=&quot;tablet-container&quot;&gt;&lt;/div&gt;`);
 
-// Кодекс (отдельный слой)
+    // Кодекс (отдельный слой)
     $(&quot;#story&quot;).append(`&lt;div id=&quot;codex-container&quot;&gt;&lt;/div&gt;`);
     $(&quot;#story&quot;).prepend(&#39;&lt;div class=&quot;background-blur&quot;&gt;&lt;/div&gt;&#39;);
 
@@ -5329,63 +5246,48 @@ $(document).one(&quot;:storyready&quot;, function() {
         }
     });
 
-    // Самое главное — кнопка кодекса теперь открывает планшет
     $(document).on(&quot;click&quot;, &quot;#codex-btn&quot;, function() {
         console.log(&quot;Кнопка кодекса нажата → открываем планшетный кодекс&quot;);
         window.openCodex();
         $(&quot;#codex-update-msg&quot;).remove();
     });
 
- // Инициализация переменных (не перезаписывает сейв)
+    // Инициализация переменных (исправлена опечатка с Kairos)
+    if (State.variables.loyalty === undefined) State.variables.loyalty = 0;
+    if (State.variables.compassion === undefined) State.variables.compassion = 0;
+    if (State.variables.echo === undefined) State.variables.echo = 0;
 
-if (State.variables.loyalty === undefined) State.variables.loyalty = 0;
-if (State.variables.compassion === undefined) State.variables.compassion = 0;
-if (State.variables.echo === undefined) State.variables.echo = 0;
+    if (State.variables.romanceWithLaertes === undefined) State.variables.romanceWithLaertes = false;
+    if (State.variables.romanceWithKairos === undefined) State.variables.romanceWithKairos = false;
+    if (State.variables.EuniceHasMoney === undefined) State.variables.EuniceHasMoney = false;
+    if (State.variables.questWithPetros === undefined) State.variables.questWithPetros = false;
+    if (State.variables.questWithMurasaki === undefined) State.variables.questWithMurasaki = false;
 
-if (State.variables.romanceWithLaertes === undefined) State.variables.romanceWithLaertes = false;
+    if (State.variables.questWithPetrosCounter === undefined) State.variables.questWithPetrosCounter = 0;
+    if (State.variables.questWithMurasakiCounter === undefined) State.variables.questWithMurasakiCounter = 0;
 
-if (State.variables.romanceWithKairos === undefined) State.variables.romanceWithKairos = false;
+    if (State.variables.chatWithMignChauCounter === undefined) State.variables.chatWithMignChauCounter = false;
+    if (State.variables.chatWithMeralisCounter === undefined) State.variables.chatWithMeralisCounter = false;
+    if (State.variables.ReportAboutAnomalia === undefined) State.variables.ReportAboutAnomalia = false;
 
-if (State.variables.EuniceHasMoney === undefined) State.variables.EuniceHasMoney = false;
+    if (State.variables.chatWithVeirCounter === undefined) State.variables.chatWithVeirCounter = false;
+    if (State.variables.sex1WithVeirCounter === undefined) State.variables.sex1WithVeirCounter = false;
+    if (State.variables.argueWithVeirCounter === undefined) State.variables.argueWithVeirCounter = false;
 
-if (State.variables.questWithPetros === undefined) State.variables.questWithPetros = false;
+    // ИСПРАВЛЕНО: Разделены переменные, чтобы избежать логического сбоя
+    if (State.variables.argueWithKairos === undefined) State.variables.argueWithKairos = false;
+    
+    if (State.variables.VeirSawEuniceDrunk === undefined) State.variables.VeirSawEuniceDrunk = false;
+    if (State.variables.romanceWithChenardCounter === undefined) State.variables.romanceWithChenardCounter = 0;
+    if (State.variables.romanceWithLaertesCounter === undefined) State.variables.romanceWithLaertesCounter = 0;
+    if (State.variables.romanceWithTeronCounter === undefined) State.variables.romanceWithTeronCounter = 0;
+    if (State.variables.EuniceSleptWithTeron === undefined) State.variables.EuniceSleptWithTeron = 0;
+    if (State.variables.virioLog === undefined) State.variables.virioLog = [];
 
-if (State.variables.questWithMurasaki === undefined) State.variables.questWithMurasaki = false;
+    updateAudioVolume();
+    updateStats();
 
-if (State.variables.questWithPetrosCounter === undefined) State.variables.questWithPetrosCounter = 0;
-
-if (State.variables.questWithMurasakiCounter === undefined) State.variables.questWithMurasakiCounter = 0;
-
-if (State.variables.chatWithMignChauCounter === undefined) State.variables.chatWithMignChauCounter = false;
-
-if (State.variables.chatWithMeralisCounter === undefined) State.variables.chatWithMeralisCounter = false;
-
-if (State.variables.ReportAboutAnomalia === undefined) State.variables.ReportAboutAnomalia = false;
-
-if (State.variables.chatWithVeirCounter === undefined) State.variables.chatWithVeirCounter = false;
-
-if (State.variables.sex1WithVeirCounter === undefined) State.variables.sex1WithVeirCounter = false;
-
-if (State.variables.argueWithVeirCounter === undefined) State.variables.argueWithVeirCounter = false;
-
-if (State.variables.argueWithKairos === undefined) State.variables.argueWithKairosCounter = false;
-
-if (State.variables.VeirSawEuniceDrunk === undefined) State.variables.VeirSawEuniceDrunk = false;
-
-if (State.variables.romanceWithChenardCounter === undefined) State.variables.romanceWithChenardCounter = 0;
-
-if (State.variables.romanceWithLaertesCounter === undefined) State.variables.romanceWithLaertesCounter = 0;
-
-if (State.variables.romanceWithTeronCounter === undefined) State.variables.romanceWithTeronCounter = 0;
-
-if (State.variables.EuniceSleptWithTeron === undefined) State.variables.EuniceSleptWithTeron = 0;
-
-if (State.variables.virioLog === undefined) State.variables.virioLog = [];
-
-updateAudioVolume();
-updateStats();
-
-console.log(&quot;StoryInit: Initialization complete&quot;);
+    console.log(&quot;StoryInit: Initialization complete&quot;);
 });
 &lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="269" name="At_cosmoport_15" tags="" position="1100,16675" size="100,100">&lt;script&gt;addMessage(&quot;[Σ/09] На время полета вашему вниманию представляется патриотический фильм \&quot;Хроники Империи\&quot;.&quot;, &quot;[Σ/09] For the duration of the flight, the patriotic film \&quot;Chronicles of the Empire\&quot; will be presented for your viewing.&quot;);&lt;/script&gt;
 &lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(
@@ -8058,9 +7960,9 @@ addMessage(&quot;[Σ/09] Мотивы собеседника непонятны.
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;bal_Weir_dance_17]]&lt;&lt;else&gt;&gt;[[Next-&gt;bal_Weir_dance_17]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="662" name="bal_Weir_dance_17" tags="" position="2200,36450" size="100,100">&lt;script&gt;addMessage(&quot;[Σ/09] Мотивы собеседника непонятны. Поведение нарочитое, намерения - эскалация конфликта и привлечение внимания окружающих.&quot;, &quot;[Σ/09] Subject\&#39;s motives unclear. Behavior is deliberate; intentions point toward escalation of conflict and drawing the attention of those present.&quot;);&lt;/script&gt;
 &lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(&quot;Внутри клокотала ярость пополам с облегчением. Он нарочно её провоцировал. Видимо, императорское решение по поводу ее назначения пришлось лорду Вейру не по душе, и он решил отыграться.&quot;, &quot;Fury churned inside her, mingled with relief. He had provoked her on purpose. Apparently, the Emperor\&#39;s decision regarding her appointment had not sat well with Counsellor Weir, and he had decided to take it out.&quot;)&gt;&gt;
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;bal_Weir_dance_18]]&lt;&lt;else&gt;&gt;[[Next-&gt;bal_Weir_dance_18]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="663" name="Eunice_enjoys_Kairos_romance_fail_comp_20" tags="" position="2400,24025" size="100,100">&lt;script&gt;
+</tw-passagedata><tw-passagedata pid="663" name="Eunice_enjoys_Kairos_romance_fail_comp_20" tags="" position="2400,24025" size="100,100">&lt;&lt;set $argueWithKairos to true&gt;&gt;
+&lt;script&gt;
 addMessage(&quot;[Σ/09] Оценка внешности: выше среднего. Коррекция средствами макияжа не требуется.&quot;, &quot;[Σ/09] Appearance assessment: above average. Correction via cosmetics is not required.&quot;);
-State.variables.argueWithKairos = true;
 setBackground(&quot;media/locations/Space_Cruise_bedroom.jpg&quot;);
 $(&quot;#character-container-right img&quot;).fadeOut(300);
 $(&quot;#character-container-left img&quot;).fadeOut(300, function() {
@@ -8641,7 +8543,7 @@ $(this).fadeIn(600);
 &lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(&quot;Вскоре на летных консолях стали появляться веселые огоньки. Юнис было обрадовалась, пока дисплеи не запестрели сообщениями об ошибках.&quot;, &quot;Soon, cheerful lights began to flicker on the flight consoles. Eunice felt a brief surge of hope, until the displays became cluttered with error messages.&quot;)&gt;&gt;
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;shuttle_accident_noecho_58]]&lt;&lt;else&gt;&gt;[[Next-&gt;shuttle_accident_noecho_58]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="793" name="shuttle_accident_noecho_58" tags="" position="9375,16875" size="100,100">&lt;script&gt;addMessage(&quot;[Σ/09] Ручное управление требует действующей летной лицензии. Оператор Юнис не обладает подтвержденной летной лицензией. Рекомендуется установление квантового соединения с диспетчером.&quot;, &quot;[Σ/09] Manual control requires a valid flight license. Operator Eunice does not possess a verified flight license. Establishing a quantum connection with a dispatcher is recommended.&quot;);&lt;/script&gt;
 &lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(&quot;\&quot;Автопилот и навигационное оборудование запустить не выйдет. Только ручное управление. Или, как вариант — попробовать связаться с диспетчером. Квантовая связь работает всегда и везде. Диспетчер возьмет управление на себя.\&quot;&quot;, &quot;//The autopilot and navigation equipment won\&#39;t start. Only manual control. Or, as an alternative – try to contact a dispatcher. Quantum communication works anytime, anywhere. A dispatcher will take over the controls.//&quot;)&gt;&gt;
-&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[- И как лучше поступить?-&gt;shuttle_accident_noecho_59]]&lt;&lt;else&gt;&gt;[[- And what is the best thing to do?-&gt;shuttle_accident_noecho_59]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;
+&lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[— И как лучше поступить?-&gt;shuttle_accident_noecho_59]]&lt;&lt;else&gt;&gt;[[And what is the best thing to do?-&gt;shuttle_accident_noecho_59]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="794" name="shuttle_accident_noecho_59" tags="" position="9500,16875" size="100,100">&lt;script&gt;addMessage(&quot;[Σ/09] Попытка ручного управления будет зафиксирована как нарушение летных протоколов.&quot;, &quot;[Σ/09] An attempt at manual control will be recorded as a violation of flight protocols.&quot;);&lt;/script&gt;
 &lt;div class=&quot;footer-bar&quot;&gt;&lt;&lt;= setup.t(&quot;\&quot;Этот вопрос решает оператор,\&quot; — коротко ответил СХ-3.&quot;, &quot;//The operator decides this matter,// CX-3 replied shortly.&quot;)&gt;&gt;
 &lt;&lt;if $lang is &#39;ru&#39;&gt;&gt;[[Далее-&gt;shuttle_accident_noecho_60]]&lt;&lt;else&gt;&gt;[[Next-&gt;shuttle_accident_noecho_60]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="795" name="shuttle_accident_noecho_60" tags="" position="9625,16875" size="100,100">&lt;script&gt;addMessage(&quot;[Σ/09] Квантовое соединение с диспетчерской службой является приоритетным вариантом управления.&quot;, &quot;[Σ/09] Quantum connection with the dispatch service is the priority control option.&quot;);&lt;/script&gt;
